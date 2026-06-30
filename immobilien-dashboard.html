@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Höhenmesser – Immobilien-Radar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+:root{
+  --snow:#e7ebe4; --surface:#ffffff; --surface-2:#f4f6f1;
+  --ink:#16201b; --muted:#6c7a71; --faint:#94a299;
+  --line:#d6ddd2; --line-soft:#e4e9df;
+  --pine:#2f6b4f; --pine-deep:#234e3a;
+  --sun:#dd9f37; --sun-deep:#bd7e1c;
+  --amber:#c98326; --danger:#b0493a; --sky:#4d7c8a;
+  --shadow:0 1px 2px rgba(20,40,30,.05), 0 8px 24px -12px rgba(20,40,30,.18);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--snow); color:var(--ink); font-family:'IBM Plex Sans',system-ui,-apple-system,Segoe UI,sans-serif; font-size:15px; line-height:1.5; -webkit-font-smoothing:antialiased}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace; font-variant-numeric:tabular-nums}
+
+.top{position:relative; overflow:hidden; background:var(--pine-deep); color:#eaf1ea; border-bottom:3px solid var(--sun)}
+.top__contours{position:absolute; inset:0; opacity:.16; pointer-events:none}
+.top__inner{position:relative; max-width:1180px; margin:0 auto; padding:26px 22px 22px}
+.brand{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+.brand h1{font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:30px; letter-spacing:-.01em; margin:0; line-height:1}
+.brand .tag{font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:#bcd2c4}
+.runline{margin-top:6px; font-size:13px; color:#c2d4c8}
+.runline b{color:#f0e3c8; font-weight:500}
+.stats{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+.stat{background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); border-radius:11px; padding:9px 13px; min-width:78px}
+.stat .n{font-family:'Fraunces',serif; font-size:22px; font-weight:600; line-height:1.05; display:block}
+.stat .l{font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:#acc3b4; margin-top:2px}
+.stat.is-sun .n{color:var(--sun)} .stat.is-amber .n{color:#f0c27a}
+.loadbar{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-top:18px}
+.btn{font:inherit; font-size:13.5px; font-weight:500; cursor:pointer; border-radius:9px; border:1px solid transparent; padding:9px 14px; transition:.15s}
+.btn--load{background:var(--sun); color:#2a200a; border-color:var(--sun-deep)}
+.btn--load:hover{background:#e9ae47}
+.loadhint{font-size:12.5px; color:#a9c0b3}
+.loadhint.err{color:#ffd0c7}
+
+.wrap{max-width:1180px; margin:0 auto; padding:20px 22px 60px}
+.controls{display:flex; gap:10px; flex-wrap:wrap; align-items:center; position:sticky; top:0; z-index:600; background:var(--snow); padding:14px 0 12px; border-bottom:1px solid var(--line-soft); margin-bottom:18px}
+.field{position:relative}
+.search{font:inherit; font-size:14px; padding:9px 12px 9px 32px; border:1px solid var(--line); border-radius:9px; background:var(--surface); min-width:210px; color:var(--ink)}
+.search:focus{outline:2px solid var(--pine); outline-offset:1px; border-color:var(--pine)}
+.field .ico{position:absolute; left:10px; top:50%; transform:translateY(-50%); color:var(--faint); pointer-events:none}
+select.ctl{font:inherit; font-size:13.5px; padding:9px 30px 9px 12px; border:1px solid var(--line); border-radius:9px; background:var(--surface) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M2 4l4 4 4-4' stroke='%236c7a71' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>") no-repeat right 10px center; -webkit-appearance:none; appearance:none; color:var(--ink); cursor:pointer}
+select.ctl:focus{outline:2px solid var(--pine); outline-offset:1px}
+.segmented{display:inline-flex; background:var(--surface-2); border:1px solid var(--line); border-radius:9px; padding:2px}
+.segmented button{font:inherit; font-size:13px; cursor:pointer; border:0; background:transparent; color:var(--muted); padding:7px 12px; border-radius:7px; transition:.12s; white-space:nowrap}
+.segmented button[aria-pressed="true"]{background:var(--surface); color:var(--pine-deep); font-weight:600; box-shadow:0 1px 2px rgba(20,40,30,.08)}
+.count{margin-left:auto; font-size:13px; color:var(--muted)}
+
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:16px}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); padding:16px 16px 14px; display:flex; flex-direction:column; gap:12px; transition:transform .16s ease, box-shadow .16s ease}
+.card:hover{transform:translateY(-2px); box-shadow:0 2px 4px rgba(20,40,30,.06), 0 18px 36px -14px rgba(20,40,30,.28)}
+.card.is-removed{opacity:.62}
+.card.is-removed .card__title{text-decoration:line-through; text-decoration-color:var(--faint)}
+.card__head{display:flex; gap:14px; align-items:flex-start}
+.gauge{flex:0 0 auto; width:66px; text-align:center}
+.gauge svg{display:block}
+.gauge .lbl{font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); margin-top:1px}
+.card__headmain{min-width:0; flex:1}
+.badges{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:6px}
+.badge{font-size:11px; font-weight:600; letter-spacing:.02em; padding:2.5px 8px; border-radius:999px; line-height:1.4; white-space:nowrap}
+.badge--top{background:#e4f0e8; color:var(--pine-deep)}
+.badge--check{background:#fbeed6; color:#8a5a13}
+.badge--neu{background:var(--sun); color:#2a200a}
+.badge--removed{background:#f3ddd8; color:#8a3325}
+.badge--price{background:#e1ecef; color:#2f5d6b}
+.card__title{font-family:'Fraunces',Georgia,serif; font-weight:500; font-size:17.5px; line-height:1.22; color:var(--ink); text-decoration:none; display:block}
+a.card__title:hover{color:var(--pine)}
+.card__loc{font-size:13px; color:var(--muted); margin-top:5px; display:flex; align-items:center; gap:5px}
+.facts{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); border-radius:11px; overflow:hidden}
+.fact{background:var(--surface); padding:8px 11px}
+.fact .l{font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--faint)}
+.fact .v{font-size:14.5px; margin-top:1px; color:var(--ink)}
+.fact .v.price{color:var(--pine-deep); font-weight:500}
+.tags{display:flex; gap:6px; flex-wrap:wrap}
+.chip{font-size:12px; color:var(--muted); background:var(--surface-2); border:1px solid var(--line-soft); border-radius:7px; padding:3px 8px; display:inline-flex; align-items:center; gap:5px}
+.chip svg{flex:0 0 auto}
+.chip.warn{color:#8a5a13; background:#fbf3e2; border-color:#f0dfbd}
+.cardfoot{display:flex; align-items:center; gap:10px; margin-top:auto; padding-top:4px}
+.more{font:inherit; font-size:12.5px; color:var(--muted); background:none; border:0; cursor:pointer; padding:6px 2px; display:inline-flex; align-items:center; gap:5px}
+.more:hover{color:var(--pine)}
+.more svg{transition:transform .15s}
+.more[aria-expanded="true"] svg{transform:rotate(180deg)}
+.cta{margin-left:auto; font-size:13px; font-weight:500; text-decoration:none; color:var(--pine-deep); border:1px solid var(--line); border-radius:8px; padding:8px 13px; transition:.14s; display:inline-flex; align-items:center; gap:6px}
+.cta:hover{background:var(--pine); color:#fff; border-color:var(--pine)}
+.details{display:none; border-top:1px dashed var(--line); padding-top:11px; font-size:13px}
+.details.open{display:block}
+.drow{display:flex; gap:8px; padding:4px 0; align-items:baseline}
+.drow .dl{flex:0 0 96px; color:var(--faint); font-size:11.5px; letter-spacing:.04em; text-transform:uppercase}
+.drow .dv{color:var(--ink)}
+.scoredetail{font-size:12px; color:var(--muted); background:var(--surface-2); border-radius:8px; padding:8px 10px; margin-top:4px; line-height:1.5}
+.empty{text-align:center; padding:70px 20px; color:var(--muted)}
+.empty h3{font-family:'Fraunces',serif; font-weight:500; color:var(--ink); margin:0 0 6px}
+
+/* map */
+#mapwrap{display:none}
+#mapwrap.show{display:block}
+.grid.hide{display:none}
+#map{height:560px; border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); z-index:1}
+.mapnote{font-size:12.5px; color:var(--muted); margin:10px 2px 0}
+.legend{display:flex; gap:14px; flex-wrap:wrap; margin:12px 2px 0; font-size:12px; color:var(--muted)}
+.legend span{display:inline-flex; align-items:center; gap:6px}
+.legend i{width:11px; height:11px; border-radius:50%; display:inline-block; border:1px solid rgba(0,0,0,.15)}
+.leaflet-popup-content{font-family:'IBM Plex Sans',sans-serif; margin:11px 13px}
+.pop-t{font-family:'Fraunces',serif; font-weight:500; font-size:15px; color:var(--ink); text-decoration:none; display:block; line-height:1.25}
+.pop-t:hover{color:var(--pine)}
+.pop-m{font-size:12.5px; color:var(--muted); margin:3px 0 7px}
+.pop-row{display:flex; gap:10px; align-items:center; font-size:13px}
+.pop-score{font-family:'IBM Plex Mono',monospace; font-weight:600; color:#fff; border-radius:6px; padding:1px 7px; font-size:12px}
+.pop-cta{display:inline-block; margin-top:8px; font-size:12.5px; font-weight:500; color:var(--pine-deep); text-decoration:none; border:1px solid var(--line); border-radius:7px; padding:5px 10px}
+.pop-cta:hover{background:var(--pine); color:#fff; border-color:var(--pine)}
+
+footer{max-width:1180px; margin:0 auto; padding:0 22px 40px; color:var(--faint); font-size:12px; line-height:1.6}
+footer code{background:var(--surface-2); border:1px solid var(--line-soft); border-radius:5px; padding:1px 5px; font-size:11.5px}
+
+@media (max-width:560px){.brand h1{font-size:25px} .count{width:100%; margin:4px 0 0} #map{height:440px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
+.card{animation:rise .4s ease both}
+@keyframes rise{from{opacity:0; transform:translateY(8px)}to{opacity:1; transform:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <svg class="top__contours" preserveAspectRatio="none" viewBox="0 0 1200 220" aria-hidden="true">
+    <g fill="none" stroke="#ffffff" stroke-width="1.2">
+      <path d="M-20 180 C 200 120, 360 160, 560 110 S 980 60, 1220 120"/>
+      <path d="M-20 150 C 220 95, 380 130, 600 80 S 1000 30, 1220 90"/>
+      <path d="M-20 120 C 240 70, 420 100, 640 55 S 1020 10, 1220 65"/>
+      <path d="M-20 92 C 260 50, 440 78, 680 35 S 1040 -5, 1220 42"/>
+      <path d="M-20 205 C 180 150, 340 185, 540 140 S 960 95, 1220 150"/>
+    </g>
+  </svg>
+  <div class="top__inner">
+    <div class="brand"><h1>Höhenmesser</h1><span class="tag">Freiheits-Radar · AT &amp; Südtirol</span></div>
+    <div class="runline" id="runline"></div>
+    <div class="stats" id="stats"></div>
+    <div class="loadbar">
+      <label class="btn btn--load">Neue JSON laden<input id="file" type="file" accept=".json,application/json" hidden></label>
+      <span class="loadhint" id="loadhint">Quelle wird geladen…</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="controls">
+    <div class="segmented" id="viewSeg" role="group" aria-label="Ansicht">
+      <button data-v="liste" aria-pressed="true">Liste</button>
+      <button data-v="karte" aria-pressed="false">Karte</button>
+    </div>
+    <div class="field">
+      <svg class="ico" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M11 11l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <input id="q" class="search" type="search" placeholder="Ort, Titel oder Region…">
+    </div>
+    <div class="segmented" id="statusSeg" role="group" aria-label="Status filtern">
+      <button data-s="alle" aria-pressed="true">Alle</button>
+      <button data-s="top">Top-Treffer</button>
+      <button data-s="pruefen">Zu prüfen</button>
+      <button data-s="neu">Neu</button>
+      <button data-s="entfernt">Entfernt</button>
+    </div>
+    <select id="region" class="ctl" aria-label="Region"></select>
+    <select id="sort" class="ctl" aria-label="Sortierung">
+      <option value="score">Freiheits-Score ↓</option>
+      <option value="preis_asc">Preis ↑</option>
+      <option value="preis_desc">Preis ↓</option>
+      <option value="grund">Grundfläche ↓</option>
+      <option value="gesehen">Zuletzt gesehen ↓</option>
+    </select>
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div id="mapwrap">
+    <div id="map"></div>
+    <div class="legend">
+      <span><i style="background:#dd9f37"></i> ≥ 85 Gipfel</span>
+      <span><i style="background:#3f8a63"></i> 70–84 stark</span>
+      <span><i style="background:#4d7c8a"></i> 55–69 solide</span>
+      <span><i style="background:#93a39a"></i> &lt; 55 / offen</span>
+    </div>
+    <div class="mapnote" id="mapnote"></div>
+  </div>
+</div>
+
+<footer>
+  Lokale Ansicht deiner Cowork-Ergebnisse · Score 0–100 aus Alleinlage, Grundgröße, Bergblick, Ortsferne, Wald &amp; Autarkie ·
+  Kartenpins sind orts-/PLZ-genau (ungefähr), nicht die exakte Liegenschaft.
+  Daten aus <code>daten.js</code> / <code>bekannte_objekte.json</code>; nichts wird hochgeladen.
+</footer>
+
+<script src="daten.js" onerror="window.__DATENJS_FEHLT=true"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+const EMBEDDED = {"schema_version": 1, "letzter_lauf": "2026-06-24T21:31:00+02:00", "lauf_historie": [{"zeit": "2026-06-24T21:31:00+02:00", "typ": "baseline", "neu": 15, "preisaenderungen": 0, "entfernt": 0, "aktiv_gesamt": 20, "davon_zu_pruefen": 5}], "objekte": [{"url": "https://www.immobilienscout24.at/expose/6a3243ff65ac7aee494f6b81", "titel": "Einzigartige Alleinlage – Landwirtschaft mit Einfamilienhaus und Wirtschaftsgebäude", "region": "Steiermark (Südsteiermark)", "ort": "8453 Eichberg (Bez. Leibnitz)", "preis": 635000, "wohnflaeche": 210, "grundflaeche": 37744, "nutzflaeche": 210, "typ": "Einfamilienhaus + Landwirtschaft", "widmung": "Hauptwohnsitz (Landwirtschaft)", "freiheits_score": 100, "freiheits_score_detail": "Alleinlage 30 / Grund>20.000 25 / Bergblick voll 20 / freistehend Natur 10 / eigener Wald+Wiese 10 / Autarkie Holzheizung+LW 5", "bergblick": "ja", "alleinlage": "Alleinlage", "zustand": "gepflegt, HWB 282 (G), hoher Heizbedarf", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 46.73, "lon": 15.42, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a319645df878ebbbccca7fb", "titel": "Bauernhaus mit Geschichte – Alleinlage 1.050 m Seehöhe", "region": "Steiermark (Murau)", "ort": "8862 Paal / Stadl-Predlitz", "preis": 450000, "wohnflaeche": 250, "grundflaeche": 3527, "nutzflaeche": null, "typ": "Bauernhaus (saniert)", "widmung": "Hauptwohnsitz (unbestätigt)", "freiheits_score": 79, "freiheits_score_detail": "Alleinlage 30 / Grund 2.000-5.000 14 / Bergblick voll 20 / freistehend 10 / Wald 0 / Autarkie Holz 5. ACHTUNG: Grundgröße widersprüchlich (3.527 vs. 850 m² Garten) – klären", "bergblick": "ja", "alleinlage": "Alleinlage", "zustand": "historisch saniert (Ursprung ~1585), Holz/Öl-ZH", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 47.1, "lon": 14.05, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a330f3732d84e121f89dcc4", "titel": "LAGE! Renovieren Sie sich Ihren Haustraum! – Freistehender Bungalow mit XXL-Grundstück", "region": "Oberösterreich (Steyr-Land)", "ort": "4421 Aschach an der Steyr", "preis": 449000, "wohnflaeche": 200, "grundflaeche": 2881, "nutzflaeche": 140, "typ": "Einfamilienhaus / Bungalow", "widmung": "Hauptwohnsitz (1.000 m² Bauland)", "freiheits_score": 74, "freiheits_score_detail": "Alleinlage 30 / Grund 2.000-5.000 14 / Bergblick teilw. 10 / freistehend 10 / eigener Grünland-Grund 10 / Autarkie 0", "bergblick": "teilweise", "alleinlage": "Alleinlage", "zustand": "stark renovierungsbedürftig, Bj. 1971, Energieausweis fehlt", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 48.02, "lon": 14.33, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a0461a4da02f883383e25cc", "titel": "Historisches Bauernhaus in Taxenbach (Hopfberg) – BIETERVERFAHREN", "region": "Salzburg (Pinzgau)", "ort": "5660 Hopfberg / Taxenbach (~1.100 m)", "preis": 570000, "preis_hinweis": "Mindestgebot Bieterverfahren, Bietfrist bis 14.08.2026", "wohnflaeche": 200, "grundflaeche": 1475, "nutzflaeche": null, "typ": "Bauernhaus (Bj. 1759)", "widmung": "Hauptwohnsitz (Zweitwohnsitz/Vermietung ausdrücklich ausgeschlossen)", "freiheits_score": 72, "freiheits_score_detail": "Alleinlage 30 / Grund 1.000-2.000 7 / Bergblick voll 20 / freistehend 10 / Wald 0 / Autarkie Quelle+Holz 5", "bergblick": "ja", "alleinlage": "Alleinlage", "zustand": "gepflegt, teilsaniert, Sanierungsbedarf; eigene Quelle, Ofenheizung, HWB 243 (F)", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 47.29, "lon": 12.96, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a380a73584ccc48d2f34eae", "titel": "Viel Platz für die Familie mit 10 Zimmern und landwirtschaftlicher Fläche", "region": "Steiermark (Weststeiermark)", "ort": "8524 Bad Gams (Bez. Deutschlandsberg)", "preis": 399000, "wohnflaeche": 224, "grundflaeche": 3111, "nutzflaeche": 66, "typ": "Einfamilienhaus", "widmung": "Hauptwohnsitz", "freiheits_score": 65, "freiheits_score_detail": "sehr ruhig 20 / Grund 2.000-5.000 14 / Bergblick teilw. 10 / Ortsrand/Hang 6 / eigene LW-Fläche ringsum 10 / Autarkie Brunnen+LW 5", "bergblick": "teilweise", "alleinlage": "sehr ruhig (Hanglage, Privatstraße)", "zustand": "gepflegt, Bj. 1961, Öl-ZH, HWB 165 (E)", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 46.86, "lon": 15.27, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a2faa6d0253df365d5fb550", "titel": "Ehemaliges Traditionsgasthaus in traumhafter Naturlage", "region": "Kärnten", "ort": "9530 Bad Bleiberg (Bez. Villach-Land)", "preis": 395000, "wohnflaeche": 300, "grundflaeche": 3096, "nutzflaeche": 300, "typ": "Einfamilienhaus (ehem. Gasthaus)", "widmung": "Hauptwohnsitz möglich (gewerbl. Historie)", "freiheits_score": 65, "freiheits_score_detail": "sehr ruhig/Naturlage 20 / Grund 2.000-5.000 14 / Bergblick voll 20 / Ortsrand 6 / Wald 0 / Autarkie Pellets 5", "bergblick": "ja", "alleinlage": "sehr ruhig / Naturlage", "zustand": "gepflegt, Altbau 1900, mod. 2008-2020, Pellets, HWB 338 (G)", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 46.63, "lon": 13.68, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a305b06a003cef3f4ba5238", "titel": "Im Einklang mit der Natur! – Schönes Landhaus", "region": "Niederösterreich (Türnitzer Alpen)", "ort": "3172 Ramsau (Bez. Lilienfeld)", "preis": 490000, "preis_hinweis": "provisionsfrei, Privatverkauf", "wohnflaeche": 280, "grundflaeche": 1918, "nutzflaeche": 280, "typ": "Einfamilienhaus (Bj. 1976)", "widmung": "Hauptwohnsitz (unbestätigt)", "freiheits_score": 62, "freiheits_score_detail": "quasi-Alleinlage 20 / Grund 1.000-2.000 7 / Bergblick voll 20 / freistehend Waldlichtung 10 / Wald 0 / Autarkie Quelle+Pellet 5", "bergblick": "ja", "alleinlage": "quasi-Alleinlage (1 Nachbar ~150 m, Waldlichtung, ~780 m)", "zustand": "sehr gepflegt, modernisiert, eigene Quelle", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 48.04, "lon": 15.74, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://immobilien.derstandard.at/detail/15150703", "titel": "Tolle Liegenschaft mit Einfamilienhaus und urigem Bauernhaus, Stall, Garagen", "region": "Steiermark (Murau)", "ort": "8844 Schöder (~900 m, Sölkpass)", "preis": 460000, "wohnflaeche": 293, "grundflaeche": 1313, "nutzflaeche": 80, "typ": "Einfamilienhaus + Bauernhaus + Stall", "widmung": "Hauptwohnsitz (unbestätigt)", "freiheits_score": 58, "freiheits_score_detail": "sehr ruhig 20 / Grund 1.000-2.000 7 / Bergblick voll 20 / Ortsrand/Bergdorf 6 / Wald 0 / Autarkie Stall 5", "bergblick": "ja", "alleinlage": "sehr ruhig, naturnah", "zustand": "EFH gut (Bj. 2000/2004), Bauernhaus urig; Öl-ZH", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 47.21, "lon": 14.01, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a2843797ee84e039e471919", "titel": "Steirisches Landhausjuwel in traumhafter Ruhelage mit Fernblick", "region": "Steiermark (Südoststeiermark)", "ort": "8352 Unterlamm (Thermen-/Vulkanland)", "preis": 650000, "wohnflaeche": 243, "grundflaeche": 1176, "nutzflaeche": null, "typ": "Einfamilienhaus (Bj. 1989)", "widmung": "Hauptwohnsitz", "freiheits_score": 58, "freiheits_score_detail": "absolute Ruhelage 20 / Grund 1.000-2.000 7 / Fernblick 20 / Ortsrand/Hügel 6 / Wald 0 / Autarkie Selbstversorgergarten 5", "bergblick": "ja (Fernblick)", "alleinlage": "absolute Ruhelage, unverbaut", "zustand": "sehr gepflegt; Öl + Kachelofen; opt. Zukauf auf 7.300 m²", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 46.94, "lon": 16.05, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a31781065ac7aee494d51e6", "titel": "Großzügiges Einfamilienhaus mit 2.270 m² Grundstück", "region": "Steiermark (Südweststeiermark)", "ort": "8551 Wies / Steyeregg (Koralpe)", "preis": 239000, "wohnflaeche": 160, "grundflaeche": 2270, "nutzflaeche": 320, "typ": "Einfamilienhaus (Bj. 1960)", "widmung": "Hauptwohnsitz", "freiheits_score": 49, "freiheits_score_detail": "ruhig/naturnah 20 / Grund 2.000-5.000 14 / Bergblick unbestätigt 0 / Waldrand 10 / Wald 0 / Autarkie Holzofen 5", "bergblick": "unbestätigt", "alleinlage": "ruhig, naturnah, am Waldrand", "zustand": "bezugsfertig, teils modernisierungsbedürftig", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 46.72, "lon": 15.27, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a35203c49f165b62eff313a", "titel": "Wohnhaus Friesach (Einfamilienhaus mit Nebengebäude und Stallung)", "region": "Kärnten", "ort": "9360 Friesach (Bez. St. Veit/Glan)", "preis": 318000, "wohnflaeche": 240, "grundflaeche": 1234, "nutzflaeche": 277, "typ": "Einfamilienhaus + Stallung", "widmung": "Hauptwohnsitz (kein Freizeit erkennbar)", "freiheits_score": 48, "freiheits_score_detail": "ruhige Randlage 10 / Grund 1.000-2.000 7 / Bergblick voll 20 / Ortsrand 6 / Wald 0 / Autarkie Stall+Garten 5", "bergblick": "ja", "alleinlage": "Ortsrand/ländlich (umgeben von Wohnbebauung)", "zustand": "renovierungsbedürftig, Bj. ~1900, HWB 298,8 (G)", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 46.95, "lon": 14.41, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a364600a285f6889873cb01", "titel": "ALLEINLAGE-Traum neben Bach samt Teich/Biotop (ehem. Mühle)", "region": "Oberösterreich (Kirchdorf)", "ort": "4552 Wartberg an der Krems", "preis": 475000, "wohnflaeche": 240, "grundflaeche": 1682, "nutzflaeche": null, "typ": "Einfamilienhaus (ehem. Mühle, saniert)", "widmung": "Hauptwohnsitz (unbestätigt)", "freiheits_score": 47, "freiheits_score_detail": "Alleinlage 30 / Grund 1.000-2.000 7 / Bergblick unbestätigt 0 / freistehend naturnah 10 / Wald 0 / Autarkie 0", "bergblick": "unbestätigt (Fernblick lt. Ausstattung)", "alleinlage": "Alleinlage (uneinsehbar, am Bach)", "zustand": "vollständig renoviert, Pool/Biotop, HWB 163 (E)", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 47.96, "lon": 14.13, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a3503748041a246a6c05115", "titel": "Wohlfühlen garantiert! Attraktives Wohnhaus mit Garage, Pool und Gartenanlage", "region": "Kärnten", "ort": "9150 Bleiburg (Bez. Völkermarkt)", "preis": 459000, "wohnflaeche": 257, "grundflaeche": 1000, "nutzflaeche": 127, "typ": "Einfamilienhaus (freistehend)", "widmung": "Hauptwohnsitz (unbestätigt)", "freiheits_score": 43, "freiheits_score_detail": "ruhige Randlage 10 / Grund 1.000-2.000 7 / Bergblick voll 20 (Petzen) / Ortsrand 6 / Wald 0 / Autarkie 0. Grund exakt 1.000 m² (Grenzwert)", "bergblick": "ja", "alleinlage": "Ortsrand (~1,1 km), eingezäunt", "zustand": "gepflegt, Bj. 1978, Pool/Sauna", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 46.59, "lon": 14.8, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a381647584ccc48d2f354b9", "titel": "PROVISIONSFREI – Vollständig saniertes Einfamilienhaus mit Pool", "region": "Steiermark (Liezen)", "ort": "8784 Trieben (Ennstal-nah)", "preis": 359000, "preis_hinweis": "provisionsfrei", "wohnflaeche": 165, "grundflaeche": 1200, "nutzflaeche": null, "typ": "Einfamilienhaus (Bj. 1954, Sanierung 2020)", "widmung": "Hauptwohnsitz (unbestätigt)", "freiheits_score": 43, "freiheits_score_detail": "ruhige Randlage 10 / Grund 1.000-2.000 7 / Bergblick voll 20 / Ortsrand Kleinstadt 6 / Wald 0 / Autarkie 0", "bergblick": "ja", "alleinlage": "ruhige sonnige Lage (Kleinstadt)", "zustand": "neuwertig (Vollsanierung 2020), HWB 85 (C)", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 47.49, "lon": 14.48, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immosuchmaschine.at/expose/45362676", "titel": "Modernisiertes Familienhaus mit großem Grundstück und Einliegerwohnung (Provisionsfrei)", "region": "Steiermark (Liezen)", "ort": "8931 Krippau (nahe Gesäuse/Wildalpen)", "preis": 310000, "preis_hinweis": "provisionsfrei", "wohnflaeche": 204, "grundflaeche": 1400, "nutzflaeche": null, "typ": "Einfamilienhaus + Einliegerwohnung", "widmung": "Hauptwohnsitz (unbestätigt)", "freiheits_score": 33, "freiheits_score_detail": "ruhig 10 / Grund 1.000-2.000 7 / Bergblick teilw. 10 / Ortsrand 6 / Wald 0 / Autarkie 0. Grundgröße aus Listentext – im Exposé final prüfen", "bergblick": "teilweise", "alleinlage": "ruhig (unbestätigt)", "zustand": "modernisiert, Bj. 1955", "hart_ok": "ja", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "aktiv", "lat": 47.66, "lon": 14.78, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a337d3477638d2a2bdea864", "titel": "Wohnen an sonnigsten Ort Österreichs (Selbstversorger, eigene Quelle)", "region": "Kärnten", "ort": "9103 Diex (Bez. Völkermarkt)", "preis": 269000, "wohnflaeche": 208, "grundflaeche": 1941, "nutzflaeche": null, "typ": "im Portal Mehrfamilienhaus (faktisch Haus + Einliegerwohnung)", "widmung": "Hauptwohnsitz (unbestätigt)", "freiheits_score": null, "freiheits_score_detail": "nicht gewertet – Typ-Risiko (Mehrfamilienhaus). Sonst: Hanglage Süd, Quelle, Selbstversorger, sonnigster Ort", "bergblick": "ja", "alleinlage": "absolut ruhig (Hanglage)", "zustand": "Bj. 1961, eigene Quelle, Biokläranlage", "hart_ok": "TEIL – Typ als Mehrfamilienhaus gelistet", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "zu_pruefen", "lat": 46.72, "lon": 14.62, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a39088ca285f688987a896d", "titel": "Wohnhaus in erhöhter Aussichtslage mit Panoramablick ins Rosental", "region": "Kärnten", "ort": "9132 Gallizien / Unterkrain (Bez. Völkermarkt)", "preis": 497000, "wohnflaeche": 239, "grundflaeche": 3945, "nutzflaeche": 290, "typ": "im Portal Mehrfamilienhaus (EFH + Einliegerwohnung, OG im Ausbau)", "widmung": "Hauptwohnsitz (unbestätigt)", "freiheits_score": null, "freiheits_score_detail": "nicht gewertet – Typ-Risiko (MFH) + OG Rohbau. Sonst: Fernblick Süd/Ost, sehr ruhig, 3.945 m²", "bergblick": "ja", "alleinlage": "erhöhte Sonnenlage, sehr ruhig", "zustand": "OG noch im Ausbau", "hart_ok": "TEIL – Typ/Zustand klären", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "zu_pruefen", "lat": 46.55, "lon": 14.55, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immosuchmaschine.at/expose/45473636", "titel": "Traum-Lage neben Bach ohne unmittelbare Nachbarn – Wohnhaus mit 2 Einheiten", "region": "Oberösterreich (Kirchdorf, Pyhrn-Priel)", "ort": "4571 Steyrling", "preis": 349000, "wohnflaeche": 259, "grundflaeche": null, "nutzflaeche": null, "typ": "Wohnhaus, 2 Einheiten (Zweifamilien-Charakter)", "widmung": "Hauptwohnsitz (unbestätigt)", "freiheits_score": null, "freiheits_score_detail": "nicht gewertet – Grundfläche unbestätigt + 2 Einheiten. Sonst: Alleinlage am Bach, Bergquelle", "bergblick": "teilweise", "alleinlage": "Alleinlage (keine direkten Nachbarn)", "zustand": "modernisierter Altbau, eigene Bergquelle", "hart_ok": "TEIL – Grundfläche unbestätigt, Typ klären", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "zu_pruefen", "lat": 47.78, "lon": 14.15, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immobilienscout24.at/expose/6a18469f1f6f14ada87b9de0", "titel": "Ihr neues Zuhause in Pfunds – Ruhe, Natur und Lebensqualität!", "region": "Tirol (Landeck)", "ort": "6542 Pfunds", "preis": 550000, "wohnflaeche": 160, "grundflaeche": null, "nutzflaeche": null, "typ": "Haus, freistehend", "widmung": "vermutl. Hauptwohnsitz (unbestätigt)", "freiheits_score": null, "freiheits_score_detail": "nicht gewertet – Grundfläche unbestätigt. Panoramablick, ruhig, Biomasse-Heizung", "bergblick": "ja", "alleinlage": "ruhig (unbestätigt)", "zustand": "gut, DG-Erweiterung 2008", "hart_ok": "TEIL – Grundfläche unbestätigt", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "zu_pruefen", "lat": 46.96, "lon": 10.57, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}, {"url": "https://www.immomarkt-suedtirol.bz/rimmoimmobilien/gepflegtes-einfamilienhaus-in-ruhiger-und-sonniger-lage", "titel": "Gepflegtes Einfamilienhaus in ruhiger und sonniger Lage (Karthaus)", "region": "Südtirol (Schnalstal)", "ort": "Schnals / Karthaus", "preis": 549000, "wohnflaeche": 170, "grundflaeche": null, "nutzflaeche": null, "typ": "Einfamilienhaus", "widmung": "Konventionierung unbestätigt", "freiheits_score": null, "freiheits_score_detail": "nicht gewertet – Grundfläche + Konventionierung unbestätigt. Sonnig, ruhig, Bergblick, eigene Wälder", "bergblick": "ja", "alleinlage": "sehr ruhig (von Grünfläche/Wäldern umgeben)", "zustand": "sehr gepflegt", "hart_ok": "TEIL – Grundfläche/Widmung unbestätigt (170 m² als Bruttofläche)", "erstmals_gesehen": "2026-06-24", "zuletzt_gesehen": "2026-06-24", "fehlt_seit": 0, "status": "zu_pruefen", "lat": 46.71, "lon": 10.91, "geo_quelle": "orts-/PLZ-genau (ungefähr)"}]};
+let DATA = EMBEDDED, statusFilter='alle', view='liste';
+let map=null, markerLayer=null, mapInit=false;
+
+const $ = s => document.querySelector(s);
+const grid = $('#grid');
+const fmtEur = n => (typeof n==='number') ? new Intl.NumberFormat('de-AT',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n) : 'auf Anfrage';
+const fmtArea = n => (typeof n==='number') ? new Intl.NumberFormat('de-AT').format(n)+' m²' : '–';
+const fmtGrund = n => { if(typeof n!=='number') return '–'; const m=new Intl.NumberFormat('de-AT').format(n)+' m²'; return n>=10000?`${m} · ${(n/10000).toLocaleString('de-AT',{maximumFractionDigits:2})} ha`:m; };
+const runDate = () => (DATA.letzter_lauf||'').slice(0,10);
+const isBaseline = () => { const h=DATA.lauf_historie||[]; return h.length && h[h.length-1].typ==='baseline'; };
+const isNeu = o => !isBaseline() && o.erstmals_gesehen===runDate() && o.status!=='entfernt';
+const isTop = o => o.hart_ok==='ja' && o.status!=='entfernt';
+const isPruefen = o => o.status==='zu_pruefen' || (typeof o.hart_ok==='string' && o.hart_ok.startsWith('TEIL'));
+const isRemoved = o => o.status==='entfernt';
+const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function scoreColor(s){ if(s>=85)return '#dd9f37'; if(s>=70)return '#3f8a63'; if(s>=55)return '#4d7c8a'; return '#93a39a'; }
+function gauge(score){
+  const s=Math.max(0,Math.min(100,score||0)), r=26, c=2*Math.PI*r, off=c*(1-s/100), col=scoreColor(s);
+  const shown = (score==null)?'–':s;
+  return `<svg width="66" height="66" viewBox="0 0 66 66" role="img" aria-label="Freiheits-Score ${shown}">
+    <circle cx="33" cy="33" r="${r}" fill="none" stroke="var(--line-soft)" stroke-width="6"/>
+    <circle cx="33" cy="33" r="${r}" fill="none" stroke="${col}" stroke-width="6" stroke-linecap="round" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" transform="rotate(-90 33 33)"/>
+    <text x="33" y="34" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="19" font-weight="500" fill="var(--ink)">${shown}</text>
+    <text x="33" y="45" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="7.5" fill="var(--faint)">/ 100</text></svg>`;
+}
+const pin=`<svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 14s5-4.5 5-8.5A5 5 0 0 0 3 5.5C3 9.5 8 14 8 14z" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="5.5" r="1.8" stroke="currentColor" stroke-width="1.3"/></svg>`;
+const peak=`<svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 13l4-8 3 5 2-3 3 6z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>`;
+const sunI=`<svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.2"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6L13 13M13 3l-1.4 1.4M4.4 11.6L3 13" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>`;
+const tree=`<svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 2l4 6H4zM6 8l2.5 4h-5zM8 14v-2" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>`;
+
+function bergblickChip(o){ const v=(o.bergblick||'').toLowerCase(); if(!v||v.startsWith('unbest'))return v?`<span class="chip warn">${peak} Bergblick unbestätigt</span>`:''; if(v.startsWith('teil'))return `<span class="chip">${peak} Bergblick teils</span>`; return `<span class="chip">${peak} Bergblick</span>`; }
+
+function card(o){
+  const removed=isRemoved(o), badges=[];
+  if(isNeu(o))badges.push('<span class="badge badge--neu">Neu</span>');
+  if(removed)badges.push('<span class="badge badge--removed">Entfernt</span>');
+  else if(isTop(o))badges.push('<span class="badge badge--top">Erfüllt alle Kriterien</span>');
+  else if(isPruefen(o))badges.push('<span class="badge badge--check">Zu prüfen</span>');
+  if(o.preis_hinweis)badges.push('<span class="badge badge--price">Bieterverfahren</span>');
+  const tags=[bergblickChip(o)];
+  if((o.alleinlage||'').toLowerCase().includes('allein'))tags.push(`<span class="chip">${peak} Alleinlage</span>`);
+  if(/holz|pellet|quelle|brunnen|pv|photovolt|autark/i.test((o.zustand||'')+' '+(o.freiheits_score_detail||'')))tags.push(`<span class="chip">${sunI} Autarkie-Plus</span>`);
+  if(/wald/i.test(o.freiheits_score_detail||''))tags.push(`<span class="chip">${tree} Wald</span>`);
+  return `<article class="card${removed?' is-removed':''}">
+    <div class="card__head">
+      <div class="gauge">${gauge(o.freiheits_score)}<div class="lbl">Freiheit</div></div>
+      <div class="card__headmain">
+        <div class="badges">${badges.join('')}</div>
+        <a class="card__title" href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.titel)}</a>
+        <div class="card__loc">${pin}<span>${esc(o.ort)} · ${esc(o.region)}</span></div>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="fact"><div class="l">Kaufpreis</div><div class="v price">${esc(fmtEur(o.preis))}</div></div>
+      <div class="fact"><div class="l">Wohnfläche</div><div class="v">${esc(fmtArea(o.wohnflaeche))}</div></div>
+      <div class="fact"><div class="l">Grundstück</div><div class="v">${esc(fmtGrund(o.grundflaeche))}</div></div>
+      <div class="fact"><div class="l">Typ</div><div class="v">${esc(o.typ||'–')}</div></div>
+    </div>
+    <div class="tags">${tags.join('')}</div>
+    <div class="cardfoot">
+      <button class="more" aria-expanded="false">Details <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+      <a class="cta" href="${esc(o.url)}" target="_blank" rel="noopener">Zum Exposé →</a>
+    </div>
+    <div class="details">
+      ${o.preis_hinweis?`<div class="drow"><span class="dl">Preis-Hinweis</span><span class="dv">${esc(o.preis_hinweis)}</span></div>`:''}
+      <div class="drow"><span class="dl">Widmung</span><span class="dv">${esc(o.widmung||'–')}</span></div>
+      <div class="drow"><span class="dl">Zustand</span><span class="dv">${esc(o.zustand||'–')}</span></div>
+      <div class="drow"><span class="dl">Einordnung</span><span class="dv">${esc(o.hart_ok==='ja'?'Erfüllt alle harten Kriterien':o.hart_ok)}</span></div>
+      <div class="drow"><span class="dl">Gesehen</span><span class="dv mono">${esc(o.erstmals_gesehen)} → ${esc(o.zuletzt_gesehen)}${o.fehlt_seit?` · fehlt seit ${o.fehlt_seit}`:''}</span></div>
+      <div class="scoredetail">${esc(o.freiheits_score_detail||'')}</div>
+    </div>
+  </article>`;
+}
+
+function passes(o){
+  if(statusFilter==='top'&&!isTop(o))return false;
+  if(statusFilter==='pruefen'&&!isPruefen(o))return false;
+  if(statusFilter==='neu'&&!isNeu(o))return false;
+  if(statusFilter==='entfernt'&&!isRemoved(o))return false;
+  const reg=$('#region').value; if(reg!=='alle'&&o.region!==reg)return false;
+  const q=$('#q').value.trim().toLowerCase();
+  if(q){const hay=(o.titel+' '+o.ort+' '+o.region+' '+o.typ).toLowerCase(); if(!hay.includes(q))return false;}
+  return true;
+}
+function getList(){
+  const key=$('#sort').value, num=v=>(typeof v==='number'?v:-Infinity);
+  const arr=(DATA.objekte||[]).filter(passes);
+  if(key==='score')arr.sort((a,b)=>(b.freiheits_score||0)-(a.freiheits_score||0));
+  else if(key==='preis_asc')arr.sort((a,b)=>(typeof a.preis==='number'?a.preis:Infinity)-(typeof b.preis==='number'?b.preis:Infinity));
+  else if(key==='preis_desc')arr.sort((a,b)=>num(b.preis)-num(a.preis));
+  else if(key==='grund')arr.sort((a,b)=>num(b.grundflaeche)-num(a.grundflaeche));
+  else if(key==='gesehen')arr.sort((a,b)=>String(b.zuletzt_gesehen).localeCompare(String(a.zuletzt_gesehen)));
+  return arr;
+}
+function renderList(list){
+  grid.innerHTML=list.length?list.map(card).join(''):`<div class="empty"><h3>Keine Objekte für diese Filter</h3><p>Setz Suche oder Status zurück, um wieder alle zu sehen.</p></div>`;
+  grid.querySelectorAll('.more').forEach(btn=>btn.addEventListener('click',()=>{
+    const d=btn.closest('.card').querySelector('.details'); const open=d.classList.toggle('open'); btn.setAttribute('aria-expanded',open?'true':'false');
+  }));
+}
+function popup(o){
+  const s=o.freiheits_score; const col=scoreColor(s||0);
+  return `<a class="pop-t" href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.titel)}</a>
+    <div class="pop-m">${esc(o.ort)} · ${esc(o.region)}</div>
+    <div class="pop-row"><span class="pop-score" style="background:${col}">${s==null?'–':s}</span><b>${esc(fmtEur(o.preis))}</b></div>
+    <div class="pop-row" style="color:var(--muted);margin-top:3px">${esc(fmtArea(o.wohnflaeche))} Wfl · ${esc(fmtGrund(o.grundflaeche))}</div>
+    <a class="pop-cta" href="${esc(o.url)}" target="_blank" rel="noopener">Zum Exposé →</a>`;
+}
+function renderMap(list){
+  const note=$('#mapnote');
+  if(typeof L==='undefined'){ note.textContent='Die Karte benötigt eine Internetverbindung (Kartenbibliothek + Kacheln). Die Listenansicht funktioniert offline.'; return; }
+  if(!mapInit){
+    map=L.map('map',{scrollWheelZoom:true});
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap'}).addTo(map);
+    markerLayer=L.layerGroup().addTo(map); mapInit=true;
+  }
+  markerLayer.clearLayers();
+  const pts=[]; let ohne=0;
+  list.forEach(o=>{
+    if(typeof o.lat==='number'&&typeof o.lon==='number'){
+      const s=o.freiheits_score||0;
+      const m=L.circleMarker([o.lat,o.lon],{radius:7+s/12,color:'#16201b',weight:1.2,fillColor:scoreColor(s),fillOpacity:.88});
+      m.bindPopup(popup(o)); markerLayer.addLayer(m); pts.push([o.lat,o.lon]);
+    } else ohne++;
+  });
+  map.invalidateSize();
+  if(pts.length)map.fitBounds(pts,{padding:[40,40],maxZoom:11}); else map.setView([47.6,14.2],7);
+  note.textContent = ohne?`${ohne} Objekt(e) ohne Koordinaten – in der Liste sichtbar. Pins sind ungefähr (Ort/PLZ).`:'Pins sind ungefähr (Ort/PLZ), nicht die exakte Liegenschaft.';
+}
+function render(){
+  const list=getList();
+  $('#count').textContent=`${list.length} von ${(DATA.objekte||[]).length} Objekten`;
+  if(view==='liste') renderList(list); else renderMap(list);
+}
+function header(){
+  const o=DATA.objekte||[];
+  const aktiv=o.filter(x=>!isRemoved(x)).length, top=o.filter(isTop).length, pruefen=o.filter(isPruefen).length, neu=o.filter(isNeu).length, entfernt=o.filter(isRemoved).length;
+  const prices=o.filter(x=>isTop(x)&&typeof x.preis==='number').map(x=>x.preis);
+  const avg=prices.length?Math.round(prices.reduce((a,b)=>a+b,0)/prices.length):null;
+  const dt=DATA.letzter_lauf?new Date(DATA.letzter_lauf):null;
+  const when=dt?dt.toLocaleString('de-AT',{day:'2-digit',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit'}):'–';
+  const h=DATA.lauf_historie||[], last=h[h.length-1]||{};
+  const kind=isBaseline()?'Baseline (Erststand)':`Delta: ${last.neu??0} neu · ${last.preisaenderungen??0} Preisänderungen · ${last.entfernt??0} entfernt`;
+  $('#runline').innerHTML=`Stand <b>${esc(when)}</b> · ${esc(kind)}`;
+  const stat=(n,l,cls='')=>`<div class="stat ${cls}"><span class="n">${n}</span><span class="l">${l}</span></div>`;
+  $('#stats').innerHTML=stat(aktiv,'Aktiv')+stat(top,'Top-Treffer','is-sun')+stat(pruefen,'Zu prüfen','is-amber')+stat(neu,'Neu')+stat(entfernt,'Entfernt')+stat(avg!=null?fmtEur(avg):'–','Ø Preis Top');
+  const regions=[...new Set(o.map(x=>x.region))].sort((a,b)=>a.localeCompare(b,'de'));
+  const sel=$('#region'), cur=sel.value||'alle';
+  sel.innerHTML=`<option value="alle">Alle Regionen</option>`+regions.map(r=>`<option value="${esc(r)}">${esc(r)}</option>`).join('');
+  sel.value=[...sel.options].some(op=>op.value===cur)?cur:'alle';
+}
+
+// events
+$('#q').addEventListener('input',render);
+$('#region').addEventListener('change',render);
+$('#sort').addEventListener('change',render);
+$('#statusSeg').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;statusFilter=b.dataset.s;[...e.currentTarget.children].forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));render();});
+$('#viewSeg').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;view=b.dataset.v;[...e.currentTarget.children].forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
+  $('#grid').classList.toggle('hide',view!=='liste'); $('#mapwrap').classList.toggle('show',view==='karte'); render();});
+$('#file').addEventListener('change',e=>{
+  const f=e.target.files[0]; if(!f)return; const hint=$('#loadhint'); hint.classList.remove('err');
+  const r=new FileReader();
+  r.onload=()=>{ try{ const j=JSON.parse(r.result); if(!j||!Array.isArray(j.objekte))throw new Error('Feld "objekte" fehlt'); DATA=j; header(); render(); hint.innerHTML=`Geladen: <b>${esc(f.name)}</b> · ${j.objekte.length} Objekte.`; }
+    catch(err){ hint.classList.add('err'); hint.textContent='Datei konnte nicht gelesen werden: '+err.message; } };
+  r.readAsText(f);
+});
+
+// Datenquelle bestimmen: daten.js → fetch(bekannte_objekte.json) → eingebettet
+async function loadData(){
+  if(window.IMMO_DATA && Array.isArray(window.IMMO_DATA.objekte)) return {data:window.IMMO_DATA, src:'daten.js (automatisch)'};
+  try{ const r=await fetch('./bekannte_objekte.json',{cache:'no-store'}); if(r.ok){ const j=await r.json(); if(Array.isArray(j.objekte)) return {data:j, src:'bekannte_objekte.json (automatisch)'}; } }catch(e){}
+  return {data:EMBEDDED, src:'eingebettet (Stand '+((EMBEDDED.letzter_lauf||'').slice(0,10))+')'};
+}
+(async function init(){
+  const {data,src}=await loadData(); DATA=data;
+  $('#loadhint').innerHTML=`Datenquelle: <b>${esc(src)}</b>. Nach jedem Cowork-Lauf aktualisiert sich das automatisch (oder „Neue JSON laden").`;
+  header(); render();
+})();
+</script>
+</body>
+</html>

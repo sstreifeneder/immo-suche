@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Backups / Zwischenstände der Zustandsdatei (nicht im Repo nötig)
+*.backup.json
+*.pre-dedup-*.json
+
+# Editor / Tools
+.vscode/
+node_modules/
+__pycache__/

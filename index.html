@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f1417">
+  <title>Immobiliensuche – Desktop</title>
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .leaflet-popup-content { font: 13px -apple-system, "Segoe UI", Roboto, sans-serif; }
+    .leaflet-popup-content b { font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <h1>🏔️ Immobiliensuche</h1>
+    <span class="meta" id="meta"></span>
+    <span class="spacer"></span>
+    <span class="whoami"><span id="who">…</span> · <button class="linkbtn" id="changeName">Name</button> · <a class="linkbtn" href="mobile.html">Mobil</a></span>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="count" id="count"></div>
+  <div class="split maps">
+    <div class="list" id="list"></div>
+    <div class="mapwrap"><div id="map"></div></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+  <script src="render.js"></script>
+  <script>
+    (function () {
+      var map, markers;
+      function initMap() {
+        map = L.map("map", { scrollWheelZoom: true }).setView([47.4, 13.8], 7);
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 18, attribution: "© OpenStreetMap"
+        }).addTo(map);
+        markers = L.layerGroup().addTo(map);
+      }
+
+      function updateMarkers(arr) {
+        if (!map) return;
+        markers.clearLayers();
+        var pts = [];
+        arr.forEach(function (o) {
+          if (o.lat && o.lon) {
+            var m = L.marker([o.lat, o.lon]);
+            m.bindPopup('<b>' + Immo.ui.esc(o.titel || "") + '</b><br>' +
+              Immo.ui.esc(o.ort || "") + '<br>' + Immo.fmtPreis(o.preis) +
+              ' · Freiheit ' + Immo.ui.esc(o.freiheits_score == null ? "—" : o.freiheits_score) +
+              '<br><a href="' + Immo.ui.esc(o.url) + '" target="_blank" rel="noopener">Inserat ↗</a>');
+            markers.addLayer(m);
+            pts.push([o.lat, o.lon]);
+          }
+        });
+        if (pts.length) { try { map.fitBounds(pts, { padding: [30, 30], maxZoom: 11 }); } catch (e) {} }
+      }
+
+      initMap();
+
+      var app = Immo.ui.createApp({
+        listEl: document.getElementById("list"),
+        filtersEl: document.getElementById("filters"),
+        countEl: document.getElementById("count"),
+        onRendered: function (arr) { updateMarkers(arr); },
+      });
+
+      function updateWho() {
+        var n = Immo.getMyName && Immo.getMyName();
+        document.getElementById("who").textContent = n ? ("Du: " + n) : (Immo.isReady() ? "Du: (kein Name)" : "verbinde…");
+      }
+      document.getElementById("changeName").addEventListener("click", function () {
+        app.askName().then(function () { updateWho(); app.refresh(); });
+      });
+
+      app.start().then(updateWho).catch(function (e) {
+        document.getElementById("list").innerHTML = '<div class="empty">Fehler beim Laden: ' + (e && e.message) + '</div>';
+      });
+
+      var iv = setInterval(function () {
+        if (app.state.data) {
+          var m = app.state.data.meta || {};
+          document.getElementById("meta").textContent = "Letzter Lauf: " + (m.letzter_lauf_datum || "—") + " · " + (m.anzahl || 0) + " Objekte";
+          updateWho();
+          clearInterval(iv);
+        }
+      }, 200);
+    })();
+  </script>
+</body>
+</html>

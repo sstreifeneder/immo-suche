@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1417">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Immobiliensuche</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">
+    <h1>🏔️ Immobiliensuche</h1>
+    <span class="meta" id="meta"></span>
+    <span class="spacer"></span>
+    <span class="whoami"><span id="who">…</span> · <button class="linkbtn" id="changeName">Name</button> · <a class="linkbtn" href="index.html">Desktop</a></span>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="count" id="count"></div>
+  <div class="list" id="list"></div>
+  <div class="foot">Daten aktualisiert pro Lauf · Bewertungen privat pro Gerät (Firebase)</div>
+
+  <!-- Firebase (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+  <script src="render.js"></script>
+  <script>
+    (function () {
+      var app = Immo.ui.createApp({
+        listEl: document.getElementById("list"),
+        filtersEl: document.getElementById("filters"),
+        countEl: document.getElementById("count"),
+      });
+
+      function updateWho() {
+        var n = Immo.getMyName && Immo.getMyName();
+        document.getElementById("who").textContent = n ? ("Du: " + n) : (Immo.isReady() ? "Du: (kein Name)" : "verbinde…");
+      }
+      document.getElementById("changeName").addEventListener("click", function () {
+        app.askName().then(function () { updateWho(); app.refresh(); });
+      });
+
+      Immo.loadData; // noop ref
+      app.start().then(updateWho).catch(function (e) {
+        document.getElementById("list").innerHTML = '<div class="empty">Fehler beim Laden: ' + (e && e.message) + '</div>';
+      });
+
+      // Meta-Zeile sobald Daten da sind
+      var iv = setInterval(function () {
+        if (app.state.data) {
+          var m = app.state.data.meta || {};
+          document.getElementById("meta").textContent = "Letzter Lauf: " + (m.letzter_lauf_datum || "—") + " · " + (m.anzahl || 0) + " Objekte";
+          updateWho();
+          clearInterval(iv);
+        }
+      }, 200);
+
+      // PWA Service Worker
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("sw.js").catch(function (e) { console.warn("SW:", e); });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
