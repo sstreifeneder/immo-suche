@@ -175,10 +175,34 @@ window.Immo = (function () {
     if (!n) return "Preis a. A.";
     return n.toLocaleString("de-DE") + " €";
   }
+  // Robuste Zahl aus Zahl ODER (Alt-)Textwert wie "160 m², 6 Zimmer" / "57.486 m²" / "1,1 ha".
+  function parseGer(t) {
+    t = t.replace(/\s/g, "");
+    if (t.indexOf(".") >= 0 && t.indexOf(",") >= 0) t = t.replace(/\./g, "").replace(",", ".");
+    else if (t.indexOf(",") >= 0) t = t.replace(",", ".");
+    else if (t.indexOf(".") >= 0) {
+      const p = t.split(".");
+      if (p.slice(1).every((x) => x.length === 3)) t = t.replace(/\./g, "");
+    }
+    const n = parseFloat(t);
+    return isFinite(n) ? n : null;
+  }
+  function toNum(v) {
+    if (v === null || v === undefined || v === "") return null;
+    if (typeof v === "number") return isFinite(v) ? v : null;
+    const s = String(v);
+    if (/(k\.\s?a|nicht beziffert|nicht angegeben|vermutlich|keine m2|keine m²)/i.test(s)) return null;
+    let m = s.match(/(\d[\d.,]*)\s*m[²2]/);
+    if (m) return parseGer(m[1]);
+    let h = s.match(/(\d[\d.,]*)\s*ha/i);
+    if (h) { const n = parseGer(h[1]); return n === null ? null : n * 10000; }
+    let f = s.match(/\d[\d.,]*/);
+    return f ? parseGer(f[0]) : null;
+  }
+
   function fmtNum(v, unit) {
-    if (v === null || v === undefined || v === "" || v === 0) return "—";
-    const n = typeof v === "number" ? v : parseFloat(String(v).replace(/[^\d.,]/g, "").replace(",", "."));
-    if (!isFinite(n)) return "—";
+    const n = toNum(v);
+    if (n === null || n === 0) return "—";
     return Math.round(n).toLocaleString("de-DE") + (unit ? " " + unit : "");
   }
 
@@ -214,8 +238,8 @@ window.Immo = (function () {
   }
 
   function numOr(v, fallback) {
-    const n = typeof v === "number" ? v : parseInt(String(v || "").replace(/[^\d]/g, ""), 10);
-    return isFinite(n) && n > 0 ? n : fallback;
+    const n = toNum(v);
+    return n !== null && n > 0 ? n : fallback;
   }
 
   function sortObjekte(arr, key, ctx) {

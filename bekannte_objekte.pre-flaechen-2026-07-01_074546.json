@@ -1,66 +1,60 @@
 {
-  "meta": {
-    "letzter_lauf": "2026-06-29T09:28:00+02:00",
-    "letzter_lauf_datum": "2026-06-29",
-    "anzahl": 108,
-    "anzahl_aktiv": 33,
-    "schema_version": 1,
-    "generiert_am": "2026-07-01T07:49:00+00:00",
-    "lauf_historie": [
-      {
-        "zeit": "2026-06-24T21:31:00+02:00",
-        "typ": "baseline",
-        "neu": 15,
-        "preisaenderungen": 0,
-        "entfernt": 0,
-        "aktiv_gesamt": 20,
-        "davon_zu_pruefen": 5
-      },
-      {
-        "zeit": "2026-06-25T05:17:00+02:00",
-        "typ": "delta",
-        "neu": 23,
-        "preisaenderungen": 0,
-        "entfernt": 0,
-        "aktiv_gesamt": 43,
-        "davon_zu_pruefen": 25,
-        "nicht_gefunden": 17
-      },
-      {
-        "zeit": "2026-06-25T21:30:00+02:00",
-        "typ": "delta",
-        "neu": 13,
-        "preisaenderungen": 0,
-        "entfernt": 1,
-        "aktiv_gesamt": 55,
-        "davon_zu_pruefen": 28,
-        "davon_hart_ok_aktiv": 27,
-        "nicht_gefunden": 3
-      },
-      {
-        "zeit": "2026-06-26T14:30:00+02:00",
-        "typ": "delta",
-        "neu": 28,
-        "preisaenderungen": 0,
-        "entfernt": 1,
-        "aktiv_gesamt": 83,
-        "davon_zu_pruefen": 50,
-        "davon_hart_ok_aktiv": 33,
-        "nicht_gefunden": 4
-      },
-      {
-        "zeit": "2026-06-29T09:28:00+02:00",
-        "typ": "delta",
-        "neu": 24,
-        "preisaenderungen": 0,
-        "entfernt": 3,
-        "aktiv_gesamt": 105,
-        "davon_zu_pruefen": 72,
-        "davon_hart_ok_aktiv": 33,
-        "nicht_gefunden": 24
-      }
-    ]
-  },
+  "schema_version": 1,
+  "letzter_lauf": "2026-06-29T09:28:00+02:00",
+  "lauf_historie": [
+    {
+      "zeit": "2026-06-24T21:31:00+02:00",
+      "typ": "baseline",
+      "neu": 15,
+      "preisaenderungen": 0,
+      "entfernt": 0,
+      "aktiv_gesamt": 20,
+      "davon_zu_pruefen": 5
+    },
+    {
+      "zeit": "2026-06-25T05:17:00+02:00",
+      "typ": "delta",
+      "neu": 23,
+      "preisaenderungen": 0,
+      "entfernt": 0,
+      "aktiv_gesamt": 43,
+      "davon_zu_pruefen": 25,
+      "nicht_gefunden": 17
+    },
+    {
+      "zeit": "2026-06-25T21:30:00+02:00",
+      "typ": "delta",
+      "neu": 13,
+      "preisaenderungen": 0,
+      "entfernt": 1,
+      "aktiv_gesamt": 55,
+      "davon_zu_pruefen": 28,
+      "davon_hart_ok_aktiv": 27,
+      "nicht_gefunden": 3
+    },
+    {
+      "zeit": "2026-06-26T14:30:00+02:00",
+      "typ": "delta",
+      "neu": 28,
+      "preisaenderungen": 0,
+      "entfernt": 1,
+      "aktiv_gesamt": 83,
+      "davon_zu_pruefen": 50,
+      "davon_hart_ok_aktiv": 33,
+      "nicht_gefunden": 4
+    },
+    {
+      "zeit": "2026-06-29T09:28:00+02:00",
+      "typ": "delta",
+      "neu": 24,
+      "preisaenderungen": 0,
+      "entfernt": 3,
+      "aktiv_gesamt": 105,
+      "davon_zu_pruefen": 72,
+      "davon_hart_ok_aktiv": 33,
+      "nicht_gefunden": 24
+    }
+  ],
   "objekte": [
     {
       "url": "https://www.immobilienscout24.at/expose/6a3243ff65ac7aee494f6b81",
@@ -1695,8 +1689,8 @@
       "region": "Niederösterreich - Waldviertel (Schweiggers, Bezirk Zwettl)",
       "ort": "3932 Schweiggers (Ortsteil Limbach)",
       "preis": 188000,
-      "wohnflaeche": 160,
-      "grundflaeche": 4903,
+      "wohnflaeche": "160 m², 6 Zimmer",
+      "grundflaeche": "4.903 m²",
       "nutzflaeche": "Vierkanthof mit Nebengebäuden, Scheune, Stall",
       "typ": "Bauernhaus / Vierkanthof",
       "widmung": "n/a (Vierkanthof, Landwirtschaft möglich)",
@@ -1714,8 +1708,7 @@
       "lat": 48.66,
       "lon": 15.16,
       "url_norm": "https://dibeo.at/expose/synergie/h-bauernhaus-kauf/noe/3932/bis200000/2168529/acvblr",
-      "dedup_fp": "3932|190000|160|4900",
-      "wohnflaeche_hinweis": "6 Zimmer"
+      "dedup_fp": null
     },
     {
       "url": "https://www.dibeo.at/expose/remaxfit2/h-bauernhaus-kauf/ooe/4723/bis600000/2191216/acvblr",
@@ -1723,8 +1716,8 @@
       "region": "Oberösterreich - Sauwald/Innviertel-Grenze (Natternbach, Bezirk Grieskirchen)",
       "ort": "4723 Natternbach",
       "preis": 539000,
-      "wohnflaeche": 160,
-      "grundflaeche": 11576,
+      "wohnflaeche": "160 m², 7 Zimmer",
+      "grundflaeche": "11.576 m² (ca. 1,1 ha)",
       "nutzflaeche": "Stadel, Werkstatt, Doppelgarage, Nebengebäude, Teichanlage",
       "typ": "Bauernhaus / Sacherl",
       "widmung": "Wohnsitz mit landwirtschaftlicher Nutzung möglich",
@@ -1742,9 +1735,7 @@
       "lat": 48.42,
       "lon": 13.75,
       "url_norm": "https://dibeo.at/expose/remaxfit2/h-bauernhaus-kauf/ooe/4723/bis600000/2191216/acvblr",
-      "dedup_fp": "4723|540000|160|11600",
-      "wohnflaeche_hinweis": "7 Zimmer",
-      "grundflaeche_hinweis": "(ca. 1,1 ha)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immobilien.net/immobilie/5552-forstau/alpenresidenz-mit-beheiztem-pool-und-dachsteinblick-traumlage-zwischen-reiteralm-und-fageralm-ski-amade-68ef6f6e8c4b5843c5d42926/",
@@ -1752,8 +1743,8 @@
       "region": "Pongau",
       "ort": "Forstau (5552)",
       "preis": null,
-      "wohnflaeche": 237.9,
-      "grundflaeche": 1018,
+      "wohnflaeche": "237,9 m2",
+      "grundflaeche": "1.018 m2 (zzgl. zusaetzliches Grundstueck)",
       "nutzflaeche": "237,9 m2; 4 SZ, 2 Baeder, Buero, Wohnraum 49 m2, Carport/Lager UG",
       "typ": "Einfamilienhaus",
       "widmung": "Wohnen (Hauptwohnsitz; keine Zweitwohnsitzwidmung erwaehnt)",
@@ -1771,8 +1762,7 @@
       "lat": 47.3917,
       "lon": 13.55,
       "url_norm": "https://immobilien.net/immobilie/5552-forstau/alpenresidenz-mit-beheiztem-pool-und-dachsteinblick-traumlage-zwischen-reiteralm-und-fageralm-ski-amade-68ef6f6e8c4b5843c5d42926",
-      "dedup_fp": "5552||240|1000",
-      "grundflaeche_hinweis": "(zzgl. zusaetzliches Grundstueck)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immobilien.net/immobilie/5583-muhr/landhaus-in-muhr-grosszuegige-flaeche-3-balkone-garage-und-mehr-6a27df7e07fb9c0a32f15305/",
@@ -1780,8 +1770,8 @@
       "region": "Lungau",
       "ort": "Muhr (5583)",
       "preis": 249000,
-      "wohnflaeche": 186,
-      "grundflaeche": 771,
+      "wohnflaeche": "186 m2",
+      "grundflaeche": "771 m2",
       "nutzflaeche": "186 m2 Wohnflaeche; separates grosses Garagengebaeude",
       "typ": "Landhaus / Einfamilienhaus",
       "widmung": "Wohnen (Nationalparkgemeinde Muhr)",
@@ -1799,7 +1789,7 @@
       "lat": 47.105,
       "lon": 13.5,
       "url_norm": "https://immobilien.net/immobilie/5583-muhr/landhaus-in-muhr-grosszuegige-flaeche-3-balkone-garage-und-mehr-6a27df7e07fb9c0a32f15305",
-      "dedup_fp": "5583|250000|185|800"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immobilien.net/immobilie/5591-ramingstein/ihr-platz-in-den-alpen-charmantes-haus-im-lungau-6a3d050b3e3fb64b50cc9608/",
@@ -1807,8 +1797,8 @@
       "region": "Lungau",
       "ort": "Ramingstein (5591)",
       "preis": 265000,
-      "wohnflaeche": 120,
-      "grundflaeche": 2789,
+      "wohnflaeche": "120 m2",
+      "grundflaeche": "2.789 m2",
       "nutzflaeche": "120 m2",
       "typ": "Einfamilienhaus / charmantes Haus",
       "widmung": "Wohnen",
@@ -1826,7 +1816,7 @@
       "lat": 47.065,
       "lon": 13.705,
       "url_norm": "https://immobilien.net/immobilie/5591-ramingstein/ihr-platz-in-den-alpen-charmantes-haus-im-lungau-6a3d050b3e3fb64b50cc9608",
-      "dedup_fp": "5591|265000|120|2800"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immobilien.net/immobilie/5612-grossarl-huettschlag/leben-und-geniessen-im-nationalpark-hohe-tauern-6a0365b0e9613f27f26059b9/",
@@ -1834,8 +1824,8 @@
       "region": "Pongau",
       "ort": "Grossarl-Huettschlag (5612)",
       "preis": null,
-      "wohnflaeche": 280,
-      "grundflaeche": 761,
+      "wohnflaeche": "280 m2",
+      "grundflaeche": "761 m2",
       "nutzflaeche": "420 m2 (auf einer Ebene ~140 m2, EG/OG Kacheloefen, Dachboden)",
       "typ": "Einfamilienhaus / Feriendomizil (Hauptwohnsitzverpflichtung)",
       "widmung": "Hauptwohnsitz (zum Erwerb Hauptwohnsitz noetig)",
@@ -1853,7 +1843,7 @@
       "lat": 47.133,
       "lon": 13.253,
       "url_norm": "https://immobilien.net/immobilie/5612-grossarl-huettschlag/leben-und-geniessen-im-nationalpark-hohe-tauern-6a0365b0e9613f27f26059b9",
-      "dedup_fp": "5612||280|800"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immobilien.net/immobilie/5640-bad-gastein/zwischen-gaemsen-und-waeldern-privates-berghaeuschen-ueber-bad-gastein-69fcae45dcddabf34d259eb0/",
@@ -1861,8 +1851,8 @@
       "region": "Pongau",
       "ort": "Remsach/Bad Gastein (5640)",
       "preis": 649000,
-      "wohnflaeche": 103,
-      "grundflaeche": 1399,
+      "wohnflaeche": "103 m2 (Wohnnutzflaeche ~110 m2)",
+      "grundflaeche": "1.399 m2",
       "nutzflaeche": "103 m2",
       "typ": "Chalet / Einfamilienhaus (Berghaeuschen)",
       "widmung": "Wohnen (Gruenland, idyllisch)",
@@ -1880,8 +1870,7 @@
       "lat": 47.11,
       "lon": 13.135,
       "url_norm": "https://immobilien.net/immobilie/5640-bad-gastein/zwischen-gaemsen-und-waeldern-privates-berghaeuschen-ueber-bad-gastein-69fcae45dcddabf34d259eb0",
-      "dedup_fp": "5640|650000|105|1400",
-      "wohnflaeche_hinweis": "(Wohnnutzflaeche )"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immobilienscout24.at/expose/690da3f2dacbc439d9e500b9",
@@ -1997,8 +1986,8 @@
       "region": "Vinschgau",
       "ort": "Latsch / St. Martin am Kofel (San Martino al Monte), ca. 1.600 m",
       "preis": 375000,
-      "wohnflaeche": null,
-      "grundflaeche": 43000,
+      "wohnflaeche": "k.A. - bestehende Hofstelle sanierungsbeduerftig, Abbruch im genehmigten Neubauprojekt vorgesehen; keine bewohnbare Wohnflaeche beziffert",
+      "grundflaeche": "ca. 4,3 ha (43.000 m2) arrondierte bewaesserte Wiesen rund um die Hofstelle + 1/2-Anteil an ca. 14 ha Wald",
       "nutzflaeche": "k.A.",
       "typ": "Geschlossener Hof (Landwirtschaft) mit genehmigtem Bauprojekt fuer Wohnhaus + 2 Ferienwohnungen + Wirtschaftsgebaeude",
       "widmung": "Geschlossener Hof - Erwerb erfordert Genehmigung der Hoefekommission (Hoefegesetz/Wohnreform 2025: landwirtschaftliche Taetigkeit + Ausbildung erforderlich, Ausnahmen moeglich)",
@@ -2016,9 +2005,7 @@
       "lat": 46.6167,
       "lon": 10.8667,
       "url_norm": "https://immomarkt-suedtirol.bz/wellenzohn/52-latsch-st-martin-am-kofel-geschlossener-hof-in-alleinlage-mit-genehmigtem-bauprojekt-zu-verkaufen",
-      "dedup_fp": "latsch|375000||43000",
-      "wohnflaeche_hinweis": "k.A. - bestehende Hofstelle sanierungsbeduerftig, Abbruch im genehmigten Neubauprojekt vorgesehen; keine bewohnbare Wohnflaeche beziffert",
-      "grundflaeche_hinweis": "ca. 4,3 ha () arrondierte bewaesserte Wiesen rund um die Hofstelle + 1/2-Anteil an ca. 14 ha Wald"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immomarkt-suedtirol.bz/wellenzohn/52-exklusives-einfamilienhaus-mit-grossem-garten-in-sonnigster-lage-von-mals-zu-verkaufen",
@@ -2026,8 +2013,8 @@
       "region": "Vinschgau",
       "ort": "Mals - Dorfzentrum",
       "preis": null,
-      "wohnflaeche": 275,
-      "grundflaeche": null,
+      "wohnflaeche": "275 m2 (Verkaufsflaeche 234 m2)",
+      "grundflaeche": "k.A. - 'grosser Privatgarten' genannt, keine m2-Zahl",
       "nutzflaeche": "234 m2 (Verkaufsflaeche)",
       "typ": "Einfamilienhaus, freistehend, 3 Ebenen (mit Einliegerwohnung/Studio im UG)",
       "widmung": "k.A. zu Konventionierung; Fernwaerme; Baujahr/Sanierung 2013; Ortlerblick; im Dorfzentrum von Mals",
@@ -2045,9 +2032,7 @@
       "lat": 46.6889,
       "lon": 10.5444,
       "url_norm": "https://immomarkt-suedtirol.bz/wellenzohn/52-exklusives-einfamilienhaus-mit-grossem-garten-in-sonnigster-lage-von-mals-zu-verkaufen",
-      "dedup_fp": null,
-      "wohnflaeche_hinweis": "(Verkaufsflaeche)",
-      "grundflaeche_hinweis": "k.A. - 'grosser Privatgarten' genannt, keine m2-Zahl"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immoco.it/en/property/detached-house-with-large-plot-for-sale-in-muehlwalder-valley",
@@ -2055,8 +2040,8 @@
       "region": "Pustertal (Muehlwalder Tal)",
       "ort": "Selva dei Molini / Muehlwald",
       "preis": 540000,
-      "wohnflaeche": 312,
-      "grundflaeche": null,
+      "wohnflaeche": "312 m2 Wohnflaeche / 594-595 m2 Verkaufsflaeche (freie/unallozierte Wohnkubatur)",
+      "grundflaeche": "'grosses Grundstueck' (large plot) - konkrete m2-Zahl im Exposé nicht beziffert; Lageplan vorhanden, Groesse k.A.",
       "nutzflaeche": "312 m2 Wohnflaeche",
       "typ": "Aelteres freistehendes Einzelhaus; beworben zur Realisierung Mehrfamilienhaus mit 2-3 Einheiten / B&B / Ferienhaus (starker Rendite-/Mehrfamilien-Fokus)",
       "widmung": "Nicht konventioniert ('unconventional, South Tyrol'); Energieklasse G; ruhige Lage nahe Neves-/Meggima-See",
@@ -2074,9 +2059,7 @@
       "lat": 46.9333,
       "lon": 11.9667,
       "url_norm": "https://immoco.it/en/property/detached-house-with-large-plot-for-sale-in-muehlwalder-valley",
-      "dedup_fp": "selva dei molini|540000|310|",
-      "wohnflaeche_hinweis": "Wohnflaeche / 594- Verkaufsflaeche (freie/unallozierte Wohnkubatur)",
-      "grundflaeche_hinweis": "'grosses Grundstueck' (large plot) - konkrete m2-Zahl im Exposé nicht beziffert; Lageplan vorhanden, Groesse k.A."
+      "dedup_fp": null
     },
     {
       "url": "https://www.immoco.it/en/property/detached-house-in-panoramic-location-in-the-dolomites",
@@ -2084,8 +2067,8 @@
       "region": "Pustertal (Gadertal-Eingang)",
       "ort": "Marebbe / Enneberg - Welschellen (Rina)",
       "preis": 345000,
-      "wohnflaeche": 162,
-      "grundflaeche": null,
+      "wohnflaeche": "162 m2 Wohnflaeche / 210 m2 Verkaufsflaeche",
+      "grundflaeche": "k.A. - Bestandskubatur 561 m3; Grundstueck nicht beziffert",
       "nutzflaeche": "162 m2",
       "typ": "Freistehendes Haus, 'House to be demolished' (Abbruchobjekt) - ideal fuer EFH/Duplex/Chalet-Neubau",
       "widmung": "Nicht konventioniert ('unconventional, South Tyrol'); Energieklasse G; Baujahr 1962; Ortsrand Welschellen",
@@ -2103,9 +2086,7 @@
       "lat": 46.7,
       "lon": 11.9333,
       "url_norm": "https://immoco.it/en/property/detached-house-in-panoramic-location-in-the-dolomites",
-      "dedup_fp": "marebbe|345000|160|",
-      "wohnflaeche_hinweis": "Wohnflaeche / Verkaufsflaeche",
-      "grundflaeche_hinweis": "k.A. - Bestandskubatur 561 m3; Grundstueck nicht beziffert"
+      "dedup_fp": null
     },
     {
       "url": "https://www.idealista.it/de/immobile/35048154/",
@@ -2113,8 +2094,8 @@
       "region": "Pustertal (Ahrntal)",
       "ort": "Predoi / Prettau, Via Neuhausergasse 4",
       "preis": 620000,
-      "wohnflaeche": 330,
-      "grundflaeche": null,
+      "wohnflaeche": "330 m2",
+      "grundflaeche": "k.A. (nicht im Inserat beziffert)",
       "nutzflaeche": "k.A.",
       "typ": "Einfamilienhaus, freistehend, mehrere Etagen; enthaelt zusaetzlich eine 2-Zimmer-Einliegerwohnung",
       "widmung": "k.A. zu Konventionierung; ruhige Lage in Prettau (hinterstes Ahrntal); grosse Garage fuer bis zu 4 Pkw",
@@ -2132,8 +2113,7 @@
       "lat": 47.0417,
       "lon": 12.1083,
       "url_norm": "https://idealista.it/de/immobile/35048154",
-      "dedup_fp": "predoi|620000|330|",
-      "grundflaeche_hinweis": "k.A. (nicht im Inserat beziffert)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.idealista.it/de/immobile/34555070/",
@@ -2141,8 +2121,8 @@
       "region": "Eisacktal",
       "ort": "Latzfons (Lazfons), Gemeinde Klausen",
       "preis": 490000,
-      "wohnflaeche": 184,
-      "grundflaeche": null,
+      "wohnflaeche": "184 m2 kommerziell / ca. 128 m2 Nutzflaeche (calpestabili)",
+      "grundflaeche": "k.A. - 'ampio giardino' (grosser Garten) genannt, keine m2-Zahl",
       "nutzflaeche": "ca. 128 m2",
       "typ": "Freistehendes Einfamilienhaus (casa unifamiliare/villa), 2 Etagen; Verkauf mit Vorprojekt (umbau-/sanierungsbeduerftig)",
       "widmung": "k.A. zu Konventionierung; Baujahr 1963; Panoramalage Latzfons, ca. 15 Min von Klausen",
@@ -2160,9 +2140,7 @@
       "lat": 46.6253,
       "lon": 11.5739,
       "url_norm": "https://idealista.it/de/immobile/34555070",
-      "dedup_fp": "latzfons|490000|185|",
-      "wohnflaeche_hinweis": "kommerziell / ca. Nutzflaeche (calpestabili)",
-      "grundflaeche_hinweis": "k.A. - 'ampio giardino' (grosser Garten) genannt, keine m2-Zahl"
+      "dedup_fp": null
     },
     {
       "url": "https://www.idealista.it/de/immobile/36117841/",
@@ -2170,8 +2148,8 @@
       "region": "Vinschgau (Martelltal)",
       "ort": "Gand (Ganda), Gemeinde Martell",
       "preis": 580000,
-      "wohnflaeche": 353,
-      "grundflaeche": 860,
+      "wohnflaeche": "353 m2 kommerziell / ca. 160 m2 Nutzflaeche (zwei Wohnungen ~82 + ~116 m2 brutto)",
+      "grundflaeche": "860 m2 (Appezzamento di 860 m2)",
       "nutzflaeche": "ca. 160 m2 (calpestabili, auf zwei Einheiten verteilt)",
       "typ": "Freistehendes Haus mit ZWEI Wohneinheiten + Wirtschaftsgebaeude/Stadel (Zweifamilienhaus, eine Einheit vermietet)",
       "widmung": "Nicht konventioniert ('non convenzionata') - Hauptwohnsitz, Ferien- oder Zweitwohnsitz moeglich; Baujahr 1989",
@@ -2189,9 +2167,7 @@
       "lat": 46.5833,
       "lon": 10.7833,
       "url_norm": "https://idealista.it/de/immobile/36117841",
-      "dedup_fp": "gand|580000|355|900",
-      "wohnflaeche_hinweis": "kommerziell / ca. Nutzflaeche (zwei Wohnungen ~82 +  brutto)",
-      "grundflaeche_hinweis": "(Appezzamento di)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immobar.it/haus/moos-in-passeier/7011/ein-zuhause-mit-seele-antikes-bauernhaus-in-moos-i-passeier",
@@ -2199,8 +2175,8 @@
       "region": "Passeiertal",
       "ort": "Moos in Passeier, ca. 1.250 m",
       "preis": 680000,
-      "wohnflaeche": 167,
-      "grundflaeche": null,
+      "wohnflaeche": "ca. 167 m2 Netto-Wohnflaeche plus Dachschraegen (ca. 77 m2 Grundflaeche pro Etage)",
+      "grundflaeche": "nur 'kleines Gartengrundstueck' hinter dem Haus - keine m2-Zahl, faktisch klein",
       "nutzflaeche": "ca. 167 m2",
       "typ": "Bauernhaus (antik, instandgehalten), EG + 1. Stock + Dachgeschoss",
       "widmung": "Als Ferienhaus deklariert (IMU als Ferienhaus ca. 1.048 EUR/Jahr); Trink-/Abwasser ueber Gemeinde; APE G; oeffentlicher Stellplatz gegenueber",
@@ -2218,9 +2194,7 @@
       "lat": 46.8417,
       "lon": 11.1583,
       "url_norm": "https://immobar.it/haus/moos-in-passeier/7011/ein-zuhause-mit-seele-antikes-bauernhaus-in-moos-i-passeier",
-      "dedup_fp": "moos in passeier ca|680000|165|",
-      "wohnflaeche_hinweis": "ca. Netto-Wohnflaeche plus Dachschraegen (ca. Grundflaeche pro Etage)",
-      "grundflaeche_hinweis": "nur 'kleines Gartengrundstueck' hinter dem Haus - keine m2-Zahl, faktisch klein"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immomarkt-suedtirol.bz/wellenzohn/52-mals-planeil-wohnhaus-mit-wirtschaftsgebaeude-und-garten-zu-verkaufen",
@@ -2228,8 +2202,8 @@
       "region": "Vinschgau",
       "ort": "Mals - Planeil (Planol), Dorfzentrum",
       "preis": null,
-      "wohnflaeche": 75,
-      "grundflaeche": null,
+      "wohnflaeche": "2 Wohnungen (ca. 75 m2 + ca. 87 m2 = ca. 162 m2) + Zimmer/Dachboden",
+      "grundflaeche": "k.A. - Gemuesegarten + Holzlager genannt, keine m2-Zahl; Wirtschaftsgebaeude ca. 235 m2",
       "nutzflaeche": "ca. 162 m2 (zwei Wohnungen)",
       "typ": "Wohnhaus mit ZWEI 3-Zimmer-Wohnungen + angebautes Wirtschaftsgebaeude (Stall/Stadel) - Zwei-/Mehrfamilien",
       "widmung": "Nicht konventioniert - 'eignet sich ideal als Ferienhaus oder als Zweitwohnsitz'; Baujahr 1994; Energieklasse A3; Dorfzentrum Planeil",
@@ -2247,9 +2221,7 @@
       "lat": 46.7322,
       "lon": 10.4869,
       "url_norm": "https://immomarkt-suedtirol.bz/wellenzohn/52-mals-planeil-wohnhaus-mit-wirtschaftsgebaeude-und-garten-zu-verkaufen",
-      "dedup_fp": null,
-      "wohnflaeche_hinweis": "2 Wohnungen (ca. + ca. = ca.) + Zimmer/Dachboden",
-      "grundflaeche_hinweis": "k.A. - Gemuesegarten + Holzlager genannt, keine m2-Zahl; Wirtschaftsgebaeude ca. 235 m2"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a37b1b0584ccc48d2f2e4bf",
@@ -2376,8 +2348,8 @@
       "region": "Lungau",
       "ort": "St. Michael im Lungau (5582)",
       "preis": 420000,
-      "wohnflaeche": 135,
-      "grundflaeche": 593,
+      "wohnflaeche": "135 m2",
+      "grundflaeche": "593 m2",
       "nutzflaeche": "135 m2",
       "typ": "Einfamilienhaus",
       "widmung": "Wohnen",
@@ -2398,7 +2370,7 @@
         "https://www.immobilien.net/immobilie/5582-st-michael-im-lungau/koffer-packen-und-einziehen-einfamilienhaus-in-st-michael-i-lungau-69cc61f9947be8492071459b"
       ],
       "url_norm": "https://immobilienscout24.at/expose/69cc61f9947be8492071459b",
-      "dedup_fp": "5582|420000|135|600"
+      "dedup_fp": null
     },
     {
       "url": "https://immo.sn.at/immobilien/leben-zwischen-natur-zentrum-einfamilienhaus-in-schwarzach-GV4XN5",
@@ -2406,8 +2378,8 @@
       "region": "Salzburg (Pongau)",
       "ort": "5620 Schwarzach im Pongau (Goldeggerstrasse)",
       "preis": 579000,
-      "wohnflaeche": 178,
-      "grundflaeche": 1053,
+      "wohnflaeche": "178 m2",
+      "grundflaeche": "1.053 m2",
       "nutzflaeche": "215 m2",
       "typ": "Einfamilienhaus (Bj. 1945, laufend erweitert/modernisiert, 3 Ebenen)",
       "widmung": "Wohnnutzung, Hauptwohnsitz obligatorisch",
@@ -2425,7 +2397,7 @@
       "lat": 47.3203,
       "lon": 13.1449,
       "url_norm": "https://immo.sn.at/immobilien/leben-zwischen-natur-zentrum-einfamilienhaus-in-schwarzach-GV4XN5",
-      "dedup_fp": "5620|580000|180|1100"
+      "dedup_fp": null
     },
     {
       "url": "https://immo.sn.at/immobilien/traditionelles-bauernhaus-mit-bar-sauna-in-maishofen-GVJS2P",
@@ -2433,8 +2405,8 @@
       "region": "Salzburg (Pinzgau)",
       "ort": "5751 Maishofen (nahe Zell am See)",
       "preis": 650000,
-      "wohnflaeche": 160,
-      "grundflaeche": 410,
+      "wohnflaeche": "160 m2",
+      "grundflaeche": "410 m2",
       "nutzflaeche": "unbekannt",
       "typ": "Einfamilienhaus / Bauernhaus (Bj. 1977, Altholz/Kachelofen)",
       "widmung": "Wohnnutzung, ausdruecklich 'Hauptwohnsitz - kein Zweitwohnsitz'",
@@ -2452,7 +2424,7 @@
       "lat": 47.35,
       "lon": 12.8,
       "url_norm": "https://immo.sn.at/immobilien/traditionelles-bauernhaus-mit-bar-sauna-in-maishofen-GVJS2P",
-      "dedup_fp": "5751|650000|160|400"
+      "dedup_fp": null
     },
     {
       "url": "https://www.dibeo.at/expose/2115348",
@@ -2460,8 +2432,8 @@
       "region": "Niederösterreich - Waldviertel (Bärnkopf, Bezirk Zwettl)",
       "ort": "3633 Bärnkopf (Ortsteil Saggraben)",
       "preis": 379000,
-      "wohnflaeche": 255,
-      "grundflaeche": 4580,
+      "wohnflaeche": "255 m² (EG ca. 160 m² + OG ca. 95 m², ausgebaut 2004)",
+      "grundflaeche": "4.580 m²",
       "nutzflaeche": "zzgl. 2 Stadel, Stallung, ca. 110 m² Stadel direkt am Haus; Wiesenfläche",
       "typ": "Bauernhaus (Altbau 1875, grundlegend saniert)",
       "widmung": "nicht im Exposé beziffert (Bauernhaus/landwirtschaftl. Charakter; im Detail beim Makler zu bestätigen)",
@@ -2479,8 +2451,7 @@
       "lat": 48.2167,
       "lon": 14.9333,
       "url_norm": "https://dibeo.at/expose/2115348",
-      "dedup_fp": "3633|380000|255|4600",
-      "wohnflaeche_hinweis": "(EG ca. + OG ca., ausgebaut 2004)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.dibeo.at/expose/2185792",
@@ -2488,8 +2459,8 @@
       "region": "Niederösterreich - Waldviertel (Langschlag, Bez. Zwettl)",
       "ort": "3921 Langschlag",
       "preis": 647000,
-      "wohnflaeche": 141,
-      "grundflaeche": 88000,
+      "wohnflaeche": "ca. 141 m² (4 Zimmer)",
+      "grundflaeche": "ca. 88.000 m² (ca. 8,8 ha Wald- und Wiesenflächen)",
       "nutzflaeche": "ausgebautes Dachgeschoss; Terrasse; eigener Teich",
       "typ": "Landhaus / Landwirtschaft (renoviert)",
       "widmung": "Land- und Forstwirtschaft (Glf/FO); Haus 'Geb' = erhaltenswertes Gebäude im Grünland; KEIN Baulandanteil",
@@ -2507,9 +2478,7 @@
       "lat": 48.55,
       "lon": 14.7833,
       "url_norm": "https://dibeo.at/expose/2185792",
-      "dedup_fp": "3921|645000|140|88000",
-      "wohnflaeche_hinweis": "ca. (4 Zimmer)",
-      "grundflaeche_hinweis": "ca. (ca. 8,8 ha Wald- und Wiesenflächen)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.idealista.it/de/immobile/26800019/",
@@ -2517,8 +2486,8 @@
       "region": "Vinschgau",
       "ort": "Morter, Gemeinde Latsch (Laces)",
       "preis": 295000,
-      "wohnflaeche": 106,
-      "grundflaeche": 244.6,
+      "wohnflaeche": "Nettoflaeche 106 m2 (Handelsflaeche 167 m2) -> < 160 m2 (verfehlt)",
+      "grundflaeche": "Hofraum ca. 244,6 m2 -> < 1.000 m2 (verfehlt)",
       "nutzflaeche": "Eingang, Kueche mit Speis, Stube, 2 Schlafzimmer, Bad, Abstellraum + Keller 19,4 m2",
       "typ": "Freistehendes Haus, sanierungsbeduerftig",
       "widmung": "Konventioniert: Nein; Heizung autonom Holz; Energieklasse in Ausarbeitung; auch als Ferienwohnung beworben",
@@ -2536,9 +2505,7 @@
       "lat": 46.614,
       "lon": 10.835,
       "url_norm": "https://idealista.it/de/immobile/26800019",
-      "dedup_fp": "morter gemeinde latsch|295000|105|200",
-      "wohnflaeche_hinweis": "Nettoflaeche (Handelsflaeche) -> < (verfehlt)",
-      "grundflaeche_hinweis": "Hofraum ca. -> < (verfehlt)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.idealista.it/de/immobile/32906489/",
@@ -2546,8 +2513,8 @@
       "region": "Burggrafenamt",
       "ort": "Obertall, Gemeinde Schenna (Scena) oberhalb von Meran",
       "preis": 618000,
-      "wohnflaeche": 160,
-      "grundflaeche": 280,
+      "wohnflaeche": "160 m2 idealista-Grundflaeche (= Bruttoflaeche; netto wohl etwas darunter; nur 3 Zimmer/2 Etagen)",
+      "grundflaeche": "ca. 280 m2 private Aussenflaeche/Garten -> < 1.000 m2 (verfehlt)",
       "nutzflaeche": "EG Wohnzimmer + sep. Kueche + Bad + Abstellraum; 1. OG 2 Schlafzimmer; Terrasse; Keller",
       "typ": "Einfamilienhaus, freistehend",
       "widmung": "Nicht beziffert; Baujahr 1980, laufend renoviert; sonnige Hoehenlage. Konventionierung offen.",
@@ -2565,9 +2532,7 @@
       "lat": 46.694,
       "lon": 11.183,
       "url_norm": "https://idealista.it/de/immobile/32906489",
-      "dedup_fp": "obertall gemeinde schenna|620000|160|300",
-      "wohnflaeche_hinweis": "idealista-Grundflaeche (= Bruttoflaeche; netto wohl etwas darunter; nur 3 Zimmer/2 Etagen)",
-      "grundflaeche_hinweis": "ca. private Aussenflaeche/Garten -> < (verfehlt)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.idealista.it/de/immobile/35647069/",
@@ -2575,8 +2540,8 @@
       "region": "Vinschgau",
       "ort": "Tarsch oberhalb von Latsch (Laces)",
       "preis": 655000,
-      "wohnflaeche": 193,
-      "grundflaeche": 133,
+      "wohnflaeche": "193 m2 Bruttoflaeche; 5 Zimmer, 4 Ebenen",
+      "grundflaeche": "ca. 133 m2 Aussenflaeche mit Garten -> < 1.000 m2 (verfehlt)",
       "nutzflaeche": "EG Wohnbereich + Kueche + Arbeitsraum + Bad; 1. OG 3 Schlafzimmer + Bad; DG Dachboden; Keller mit 2 Abteilen + Heizraum + Bad; Garage 2 Fahrzeuge",
       "typ": "Haushaelfte (Doppelhaushaelfte) - Ausschluss-Objekttyp",
       "widmung": "Konventioniert: Nein (als Zweitwohnsitz beworben); Baujahr 1995; Propan-/Butangasheizung",
@@ -2594,9 +2559,7 @@
       "lat": 46.621,
       "lon": 10.847,
       "url_norm": "https://idealista.it/de/immobile/35647069",
-      "dedup_fp": "tarsch oberhalb von latsch|655000|195|100",
-      "wohnflaeche_hinweis": "Bruttoflaeche; 5 Zimmer, 4 Ebenen",
-      "grundflaeche_hinweis": "ca. Aussenflaeche mit Garten -> < (verfehlt)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immobar.it/landwirtschaft/st-pankraz/6942/ein-leben-wie-frueher-der-traum-vom-selbstversorgerhof",
@@ -2604,8 +2567,8 @@
       "region": "Ultental",
       "ort": "St. Pankraz (San Pancrazio), Ultental",
       "preis": 680000,
-      "wohnflaeche": 110,
-      "grundflaeche": 65000,
+      "wohnflaeche": "ca. 110 m2 Nettowohnflaeche aktuell (renovierungsbeduerftig); Erweiterung auf bis zu 300 m2 'denkbar' (nicht genehmigt/bestaetigt)",
+      "grundflaeche": "ca. 65.000 m2 (ca. 15.000 m2 Wiese + ca. 50.000 m2 Wald) - sehr gross",
       "nutzflaeche": "Wohnhaus + Stall + kleine Scheune unter einem Dach (Verkaufsflaeche 65.000 m2 = Gesamtgrund)",
       "typ": "Landwirtschaftliches Anwesen / Bauernhof (Wohnhaus + Stall + Scheune); wahrscheinlich geschlossener Hof",
       "widmung": "Landwirtschaftlich; wahrscheinlich geschlossener Hof -> Hoefekommission/Wohnreform 2025: Erwerb nur mit Genehmigung + landw. Taetigkeit/Ausbildung erforderlich. Energieklasse G. Konventionierung nicht explizit beziffert.",
@@ -2623,9 +2586,7 @@
       "lat": 46.553,
       "lon": 11.078,
       "url_norm": "https://immobar.it/landwirtschaft/st-pankraz/6942/ein-leben-wie-frueher-der-traum-vom-selbstversorgerhof",
-      "dedup_fp": "st pankraz|680000|110|65000",
-      "wohnflaeche_hinweis": "ca. Nettowohnflaeche aktuell (renovierungsbeduerftig); Erweiterung auf bis zu 'denkbar' (nicht genehmigt/bestaetigt)",
-      "grundflaeche_hinweis": "ca. (ca. Wiese + ca. Wald) - sehr gross"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immobilien.net/immobilie/4242-hirschbach-im-muehlkreis/charmantes-landhaus-mit-57-486m2-eigengrund-in-traumhafter-lage-6a02e12e9ce6b4f605cddaff/",
@@ -2633,8 +2594,8 @@
       "region": "Oberösterreich - Mühlviertel (Hirschbach im Mühlkreis, Bez. Freistadt)",
       "ort": "4242 Hirschbach im Mühlkreis",
       "preis": 449000,
-      "wohnflaeche": 145,
-      "grundflaeche": 57486,
+      "wohnflaeche": "145 m² (6 Zimmer)",
+      "grundflaeche": "57.486 m² (ca. 5,7 ha Eigengrund)",
       "nutzflaeche": "Eigengrund mit vielseitigen Nutzungsmöglichkeiten (Tierhaltung, Selbstversorgung)",
       "typ": "Landhaus / Bauernhaus",
       "widmung": "nicht beziffert (Landhaus, landw. Eigengrund)",
@@ -2652,9 +2613,7 @@
       "lat": 48.55,
       "lon": 14.6167,
       "url_norm": "https://immobilien.net/immobilie/4242-hirschbach-im-muehlkreis/charmantes-landhaus-mit-57-486m2-eigengrund-in-traumhafter-lage-6a02e12e9ce6b4f605cddaff",
-      "dedup_fp": "4242|450000|145|57500",
-      "wohnflaeche_hinweis": "(6 Zimmer)",
-      "grundflaeche_hinweis": "(ca. 5,7 ha Eigengrund)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immobilien.net/immobilie/5581-sankt-margarethen-im-lungau/geraeumiges-einfamilienhaus-6a3e13be2c543a196227da55/",
@@ -2662,8 +2621,8 @@
       "region": "Salzburg (Lungau)",
       "ort": "5581 St. Margarethen im Lungau (Oberbayrdorf 12)",
       "preis": 182300,
-      "wohnflaeche": 126,
-      "grundflaeche": 834,
+      "wohnflaeche": "126 m2 (Nutzflaeche)",
+      "grundflaeche": "834 m2",
       "nutzflaeche": "126 m2",
       "typ": "Einfamilienhaus (teilunterkellert, Dachboden nicht ausgebaut)",
       "widmung": "unbekannt (Wohnnutzung angenommen)",
@@ -2681,8 +2640,7 @@
       "lat": 47.11,
       "lon": 13.7333,
       "url_norm": "https://immobilien.net/immobilie/5581-sankt-margarethen-im-lungau/geraeumiges-einfamilienhaus-6a3e13be2c543a196227da55",
-      "dedup_fp": "5581|180000|125|800",
-      "wohnflaeche_hinweis": "(Nutzflaeche)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immobilienscout24.at/expose/68553c7e90db784496a4e3b5",
@@ -2771,8 +2729,8 @@
       "region": "Niederösterreich - Waldviertel (Waidhofen an der Thaya)",
       "ort": "3830 Waidhofen an der Thaya (Umgebung)",
       "preis": 470000,
-      "wohnflaeche": null,
-      "grundflaeche": 5259,
+      "wohnflaeche": "nicht im Exposé angegeben (EG: gr. Wohn-/Esszimmer + Küche + Bad; OG: 1 Schlafzimmer, 1 gr. Zimmer, Lesezimmer, Ankleide, WC) - vermutlich < 160 m²",
+      "grundflaeche": "5.259 m² (Beschreibung nennt 5.200 m²)",
       "nutzflaeche": "Keller, Garage, Nebengebäude",
       "typ": "Einfamilienhaus (ehem. Bahnhof, saniert, Massivbau)",
       "widmung": "nicht beziffert (Einfamilienhaus)",
@@ -2790,9 +2748,7 @@
       "lat": 48.8167,
       "lon": 15.2833,
       "url_norm": "https://immobilienscout24.at/expose/69c4fd19b4edae4658d422ba",
-      "dedup_fp": "3830|470000||5300",
-      "wohnflaeche_hinweis": "nicht im Exposé angegeben (EG: gr. Wohn-/Esszimmer + Küche + Bad; OG: 1 Schlafzimmer, 1 gr. Zimmer, Lesezimmer, Ankleide, WC) - vermutlich < 160 m²",
-      "grundflaeche_hinweis": "(Beschreibung nennt)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immobilienscout24.at/expose/69fe0271c3a521c369f6c72b",
@@ -2908,8 +2864,8 @@
       "region": "Vorarlberg (Brandnertal/Bludenz)",
       "ort": "6707 Buerserberg (Tschengla)",
       "preis": null,
-      "wohnflaeche": 208.6,
-      "grundflaeche": 1457,
+      "wohnflaeche": "208,6 m2 (zzgl. UG 151,04 m2, Gesamt 359,64 m2)",
+      "grundflaeche": "1.457 m2",
       "nutzflaeche": "Untergeschoss 151,04 m2",
       "typ": "Einfamilienhaus (als Ferienhaus vermarktet)",
       "widmung": "FERIENWOHNSITZWIDMUNG (bestehend) - K.O. fuer Hauptwohnsitz",
@@ -2927,8 +2883,7 @@
       "lat": 47.139,
       "lon": 9.758,
       "url_norm": "https://immowelt.at/expose/22939f25-f1fb-4986-ab8b-dd33a8b5f590",
-      "dedup_fp": "6707||210|1500",
-      "wohnflaeche_hinweis": "(zzgl. UG, Gesamt)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immowelt.at/expose/74547f87-ac56-4b75-915d-bb3665a72eac",
@@ -2936,8 +2891,8 @@
       "region": "Tirol (Imst)",
       "ort": "6460 Imst",
       "preis": null,
-      "wohnflaeche": 205,
-      "grundflaeche": 1627,
+      "wohnflaeche": "205 m2 (Eckdaten) bzw. ca. 233 m2 (Beschreibung)",
+      "grundflaeche": "1.627 m2",
       "nutzflaeche": "Keller mit Sauna/Lager",
       "typ": "Einfamilienhaus/Villa, freistehend",
       "widmung": "nicht ausgewiesen (Hauptwohnsitz vermutlich moeglich, kein Freizeitwohnsitz-Hinweis)",
@@ -2955,8 +2910,7 @@
       "lat": 47.276,
       "lon": 10.7007,
       "url_norm": "https://immowelt.at/expose/74547f87-ac56-4b75-915d-bb3665a72eac",
-      "dedup_fp": "6460||205|1600",
-      "wohnflaeche_hinweis": "(Eckdaten) bzw. ca. (Beschreibung)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immowelt.at/expose/75e3acc4-e166-4d38-8cdf-94635932fb16",
@@ -2964,8 +2918,8 @@
       "region": "Vorarlberg (Walgau/Bludenz)",
       "ort": "6710 Nenzing",
       "preis": null,
-      "wohnflaeche": 182.7,
-      "grundflaeche": 735,
+      "wohnflaeche": "182,7 m2",
+      "grundflaeche": "735 m2",
       "nutzflaeche": "nicht angegeben",
       "typ": "Einfamilienhaus",
       "widmung": "nicht ausgewiesen",
@@ -2983,7 +2937,7 @@
       "lat": 47.19,
       "lon": 9.7,
       "url_norm": "https://immowelt.at/expose/75e3acc4-e166-4d38-8cdf-94635932fb16",
-      "dedup_fp": "6710||185|700"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immowelt.at/expose/761c7bee-887c-4849-99c9-52492f1db370",
@@ -2991,8 +2945,8 @@
       "region": "Tirol (Landeck / Oberes Gericht)",
       "ort": "6542 Pfunds",
       "preis": 670000,
-      "wohnflaeche": 268,
-      "grundflaeche": 1940,
+      "wohnflaeche": "ca. 268 m2 Wohnen (EG 125,47 + OG 142,22), zzgl. UG 114,06 m2 = Gesamt ca. 382 m2; Inserat nennt 280 m2",
+      "grundflaeche": "1.940 m2 (2 Parzellen: 1.305 m2 Baeflaeche + 635 m2 Garten/landw. Flaeche)",
       "nutzflaeche": "UG 114,06 m2; Garage 30 m2",
       "typ": "Holzhaus/Chalet (Blockhaus-Charakter), freistehend",
       "widmung": "Mischgebiet / Tourismusgebiet gemaess Tiroler Raumordnungsgesetz - KEIN Freizeitwohnsitz, Hauptwohnsitz moeglich; bis Maerz 2025 von Eigentuemern bewohnt",
@@ -3010,9 +2964,7 @@
       "lat": 46.9419,
       "lon": 10.6203,
       "url_norm": "https://immowelt.at/expose/761c7bee-887c-4849-99c9-52492f1db370",
-      "dedup_fp": "6542|670000|270|1900",
-      "wohnflaeche_hinweis": "ca. Wohnen (EG 125,47 + OG 142,22), zzgl. UG = Gesamt ca.; Inserat nennt",
-      "grundflaeche_hinweis": "(2 Parzellen: Baeflaeche + Garten/landw. Flaeche)"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immowelt.at/expose/76734f59-e6fc-48c3-8fd7-5c8094a9cb40",
@@ -3020,8 +2972,8 @@
       "region": "Vorarlberg (Grosses Walsertal/Bludenz)",
       "ort": "6723 Blons",
       "preis": 675000,
-      "wohnflaeche": 230,
-      "grundflaeche": 641,
+      "wohnflaeche": "230 m2",
+      "grundflaeche": "641 m2",
       "nutzflaeche": "nicht angegeben",
       "typ": "Einfamilienhaus / Holzhaus",
       "widmung": "nicht ausgewiesen",
@@ -3039,7 +2991,7 @@
       "lat": 47.23,
       "lon": 9.87,
       "url_norm": "https://immowelt.at/expose/76734f59-e6fc-48c3-8fd7-5c8094a9cb40",
-      "dedup_fp": "6723|675000|230|600"
+      "dedup_fp": null
     },
     {
       "url": "https://www.immowelt.at/expose/a362f911-cf9c-4c09-ac63-50b83235ed9d",
@@ -3047,8 +2999,8 @@
       "region": "Tirol (Mieminger Plateau/Imst)",
       "ort": "6414 Mieming (Frohnhausen)",
       "preis": null,
-      "wohnflaeche": 160,
-      "grundflaeche": 1070,
+      "wohnflaeche": "160 m2",
+      "grundflaeche": "1.070 m2",
       "nutzflaeche": "Keller, Garage",
       "typ": "Einfamilienhaus, freistehend",
       "widmung": "GENEHMIGTER FREIZEITWOHNSITZ - K.O. fuer Hauptwohnsitz",
@@ -3066,7 +3018,7 @@
       "lat": 47.305,
       "lon": 10.965,
       "url_norm": "https://immowelt.at/expose/a362f911-cf9c-4c09-ac63-50b83235ed9d",
-      "dedup_fp": "6414||160|1100"
+      "dedup_fp": null
     }
   ]
 }
