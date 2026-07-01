@@ -35,6 +35,7 @@ Pflicht – ein Objekt nur aufnehmen, wenn alle erfüllt sind; sonst klar als �
   AUSGESCHLOSSEN: Doppelhaushälfte, Reihenhaus, Mehr-/Zweifamilienhaus, reine Anlage-/Renditeobjekte.
 - Hauptwohnsitz möglich (KEIN Freizeit-/Zweitwohnsitz, keine reine Ferienvermietung).
 - Bei Kaufpreis > 600.000 €: möglichst wenig Sanierungsbedarf.
+- **Harte Obergrenze für die Aufnahme: Kaufpreis ≤ 900.000 €.** Objekte über 900.000 € werden gar nicht in die Liste aufgenommen – auch nicht als Near-Miss/„TEIL". Der Zielpreis bleibt ≤ 650.000 €; Objekte zwischen 650.001 und 900.000 € dürfen als Near-Miss („TEIL – verfehlt: Preis …") geführt werden, alles darüber wird verworfen (nicht speichern, nicht melden). Sub-Agenten geben Objekte über 900.000 € gar nicht erst zurück.
 
 ---
 
