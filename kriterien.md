@@ -113,9 +113,7 @@ Arbeitsordner = dieser Cowork-Ordner. Zustandsdatei: `./bekannte_objekte.json`. 
    - Keine Änderungen → nur die Kopfzeile mit „keine Änderungen".
 6. **Bericht ablegen:** denselben Delta-Bericht zusätzlich als `./berichte/delta_<JJJJ-MM-TT_HHMM>.md` speichern.
 7. **Web-Daten schreiben (ZWINGEND):** `python3 tools/build_data.py` ausführen. Es liest `bekannte_objekte.json` und schreibt `./data.json` (Meta + alle Objekte). Die Web-App (`index.html` Desktop, `mobile.html` PWA) liest `data.json` und zeigt damit immer den neuesten Stand – die HTML-/JS-Dateien selbst werden **nicht** pro Lauf neu erzeugt (anders als früher; `daten.js` und `build_mobile_dashboard.py` sind abgelöst).
-8. **Online veröffentlichen (ZWINGEND, wenn möglich):** die Änderungen ins GitHub-Repo pushen, damit alle Geräte den neuen Stand sehen:
-   - `git add -A && git commit -m "Lauf <JJJJ-MM-TT>: <X> neu, <Y> Preisänderungen" && git push`
-   - Falls der Push aus der Lauf-Umgebung scheitert (kein Netzzugang): im Delta-Bericht „⚠️ Push ausstehend – bitte lokal `git push` ausführen" vermerken und den fertigen Befehl angeben.
+8. **Veröffentlichung (automatisch):** Der Lauf schreibt nur die Dateien (`bekannte_objekte.json`, `data.json`, Bericht) – **keine git-Befehle im Lauf ausführen** (die Lauf-Umgebung hat keinen Netzzugang und würde nur Lock-Dateien hinterlassen). Das Hochladen übernimmt der Auto-Push-Dienst auf dem Mac (`tools/auto_push.sh` via LaunchAgent `de.immosuche.autopush`): er committet und pusht neue Änderungen innerhalb weniger Minuten automatisch nach GitHub → GitHub Pages aktualisiert die Web-App.
    - **Bewertungen der Nutzer** liegen getrennt in Firebase (pro Gerät) und werden vom Lauf **nie** verändert; Schlüssel ist `url_norm`.
 
 ---
