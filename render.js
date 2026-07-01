@@ -214,6 +214,7 @@
     async function start() {
       state.data = await I.loadData();
       wireFilters();
+      wireRatings(); // Klick-Handler für die Bewerten-Buttons aktivieren
       refresh(); // erste Anzeige ohne Bewertungen
 
       await I.initFirebase();

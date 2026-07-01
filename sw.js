@@ -1,5 +1,5 @@
 /* Service Worker – App-Shell offline + data.json network-first. */
-const CACHE = "immo-v1";
+const CACHE = "immo-v2";
 const SHELL = [
   "mobile.html", "index.html", "styles.css", "app.js", "render.js",
   "firebase-config.js", "manifest.webmanifest",
