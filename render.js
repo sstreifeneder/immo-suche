@@ -73,13 +73,14 @@
     const kat = I.hartKat(o);
     const mine = I.myRating(ctx.byUrl, o.url_norm);
     const cons = I.consensus(ctx.byUrl, o.url_norm);
+    const bildSrc = o.bild_lokal || o.bild;
     const statusBadge = o.status === "entfernt" ? `<span class="badge entfernt">entfernt</span>`
       : o.status === "zu_pruefen" ? `<span class="badge teil">zu prüfen</span>` : "";
     const score = (o.freiheits_score || o.freiheits_score === 0)
       ? `<span class="badge score" title="${esc(o.freiheits_score_detail || "")}">Freiheit ${esc(o.freiheits_score)}</span>` : "";
     return `
       <div class="card${isNew ? " new" : ""}" data-url="${esc(o.url_norm)}">
-        ${o.bild ? `<img class="thumb" src="${esc(o.bild)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
+        ${bildSrc ? `<img class="thumb" src="${esc(bildSrc)}" data-remote="${esc(o.bild || "")}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="if(this.dataset.remote&&this.src!==this.dataset.remote){this.src=this.dataset.remote}else{this.remove()}">` : ""}
         ${isNew ? '<div class="ribbon">NEU</div>' : ""}
         <h3>${esc(o.titel || "(ohne Titel)")}</h3>
         <div class="loc">${esc(o.ort || "")}${o.region ? " · " + esc(o.region) : ""}</div>

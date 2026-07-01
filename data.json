@@ -5,7 +5,6 @@
     "anzahl": 131,
     "anzahl_aktiv": 43,
     "schema_version": 1,
-    "generiert_am": "2026-07-01T11:33:24+00:00",
     "lauf_historie": [
       {
         "zeit": "2026-06-24T21:31:00+02:00",
@@ -104,7 +103,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a3243ff65ac7aee494f6b81",
       "dedup_fp": "8453|635000|210|37700",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J00001nFAiP-851b677655674bf489e92610e55d4ff6"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J00001nFAiP-851b677655674bf489e92610e55d4ff6",
+      "bild_lokal": "images/b861aea7e334b3fb.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a319645df878ebbbccca7fb",
@@ -132,7 +132,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a319645df878ebbbccca7fb",
       "dedup_fp": "8862|450000|250|3500",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J00001kPW5O-c2b6f0d7cb0f49e1b61d70de2a732247"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J00001kPW5O-c2b6f0d7cb0f49e1b61d70de2a732247",
+      "bild_lokal": "images/cf9f11202a7f6aa3.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a330f3732d84e121f89dcc4",
@@ -160,7 +161,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a330f3732d84e121f89dcc4",
       "dedup_fp": "4421|450000|200|2900",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83Ue-1781866359-2c538cd67f744db4aefc213b2af3d0bf"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83Ue-1781866359-2c538cd67f744db4aefc213b2af3d0bf",
+      "bild_lokal": "images/8bf004c91c7cf139.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a0461a4da02f883383e25cc",
@@ -189,7 +191,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a0461a4da02f883383e25cc",
       "dedup_fp": "5660|570000|200|1500",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J00001pV2WL-1777281846-33339acf97e64e3f8672c1526f641a3d"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J00001pV2WL-1777281846-33339acf97e64e3f8672c1526f641a3d",
+      "bild_lokal": "images/d1490354f40b91ba.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a380a73584ccc48d2f34eae",
@@ -217,7 +220,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a380a73584ccc48d2f34eae",
       "dedup_fp": "8524|400000|225|3100",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.001P900000KmCzc-1781871689-68ceb3b65d334247818ecef8e39f4138"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.001P900000KmCzc-1781871689-68ceb3b65d334247818ecef8e39f4138",
+      "bild_lokal": "images/76b3e028814f0c91.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a2faa6d0253df365d5fb550",
@@ -245,7 +249,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a2faa6d0253df365d5fb550",
       "dedup_fp": "9530|395000|300|3100",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3rAp-1781182777-8ccb490e03c744aba0582b9a7b9eaf6a"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3rAp-1781182777-8ccb490e03c744aba0582b9a7b9eaf6a",
+      "bild_lokal": "images/773d59b40b1cc5dc.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a305b06a003cef3f4ba5238",
@@ -274,7 +279,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a305b06a003cef3f4ba5238",
       "dedup_fp": "3172|490000|280|1900",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.001P900000oJZyE-613b91f91c6c480ba5a074fc2c0a8ce6"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.001P900000oJZyE-613b91f91c6c480ba5a074fc2c0a8ce6",
+      "bild_lokal": "images/7f271756116e9262.jpg"
     },
     {
       "url": "https://immobilien.derstandard.at/detail/15150703",
@@ -305,7 +311,8 @@
       "bild": "https://i.prod.mp-dst.onyx60.com/plain/immoimporte/justimmo_backfill/storage.justimmo.at/thumb/5fc1c89677863499d54866848ca6445b/Fc_Lb_MR57wEjzybqoTcNfqhmitv4.jpg_fm_h1080_w1920/63IFZlybeUyyqCcBLOvOGb20250725.jpg/~/tcHrZQ/format:jpg/rs:fill:1200:630:1",
       "url_alt": [
         "https://immobilien.derstandard.at/detail/15150703/tolle-liegenschaft-mit-einem-einfamilienhaus-und-urigem-bauernhaus-mit-garagen-und-stallgebc3a4ude"
-      ]
+      ],
+      "bild_lokal": "images/b4b4bc37ade98e77.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a2843797ee84e039e471919",
@@ -333,7 +340,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a2843797ee84e039e471919",
       "dedup_fp": "8352|650000|245|1200",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000Oe9p5-ceea3193357b41d4b2550a588ac573b6"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000Oe9p5-ceea3193357b41d4b2550a588ac573b6",
+      "bild_lokal": "images/73a4f7efc5c106dc.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a31781065ac7aee494d51e6",
@@ -361,7 +369,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a31781065ac7aee494d51e6",
       "dedup_fp": "8551|240000|160|2300",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83jZ-1781543764-ee4be72b7400494b94187a6f241ac3fc"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83jZ-1781543764-ee4be72b7400494b94187a6f241ac3fc",
+      "bild_lokal": "images/f712dad9912d026d.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a35203c49f165b62eff313a",
@@ -389,7 +398,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a35203c49f165b62eff313a",
       "dedup_fp": "9360|320000|240|1200",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83YZ-1781601559-6ee2775c789146648c1ecb6d4197ae5a"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83YZ-1781601559-6ee2775c789146648c1ecb6d4197ae5a",
+      "bild_lokal": "images/5aeba8294b85617d.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a364600a285f6889873cb01",
@@ -417,7 +427,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a364600a285f6889873cb01",
       "dedup_fp": "4552|475000|240|1700",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J000029PN9D-1781947340-5627f6538770451aacbabfa5b385c9cd"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J000029PN9D-1781947340-5627f6538770451aacbabfa5b385c9cd",
+      "bild_lokal": "images/77072c21dded3043.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a3503748041a246a6c05115",
@@ -445,7 +456,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a3503748041a246a6c05115",
       "dedup_fp": "9150|460000|255|1000",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3rBw-1781602204-b5faf1594fcd4ea49eeea699a75b0608"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3rBw-1781602204-b5faf1594fcd4ea49eeea699a75b0608",
+      "bild_lokal": "images/c7ee8c682e71d5ac.png"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a381647584ccc48d2f354b9",
@@ -474,7 +486,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a381647584ccc48d2f354b9",
       "dedup_fp": "8784|360000|165|1200",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83wn-47cfc957459c44c18677dbb81bb7872d"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83wn-47cfc957459c44c18677dbb81bb7872d",
+      "bild_lokal": "images/6acc1628c9d8ff13.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a337d3477638d2a2bdea864",
@@ -502,7 +515,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a337d3477638d2a2bdea864",
       "dedup_fp": "9103|270000|210|1900",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3r9F-95f9418c0276498c999353475b813533"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3r9F-95f9418c0276498c999353475b813533",
+      "bild_lokal": "images/5c576b0351c9a093.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a39088ca285f688987a896d",
@@ -530,7 +544,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a39088ca285f688987a896d",
       "dedup_fp": "9132|495000|240|3900",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3rAo-1782129667-d03d16b3263846e8a35847a8758a2018"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3rAo-1782129667-d03d16b3263846e8a35847a8758a2018",
+      "bild_lokal": "images/91a0eed04e0b20e1.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a18469f1f6f14ada87b9de0",
@@ -558,7 +573,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a18469f1f6f14ada87b9de0",
       "dedup_fp": "6542|550000|160|",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3qkQ-1779357045-ca36b2cf199a4cf280b17873a2fd8f42"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3qkQ-1779357045-ca36b2cf199a4cf280b17873a2fd8f42",
+      "bild_lokal": "images/0974f8c201b03682.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/9633-reisach/neuer-preis-stilvolles-familienhaus-mit-unverbaubarem-blick-auf-die-karnischen-alpen-69f5d2532786f64d52e7bd49/",
@@ -587,7 +603,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilien.net/immobilie/9633-reisach/neuer-preis-stilvolles-familienhaus-mit-unverbaubarem-blick-auf-die-karnischen-alpen-69f5d2532786f64d52e7bd49",
       "dedup_fp": "9633|495000|310|1900",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001Qg94Z-1753267550-5782233fc86340bcb2aa471cbbf93478"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001Qg94Z-1753267550-5782233fc86340bcb2aa471cbbf93478",
+      "bild_lokal": "images/6cf03110bab5aee9.jpg"
     },
     {
       "url": "https://www.wohnnet.at/immobilien/haus-8511-greisdorf-kauf-6-zimmer-296469068",
@@ -619,7 +636,8 @@
       "bild": "https://www.wohnnet.at/bilder/bug/_thumb_98bb908541b7a93f2861e35acbf000e8_Fc_Ltl_M4fnaOFvvTPLHqHLSruZvLZ.png_fc_h600_w800_5wSZd3WjQMhVEbWa5oL5Gb.jpg.jpg",
       "url_alt": [
         "https://www.immobilien.net/immobilie/8511-sankt-stefan-ob-stainz/mein-traumhafter-landsitz-im-bauernhaus-in-sonniger-ruhelage-mit-blick-auf-st-stefan-ob-stainz-6889c21fd4e7f6801cb391f0/"
-      ]
+      ],
+      "bild_lokal": "images/23f23c0e6a79ad56.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/9623-tratten/einfamilienhaus-in-tratten-6a030243e9613f27f25fc258/",
@@ -648,7 +666,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilien.net/immobilie/9623-tratten/einfamilienhaus-in-tratten-6a030243e9613f27f25fc258",
       "dedup_fp": "9623|240000|165|1100",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001Qg94Z-1778241799-59d501eec56d4b9db70a7d680c79b313"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001Qg94Z-1778241799-59d501eec56d4b9db70a7d680c79b313",
+      "bild_lokal": "images/954ebea65bf5bf4e.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/9473-lavamuend/preisreduktion-absolute-ruhelage-landwirtschaft-mit-panoramablick-im-sueden-kaerntens-67e68cbeb0a88a61fde3a490/",
@@ -680,7 +699,8 @@
       "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3rBw-1743150240-cfe434df0e334ebeb38288f523e795f2",
       "url_alt": [
         "https://www.immowelt.at/expose/0c61cd99-ecab-4372-8222-b600d33ffe04"
-      ]
+      ],
+      "bild_lokal": "images/cbd2681fd5241926.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/9652-birnbaum/grosszuegiges-bauernhaus-mit-viel-grundbesitz-im-lesachtal-nebengebaeude-und-alpenflaeche-inklusive-in-der-natur-6a2f3733f2ccdf265e343063/",
@@ -712,7 +732,8 @@
       "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000iMSuQ-1662042752-9029c5642d2e4498a68016f229f86dd3",
       "url_alt": [
         "https://www.immowelt.at/expose/a37ffb8d-7fd7-4243-9bcc-3a8aab18ad28"
-      ]
+      ],
+      "bild_lokal": "images/ea3cb8ba70c250b8.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/9623-matschiedl/schoenes-einfamilienhaus-in-herrlicher-suedlage-bei-st-stefan-an-der-gail-69d8d7302308621636724960/",
@@ -741,7 +762,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilien.net/immobilie/9623-matschiedl/schoenes-einfamilienhaus-in-herrlicher-suedlage-bei-st-stefan-an-der-gail-69d8d7302308621636724960",
       "dedup_fp": "9623|415000|140|4800",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J000027B8xu-1777970462-87611ac68a454e5d9e358a6458968a73"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J000027B8xu-1777970462-87611ac68a454e5d9e358a6458968a73",
+      "bild_lokal": "images/ce33bcfdc8685ca0.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/9634-grafendorf-grafendorf/einfamilienhaus-in-sonniger-lage-mit-viel-platz-im-gruenen-69146a8aa1e119714410d66d/",
@@ -770,7 +792,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilien.net/immobilie/9634-grafendorf-grafendorf/einfamilienhaus-in-sonniger-lage-mit-viel-platz-im-gruenen-69146a8aa1e119714410d66d",
       "dedup_fp": "9634|285000|145|1500",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E84Do-1e9b02392960480c955b36f4b0cd9326"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E84Do-1e9b02392960480c955b36f4b0cd9326",
+      "bild_lokal": "images/f2c4087291c5c4f8.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/5505-muehlbach-am-hochkoenig/einfamilienhaus-mit-zimmervermietung-in-muehlbach-6a39537381af2ba6547d882d/",
@@ -799,7 +822,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilien.net/immobilie/5505-muehlbach-am-hochkoenig/einfamilienhaus-mit-zimmervermietung-in-muehlbach-6a39537381af2ba6547d882d",
       "dedup_fp": "5505|450000|185|900",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E845z-1781536203-3fddd967a7d840e294ee32396dab8528"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E845z-1781536203-3fddd967a7d840e294ee32396dab8528",
+      "bild_lokal": "images/7bba23fd52c22814.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/69f2f9bc959fe195d6051cbd",
@@ -856,7 +880,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/6a17f4d756f11028749fa9cb",
       "dedup_fp": "8505|450000|140|42900",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3qjM-1779357767-11bd2d60b5fd4761974455e3e28fad2f"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3qjM-1779357767-11bd2d60b5fd4761974455e3e28fad2f",
+      "bild_lokal": "images/cd1788c7e25b061d.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/69761f25f2dff49c0bc5d96b",
@@ -885,7 +910,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/69761f25f2dff49c0bc5d96b",
       "dedup_fp": "8852|650000|250|3000",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.001P900000Zr8TA-07f30ac7e1a74c1d9a80178fbb7e00bb"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.001P900000Zr8TA-07f30ac7e1a74c1d9a80178fbb7e00bb",
+      "bild_lokal": "images/77f7679513dfacbb.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/65cf25005d7195fb034c47cc",
@@ -914,7 +940,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/expose/65cf25005d7195fb034c47cc",
       "dedup_fp": "8455|550000|65|56000",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J00001nFAiP-975767ee1a48448f87c4332301234c4e"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J00001nFAiP-975767ee1a48448f87c4332301234c4e",
+      "bild_lokal": "images/2cb6eebc021c6efd.jpg"
     },
     {
       "url": "https://www.immowelt.at/expose/c4312090-1721-4823-b084-96f152aa1f10",
@@ -943,7 +970,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immowelt.at/expose/c4312090-1721-4823-b084-96f152aa1f10",
       "dedup_fp": "6465|535000|160|1100",
-      "bild": "https://mms.immowelt.de/7/f/0/1/7f0161d3-7d88-4e04-958f-177d9b66dc37.jpg?ci_seal=2ddb609eefe2ffefd5c24729261c6e681b415f57"
+      "bild": "https://mms.immowelt.de/7/f/0/1/7f0161d3-7d88-4e04-958f-177d9b66dc37.jpg?ci_seal=2ddb609eefe2ffefd5c24729261c6e681b415f57",
+      "bild_lokal": "images/fff382461b253031.jpg"
     },
     {
       "url": "https://www.immowelt.at/expose/d32e26fe-244a-4689-a6e9-1715c5f31331",
@@ -972,7 +1000,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immowelt.at/expose/d32e26fe-244a-4689-a6e9-1715c5f31331",
       "dedup_fp": "6714||260|1600",
-      "bild": "https://mms.immowelt.de/b/2/f/2/b2f26ebd-2983-48cf-bb8d-4882eb2d2eb4.jpg?ci_seal=8cede06b8c0e9a95fab6a644e8ee67442bff34f6"
+      "bild": "https://mms.immowelt.de/b/2/f/2/b2f26ebd-2983-48cf-bb8d-4882eb2d2eb4.jpg?ci_seal=8cede06b8c0e9a95fab6a644e8ee67442bff34f6",
+      "bild_lokal": "images/1fd14b15a18b8187.jpg"
     },
     {
       "url": "https://www.immowelt.at/expose/bd91991e-0da7-46c2-ac8a-24ce5d0687f8",
@@ -1004,7 +1033,8 @@
       "bild": "https://mms.immowelt.de/0/6/4/5/064597f8-3fed-45e2-bbd0-0006e5a1c37c.jpg?ci_seal=8c3cb0973ac30b8de84bd42506a4b44245083c53",
       "url_alt": [
         "https://www.laendleimmo.at/immobilien/haus/einfamilienhaus/vorarlberg/bludenz/FNSHFt1oPYH"
-      ]
+      ],
+      "bild_lokal": "images/cc54c92e2eda75c2.jpg"
     },
     {
       "url": "https://www.immowelt.at/expose/352e51cf-66f5-495f-84fb-b0060b04f11c",
@@ -1033,7 +1063,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immowelt.at/expose/352e51cf-66f5-495f-84fb-b0060b04f11c",
       "dedup_fp": "6774||160|65000",
-      "bild": "https://mms.immowelt.de/c/b/b/4/cbb473b7-0f85-4d8c-9e78-21fb25f391ea.jpg?ci_seal=bdc6855d9c3ad2095876e88cc4bb7620031c70b2"
+      "bild": "https://mms.immowelt.de/c/b/b/4/cbb473b7-0f85-4d8c-9e78-21fb25f391ea.jpg?ci_seal=bdc6855d9c3ad2095876e88cc4bb7620031c70b2",
+      "bild_lokal": "images/c3759117eb5bc58b.jpg"
     },
     {
       "url": "https://www.immodirekt.at/immobilie/698075ba4d1c148fa71d1cc3",
@@ -1065,7 +1096,8 @@
       "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001dvzsv-1770028274-1352a1281af6483c847518242544c05d",
       "url_alt": [
         "https://www.immobilienscout24.at/expose/698075ba4d1c148fa71d1cc3"
-      ]
+      ],
+      "bild_lokal": "images/0b75ea7c8ece473c.jpg"
     },
     {
       "url": "https://www.immowelt.at/expose/08687b53-a6e4-4a49-bb37-2706fa184e51",
@@ -1094,7 +1126,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immowelt.at/expose/08687b53-a6e4-4a49-bb37-2706fa184e51",
       "dedup_fp": "4793|695000|165|25000",
-      "bild": "https://mms.immowelt.de/0/f/d/a/0fda4725-6dc4-4009-9674-c245ff39a9aa.jpg?ci_seal=288010660bec439c87bbcc64272f86ae74c880a0"
+      "bild": "https://mms.immowelt.de/0/f/d/a/0fda4725-6dc4-4009-9674-c245ff39a9aa.jpg?ci_seal=288010660bec439c87bbcc64272f86ae74c880a0",
+      "bild_lokal": "images/997c43cedb6f49b5.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/3492-grafenegg/alter-lehenhof-nahe-grafenegg-wo-kultur-auf-tradition-trifft-69d3e022b8c8fd2f5ea56143/",
@@ -1151,7 +1184,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immowelt.at/expose/970adee2-616c-4229-8eed-da0af7bbb320",
       "dedup_fp": "4201|300000|180|6800",
-      "bild": "https://mms.immowelt.de/9/3/6/3/9363f8b4-cef3-4908-b86a-a0cce9c83fe4.jpg?ci_seal=92aef0071c3c4e169a3543bd5a3806804c75defc"
+      "bild": "https://mms.immowelt.de/9/3/6/3/9363f8b4-cef3-4908-b86a-a0cce9c83fe4.jpg?ci_seal=92aef0071c3c4e169a3543bd5a3806804c75defc",
+      "bild_lokal": "images/f141c656ba3a2944.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/3254-bergland/bauernhaus-mit-baugrundstueck-68c99c5956369a7a3fabd7de/",
@@ -1208,7 +1242,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobilienscout24.at/regional/oberoesterreich/kirchdorf-an-der-krems/bauernhaeuser",
       "dedup_fp": "nahe kirchdorf an der krems|690000|180|30000",
-      "bild": "https://pictures.immobilienscout24.de/dims3/S3/quality/80/legacy_thumbnail/343x193/format/webp/https://s3-eu-west-1.amazonaws.com/prod.www.immobilienscout24.at/012.0015I00000lbLu9-1749122788-4de62a4f5732445ba5f0eae54ce9935a"
+      "bild": "https://pictures.immobilienscout24.de/dims3/S3/quality/80/legacy_thumbnail/343x193/format/webp/https://s3-eu-west-1.amazonaws.com/prod.www.immobilienscout24.at/012.0015I00000lbLu9-1749122788-4de62a4f5732445ba5f0eae54ce9935a",
+      "bild_lokal": "images/b942b1e02a0a3c1d.webp"
     },
     {
       "url": "https://www.immobiliare.it/en/annunci/128521636/",
@@ -1237,7 +1272,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefähr)",
       "url_norm": "https://immobiliare.it/en/annunci/128521636",
       "dedup_fp": "39020|550000|170|100",
-      "bild": "https://pwm.im-cdn.it/image/1910717734/m-c.jpg"
+      "bild": "https://pwm.im-cdn.it/image/1910717734/m-c.jpg",
+      "bild_lokal": "images/59337f6c87fc8088.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a2947d536d25daf4f63ed68",
@@ -1294,7 +1330,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefaehr)",
       "url_norm": "https://immodirekt.at/immobilie/5231-schalchen/gruenland-ca-2-4-ha-mit-haus-stadel-und-garagen-ruhige-und-sonnige-lage-64bfb8ee00cbd3e3b8dafec9",
       "dedup_fp": "5231|400000|200|24700",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3qvQ-1759491877-d526e7e7c7054205a40982d3ce28e974"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3qvQ-1759491877-d526e7e7c7054205a40982d3ce28e974",
+      "bild_lokal": "images/039921245c753915.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a03032ce9613f27f25fc3c0",
@@ -1326,7 +1363,8 @@
       "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3r0O-79f7d48c194f4d4c832c0ceaca73b3d3",
       "url_alt": [
         "https://www.immobilien.net/immobilie/8541-schwanberg/sonniges-refugium-mit-weitblick-modernisiertes-landhaus-mit-einliegerwohnung-nahe-bad-schwanberg-6a03032ce9613f27f25fc3c0/"
-      ]
+      ],
+      "bild_lokal": "images/b65df8eef09e00fe.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/69db6b6f4d9c94798f3f30ab",
@@ -1355,7 +1393,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefaehr)",
       "url_norm": "https://immobilienscout24.at/expose/69db6b6f4d9c94798f3f30ab",
       "dedup_fp": "8563|440000|235|1300",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000RKis2-ebe3dc3d4f924dbabedc4e2576e1134a"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000RKis2-ebe3dc3d4f924dbabedc4e2576e1134a",
+      "bild_lokal": "images/3e31cbf12ce6cfdd.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/67a1f6aabc14ced889221f43",
@@ -1387,7 +1426,8 @@
       "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3r8z-1764950882-a1078f892aaa42b3bbd305c816083324",
       "url_alt": [
         "https://www.immobilien.net/immobilie/8750-judenburg/gepflegtes-haus-am-murwald-67a1f6aabc14ced889221f43/"
-      ]
+      ],
+      "bild_lokal": "images/d3519b3978f77cf2.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/68611fb4c0a76fddd30a959f",
@@ -1416,7 +1456,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefaehr)",
       "url_norm": "https://immobilienscout24.at/expose/68611fb4c0a76fddd30a959f",
       "dedup_fp": "8262|500000|185|1100",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000Oe9p5-c76b5f19bdb04203b58f5c252c61e153"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000Oe9p5-c76b5f19bdb04203b58f5c252c61e153",
+      "bild_lokal": "images/d93d820e5cc27ba4.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/69f9b988a4937fccb4a99fcd",
@@ -1445,7 +1486,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefaehr)",
       "url_norm": "https://immobilienscout24.at/expose/69f9b988a4937fccb4a99fcd",
       "dedup_fp": "8854|545000|260|2700",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3qjM-1777978659-26a2394cff9140769df2c07bb7cba7fe"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3qjM-1777978659-26a2394cff9140769df2c07bb7cba7fe",
+      "bild_lokal": "images/5ee4fd68007da864.jpg"
     },
     {
       "url": "https://www.immodirekt.at/immobilie/3550-langenlois/bauernhaus-mit-altbestand-auf-ca-1238-m2-grundstueck-ca-190-m2-wohnflaeche-5-zimmer-69fb658fa6da86a518e04033/",
@@ -1474,7 +1516,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefaehr)",
       "url_norm": "https://immodirekt.at/immobilie/3550-langenlois/bauernhaus-mit-altbestand-auf-ca-1238-m2-grundstueck-ca-190-m2-wohnflaeche-5-zimmer-69fb658fa6da86a518e04033",
       "dedup_fp": "3550|250000|190|1200",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000RKis2-6f841feca9f440c89d2d9760ffced06b"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000RKis2-6f841feca9f440c89d2d9760ffced06b",
+      "bild_lokal": "images/db16ed00209924b9.jpg"
     },
     {
       "url": "https://www.immodirekt.at/immobilie/3730-stoitzendorf/sanierungsbeduerftiges-landhaus-zum-grundstueckspreis-6a3ce29e1ca005e03b88d8ed/",
@@ -1503,7 +1546,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefaehr)",
       "url_norm": "https://immodirekt.at/immobilie/3730-stoitzendorf/sanierungsbeduerftiges-landhaus-zum-grundstueckspreis-6a3ce29e1ca005e03b88d8ed",
       "dedup_fp": "3730|155000|205|2800",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3qlS-1782121877-0d78d72b2eed495f9080e5f993b625db"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3qlS-1782121877-0d78d72b2eed495f9080e5f993b625db",
+      "bild_lokal": "images/e184ec00b1b7dbdc.jpg"
     },
     {
       "url": "https://www.immodirekt.at/immobilie/3643-maria-laach-am-jauerling/ehemaliges-bauernhaus-mit-malerischen-innenhof-6a3101c5df878ebbbccb96b2/",
@@ -1532,7 +1576,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefaehr)",
       "url_norm": "https://immodirekt.at/immobilie/3643-maria-laach-am-jauerling/ehemaliges-bauernhaus-mit-malerischen-innenhof-6a3101c5df878ebbbccb96b2",
       "dedup_fp": "3643|200000|185|1300",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3r8t-1781022410-8b553f22b2f741e98438ea1db644ed75"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3r8t-1781022410-8b553f22b2f741e98438ea1db644ed75",
+      "bild_lokal": "images/c9e8dde47c7d8035.jpg"
     },
     {
       "url": "https://www.immodirekt.at/immobilie/9400-wolfsberg/charmantes-wohnhaus-mit-potential-grosser-grund-und-selbstversorger-potenzial-in-sonniger-aussichtslage-69fafd4aa6da86a518df2abf/",
@@ -1617,7 +1662,8 @@
       "geo_quelle": "orts-/PLZ-genau (ungefaehr)",
       "url_norm": "https://immowelt.at/expose/a81dab86-bf94-4a5c-9ad0-986aab80f3fa",
       "dedup_fp": "6700||180|1500",
-      "bild": "https://mms.immowelt.de/b/c/1/d/bc1d23ab-5a23-4f32-8ee1-c92479f41805.jpg?ci_seal=b076f41ddcadc4218f8fc49349940f95f1e3b1ad"
+      "bild": "https://mms.immowelt.de/b/c/1/d/bc1d23ab-5a23-4f32-8ee1-c92479f41805.jpg?ci_seal=b076f41ddcadc4218f8fc49349940f95f1e3b1ad",
+      "bild_lokal": "images/c49623d31d6a24c0.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/9376-knappenberg/stilvolle-wohlfuehloase-mit-gartenidylle-und-fernblick-in-knappenberg-6a1957408ce9ed357c305c2d/",
@@ -1644,7 +1690,8 @@
       "lon": 14.5,
       "url_norm": "https://immobilien.net/immobilie/9376-knappenberg/stilvolle-wohlfuehloase-mit-gartenidylle-und-fernblick-in-knappenberg-6a1957408ce9ed357c305c2d",
       "dedup_fp": "9376|475000|225|1500",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3qix-1779917676-a8247f037cca428c964f9ea7ce59379f"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3qix-1779917676-a8247f037cca428c964f9ea7ce59379f",
+      "bild_lokal": "images/a42407c31c8bcef6.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/9853-fischertratten/charmantes-landhaus-mit-alpenblick-2400-m2-bauland-und-ausbaupotenzial-69e34d1444abf03eb6184c9e/",
@@ -1671,7 +1718,8 @@
       "lon": 13.5,
       "url_norm": "https://immobilien.net/immobilie/9853-fischertratten/charmantes-landhaus-mit-alpenblick-2400-m2-bauland-und-ausbaupotenzial-69e34d1444abf03eb6184c9e",
       "dedup_fp": "9853|455000|180|2400",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.001P900000HkZKN-1776418879-44099c75f4d449c2808899acd07b26e9"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.001P900000HkZKN-1776418879-44099c75f4d449c2808899acd07b26e9",
+      "bild_lokal": "images/7875b18d7c75c9d8.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/9100-voelkermarkt/aussergewoehnliches-refugium-in-ruhe-und-alleinlage-erweiterbar-auf-ca-5-ha-69abf997fb3a4598c5ff58c4/",
@@ -1699,7 +1747,8 @@
       "lon": 14.6333,
       "url_norm": "https://immobilien.net/immobilie/9100-voelkermarkt/aussergewoehnliches-refugium-in-ruhe-und-alleinlage-erweiterbar-auf-ca-5-ha-69abf997fb3a4598c5ff58c4",
       "dedup_fp": "9100||180|14000",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000QSwqG-1780928288-1c2f8b7458b74803a0802d28345a2faa"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000QSwqG-1780928288-1c2f8b7458b74803a0802d28345a2faa",
+      "bild_lokal": "images/67a83572756da6be.png"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a3539398041a246a6c0aedc",
@@ -1726,7 +1775,8 @@
       "lon": 12.9667,
       "url_norm": "https://immobilienscout24.at/expose/6a3539398041a246a6c0aedc",
       "dedup_fp": "9781|200000|165|900",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83Y2-1781470451-e2c3af69c6384ef0b3cd8b8ba7c5dd57"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83Y2-1781470451-e2c3af69c6384ef0b3cd8b8ba7c5dd57",
+      "bild_lokal": "images/33007eb04df693f2.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/9170-ferlach/landwirtschaftliches-anwesen-selbstversorgerparadies-in-glainach-bei-ferlach-6a3401f6d3cb345ea04ad53b/",
@@ -1753,7 +1803,8 @@
       "lon": 14.3,
       "url_norm": "https://immobilien.net/immobilie/9170-ferlach/landwirtschaftliches-anwesen-selbstversorgerparadies-in-glainach-bei-ferlach-6a3401f6d3cb345ea04ad53b",
       "dedup_fp": "9170|890000|220|4300",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J00001jgUuD-119b574ea5084c74a6a07755a43cb9c7"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J00001jgUuD-119b574ea5084c74a6a07755a43cb9c7",
+      "bild_lokal": "images/6b2574a48440d746.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/9072-ludmannsdorf/bauernhaus-mit-zwei-wohneinheiten-in-traumlage-zu-verkaufen-69ca63a41d650b9a8a3a6fd2/",
@@ -1780,7 +1831,8 @@
       "lon": 14.1167,
       "url_norm": "https://immobilien.net/immobilie/9072-ludmannsdorf/bauernhaus-mit-zwei-wohneinheiten-in-traumlage-zu-verkaufen-69ca63a41d650b9a8a3a6fd2",
       "dedup_fp": "9072|675000|300|1300",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J000022PnOc-db3b774e746a470790e4b8b8be03774c"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J000022PnOc-db3b774e746a470790e4b8b8be03774c",
+      "bild_lokal": "images/7443d5e27f0aac93.jpg"
     },
     {
       "url": "https://www.dibeo.at/expose/synergie/h-bauernhaus-kauf/noe/3932/bis200000/2168529/acvblr",
@@ -1838,7 +1890,8 @@
       "dedup_fp": "4723|540000|160|11600",
       "wohnflaeche_hinweis": "7 Zimmer",
       "grundflaeche_hinweis": "(ca. 1,1 ha)",
-      "bild": "https://asset.dibeo.at/847/7ebfb11568ac4aeaacc3fc326a0f86ee/big-webp/ansicht.webp"
+      "bild": "https://asset.dibeo.at/847/7ebfb11568ac4aeaacc3fc326a0f86ee/big-webp/ansicht.webp",
+      "bild_lokal": "images/bbafd15bbcdeb959.webp"
     },
     {
       "url": "https://www.immobilien.net/immobilie/5552-forstau/alpenresidenz-mit-beheiztem-pool-und-dachsteinblick-traumlage-zwischen-reiteralm-und-fageralm-ski-amade-68ef6f6e8c4b5843c5d42926/",
@@ -1867,7 +1920,8 @@
       "url_norm": "https://immobilien.net/immobilie/5552-forstau/alpenresidenz-mit-beheiztem-pool-und-dachsteinblick-traumlage-zwischen-reiteralm-und-fageralm-ski-amade-68ef6f6e8c4b5843c5d42926",
       "dedup_fp": "5552||240|1000",
       "grundflaeche_hinweis": "(zzgl. zusaetzliches Grundstueck)",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83sB-1760529242-1ecaa00814444bb98b088689ab363bd6"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83sB-1760529242-1ecaa00814444bb98b088689ab363bd6",
+      "bild_lokal": "images/49751a56e7bd9551.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/5583-muhr/landhaus-in-muhr-grosszuegige-flaeche-3-balkone-garage-und-mehr-6a27df7e07fb9c0a32f15305/",
@@ -1895,7 +1949,8 @@
       "lon": 13.5,
       "url_norm": "https://immobilien.net/immobilie/5583-muhr/landhaus-in-muhr-grosszuegige-flaeche-3-balkone-garage-und-mehr-6a27df7e07fb9c0a32f15305",
       "dedup_fp": "5583|250000|185|800",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.001P900000GX14S-1732345320-78790c0abc96433dba3042b4599c7d86"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.001P900000GX14S-1732345320-78790c0abc96433dba3042b4599c7d86",
+      "bild_lokal": "images/0087ec5627e189ba.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/5591-ramingstein/ihr-platz-in-den-alpen-charmantes-haus-im-lungau-6a3d050b3e3fb64b50cc9608/",
@@ -1923,7 +1978,8 @@
       "lon": 13.705,
       "url_norm": "https://immobilien.net/immobilie/5591-ramingstein/ihr-platz-in-den-alpen-charmantes-haus-im-lungau-6a3d050b3e3fb64b50cc9608",
       "dedup_fp": "5591|265000|120|2800",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.001P900000WxGpY-14c792d819e94ba7816ab2c708b21f15"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.001P900000WxGpY-14c792d819e94ba7816ab2c708b21f15",
+      "bild_lokal": "images/9f495112bc9f1471.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/5612-grossarl-huettschlag/leben-und-geniessen-im-nationalpark-hohe-tauern-6a0365b0e9613f27f26059b9/",
@@ -1951,7 +2007,8 @@
       "lon": 13.253,
       "url_norm": "https://immobilien.net/immobilie/5612-grossarl-huettschlag/leben-und-geniessen-im-nationalpark-hohe-tauern-6a0365b0e9613f27f26059b9",
       "dedup_fp": "5612||280|800",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001Qg946-1782631817-b8bf9430725a43bb882c8213836efc87"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001Qg946-1782631817-b8bf9430725a43bb882c8213836efc87",
+      "bild_lokal": "images/05694f34c7ce3619.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/5640-bad-gastein/zwischen-gaemsen-und-waeldern-privates-berghaeuschen-ueber-bad-gastein-69fcae45dcddabf34d259eb0/",
@@ -1980,7 +2037,8 @@
       "url_norm": "https://immobilien.net/immobilie/5640-bad-gastein/zwischen-gaemsen-und-waeldern-privates-berghaeuschen-ueber-bad-gastein-69fcae45dcddabf34d259eb0",
       "dedup_fp": "5640|650000|105|1400",
       "wohnflaeche_hinweis": "(Wohnnutzflaeche )",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000iOhUQ-1756916606-5e6de22a869a43ccb2eb2901ab9208a3"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000iOhUQ-1756916606-5e6de22a869a43ccb2eb2901ab9208a3",
+      "bild_lokal": "images/a90cced6de4aa389.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/690da3f2dacbc439d9e500b9",
@@ -2008,7 +2066,8 @@
       "lon": 16.03,
       "url_norm": "https://immobilienscout24.at/expose/690da3f2dacbc439d9e500b9",
       "dedup_fp": "8241|550000|250|1700",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J000029PWUV-3251e30d387541fdbf316abdb9004ab7"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0010J000029PWUV-3251e30d387541fdbf316abdb9004ab7",
+      "bild_lokal": "images/ec31afc276a5a8ca.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/699d6541fb3e40d9fa4b157b",
@@ -2039,7 +2098,8 @@
       "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83gV-1771840770-0ce6650aec214d7a8e38d04070d56bc0",
       "url_alt": [
         "https://www.immobilien.net/immobilie/8490-bad-radkersburg/ehemaliger-bauernhof-bauernhaus-ferienappartements-nebengebaeude-ruhige-ortslage-699d6541fb3e40d9fa4b157b/"
-      ]
+      ],
+      "bild_lokal": "images/e6369e64c6dbedb0.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6900fed72d0b175feb924306",
@@ -2067,7 +2127,8 @@
       "lon": 14.25,
       "url_norm": "https://immobilienscout24.at/expose/6900fed72d0b175feb924306",
       "dedup_fp": "8832||260|36000",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000WyUh6-bf1a81ac838f4720a77c4d56c08bdd05"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000WyUh6-bf1a81ac838f4720a77c4d56c08bdd05",
+      "bild_lokal": "images/c06423c6277d0ab1.jpg"
     },
     {
       "url": "https://www.immomarkt-suedtirol.bz/wellenzohn/52-latsch-st-martin-am-kofel-geschlossener-hof-in-alleinlage-mit-genehmigtem-bauprojekt-zu-verkaufen",
@@ -2299,7 +2360,8 @@
       "dedup_fp": "moos in passeier ca|680000|165|",
       "wohnflaeche_hinweis": "ca. Netto-Wohnflaeche plus Dachschraegen (ca. Grundflaeche pro Etage)",
       "grundflaeche_hinweis": "nur 'kleines Gartengrundstueck' hinter dem Haus - keine m2-Zahl, faktisch klein",
-      "bild": "https://www.immobar.it/images/ad7011/o_1jdl9rksn15721kh1qda1raslt9o.jpg"
+      "bild": "https://www.immobar.it/images/ad7011/o_1jdl9rksn15721kh1qda1raslt9o.jpg",
+      "bild_lokal": "images/5123e1aeafef1e06.jpg"
     },
     {
       "url": "https://www.immomarkt-suedtirol.bz/wellenzohn/52-mals-planeil-wohnhaus-mit-wirtschaftsgebaeude-und-garten-zu-verkaufen",
@@ -2356,7 +2418,8 @@
       "lon": 10.9333,
       "url_norm": "https://immobilienscout24.at/expose/6a37b1b0584ccc48d2f2e4bf",
       "dedup_fp": "6414||170|900",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000kufZa-62eb5c40fa624ec493add9393f899af5"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000kufZa-62eb5c40fa624ec493add9393f899af5",
+      "bild_lokal": "images/63cc3bb5ed29aff3.jpg"
     },
     {
       "url": "https://immobilien.derstandard.at/detail/15148226",
@@ -2388,7 +2451,8 @@
       ],
       "url_norm": "https://immobilien.derstandard.at/detail/15148226",
       "dedup_fp": "8931|310000|205|1400",
-      "bild": "https://i.prod.mp-dst.onyx60.com/plain/immoimporte/ARU/786b9f5b-9de1-456f-8bdc-db6f59cc0a65.jpg/~/PkGqKw/format:jpg/rs:fill:1200:630:1"
+      "bild": "https://i.prod.mp-dst.onyx60.com/plain/immoimporte/ARU/786b9f5b-9de1-456f-8bdc-db6f59cc0a65.jpg/~/PkGqKw/format:jpg/rs:fill:1200:630:1",
+      "bild_lokal": "images/1796c802867dd3ee.jpg"
     },
     {
       "url": "https://immobilien.derstandard.at/detail/15169620/traum-lage-neben-bach-ohne-unmittelbare-nachbarn-gepflegtes-wohnhaus-mit-2-einheiten-u-groc39fem-garten",
@@ -2419,7 +2483,8 @@
       ],
       "url_norm": "https://immobilien.derstandard.at/detail/15169620/traum-lage-neben-bach-ohne-unmittelbare-nachbarn-gepflegtes-wohnhaus-mit-2-einheiten-u-groc39fem-garten",
       "dedup_fp": "4571|350000|260|2000",
-      "bild": "https://i.prod.mp-dst.onyx60.com/plain/immoimporte/justimmo_backfill/storage.justimmo.at/thumb/0ea0d48a42fa9bde4304b02da0b9a464/Fc_Lb_M1X1jmXMgavuzp9vPtKyfde.jpg_fm_h1080_w1920/1Pcrk2HUGP5hkJrWPh1zvW20260616.jpg/~/WytKmA/format:jpg/rs:fill:1200:630:1"
+      "bild": "https://i.prod.mp-dst.onyx60.com/plain/immoimporte/justimmo_backfill/storage.justimmo.at/thumb/0ea0d48a42fa9bde4304b02da0b9a464/Fc_Lb_M1X1jmXMgavuzp9vPtKyfde.jpg_fm_h1080_w1920/1Pcrk2HUGP5hkJrWPh1zvW20260616.jpg/~/WytKmA/format:jpg/rs:fill:1200:630:1",
+      "bild_lokal": "images/8fe875d9b0bd0d4a.jpg"
     },
     {
       "url": "https://rimmo.it/de/suedtirol/haus/einfamilienhaus/vinschgau/schnals/detail/5010/",
@@ -2484,7 +2549,8 @@
       ],
       "url_norm": "https://immobilienscout24.at/expose/69cc61f9947be8492071459b",
       "dedup_fp": "5582|420000|135|600",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001L84aU-1774960282-20bdce9ff4e945419ba0511053861925"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001L84aU-1774960282-20bdce9ff4e945419ba0511053861925",
+      "bild_lokal": "images/9ffebeb9acb923ed.jpg"
     },
     {
       "url": "https://immo.sn.at/immobilien/leben-zwischen-natur-zentrum-einfamilienhaus-in-schwarzach-GV4XN5",
@@ -2512,7 +2578,8 @@
       "lon": 13.1449,
       "url_norm": "https://immo.sn.at/immobilien/leben-zwischen-natur-zentrum-einfamilienhaus-in-schwarzach-GV4XN5",
       "dedup_fp": "5620|580000|180|1100",
-      "bild": "https://immo.sn.at/img-service/gMRbZsBZbSHCMc89HTMCVnfGqJ3oXa_jLkiIEhxhbolhBc0RxaBzfw1JX7Dc6bBq_jM8d-ham1r6hqVL2rTvaReLTolpDXA5vbjU72HEW66eTFbyiG4KCgW2jdHOgOZO2I0g89gbqjSXMjnllqOZLbgT83TlTf8HvWPPiXUYb1CJl7nYTkAoHDAOZSF389LRR;scale=1300x680"
+      "bild": "https://immo.sn.at/img-service/gMRbZsBZbSHCMc89HTMCVnfGqJ3oXa_jLkiIEhxhbolhBc0RxaBzfw1JX7Dc6bBq_jM8d-ham1r6hqVL2rTvaReLTolpDXA5vbjU72HEW66eTFbyiG4KCgW2jdHOgOZO2I0g89gbqjSXMjnllqOZLbgT83TlTf8HvWPPiXUYb1CJl7nYTkAoHDAOZSF389LRR;scale=1300x680",
+      "bild_lokal": "images/79c8180f658d85f0.jpg"
     },
     {
       "url": "https://immo.sn.at/immobilien/traditionelles-bauernhaus-mit-bar-sauna-in-maishofen-GVJS2P",
@@ -2540,7 +2607,8 @@
       "lon": 12.8,
       "url_norm": "https://immo.sn.at/immobilien/traditionelles-bauernhaus-mit-bar-sauna-in-maishofen-GVJS2P",
       "dedup_fp": "5751|650000|160|400",
-      "bild": "https://immo.sn.at/img-service/gZC35Wg4MG_oSvykbmlwf6PtL7SZRRczLRaNMOATadAJM05Xsxut9ScZwM0KX3EhOylqD3WFqUvASDCmssEz9iA;scale=1300x680"
+      "bild": "https://immo.sn.at/img-service/gZC35Wg4MG_oSvykbmlwf6PtL7SZRRczLRaNMOATadAJM05Xsxut9ScZwM0KX3EhOylqD3WFqUvASDCmssEz9iA;scale=1300x680",
+      "bild_lokal": "images/01c0a9b8d92e268c.jpg"
     },
     {
       "url": "https://www.dibeo.at/expose/2115348",
@@ -2569,7 +2637,8 @@
       "url_norm": "https://dibeo.at/expose/2115348",
       "dedup_fp": "3633|380000|255|4600",
       "wohnflaeche_hinweis": "(EG ca. + OG ca., ausgebaut 2004)",
-      "bild": "https://asset.dibeo.at/856/3d6103910bac4b839502f1defa2b707e/big-webp/wintergarten.webp"
+      "bild": "https://asset.dibeo.at/856/3d6103910bac4b839502f1defa2b707e/big-webp/wintergarten.webp",
+      "bild_lokal": "images/7674b8fd76a9d934.webp"
     },
     {
       "url": "https://www.dibeo.at/expose/2185792",
@@ -2599,7 +2668,8 @@
       "dedup_fp": "3921|645000|140|88000",
       "wohnflaeche_hinweis": "ca. (4 Zimmer)",
       "grundflaeche_hinweis": "ca. (ca. 8,8 ha Wald- und Wiesenflächen)",
-      "bild": "https://asset.dibeo.at/709/e0949a4430824fd087e43d2aa9b5d66e/big-webp/einzellage-idyllisches.webp"
+      "bild": "https://asset.dibeo.at/709/e0949a4430824fd087e43d2aa9b5d66e/big-webp/einzellage-idyllisches.webp",
+      "bild_lokal": "images/c2e6c35ddd2580a5.webp"
     },
     {
       "url": "https://www.idealista.it/de/immobile/26800019/",
@@ -2719,7 +2789,8 @@
       "dedup_fp": "st pankraz|680000|110|65000",
       "wohnflaeche_hinweis": "ca. Nettowohnflaeche aktuell (renovierungsbeduerftig); Erweiterung auf bis zu 'denkbar' (nicht genehmigt/bestaetigt)",
       "grundflaeche_hinweis": "ca. (ca. Wiese + ca. Wald) - sehr gross",
-      "bild": "https://www.immobar.it/images/ad6942/o_1j5adfq5mrkh19qe1q11kvlrmng.jpg"
+      "bild": "https://www.immobar.it/images/ad6942/o_1j5adfq5mrkh19qe1q11kvlrmng.jpg",
+      "bild_lokal": "images/6d8846f0ab0ad241.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/4242-hirschbach-im-muehlkreis/charmantes-landhaus-mit-57-486m2-eigengrund-in-traumhafter-lage-6a02e12e9ce6b4f605cddaff/",
@@ -2749,7 +2820,8 @@
       "dedup_fp": "4242|450000|145|57500",
       "wohnflaeche_hinweis": "(6 Zimmer)",
       "grundflaeche_hinweis": "(ca. 5,7 ha Eigengrund)",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3rAH-1778579082-c6b144ec5dab4c66b169951cc9ac0343"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3rAH-1778579082-c6b144ec5dab4c66b169951cc9ac0343",
+      "bild_lokal": "images/2d5beb72a0a92b11.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/5581-sankt-margarethen-im-lungau/geraeumiges-einfamilienhaus-6a3e13be2c543a196227da55/",
@@ -2805,7 +2877,8 @@
       "lon": 13.2167,
       "url_norm": "https://immobilienscout24.at/expose/68553c7e90db784496a4e3b5",
       "dedup_fp": "9771|495000|295|600",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001VA2Nz-1753350096-abd15b89183645b8bf019ca902f46ff3"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001VA2Nz-1753350096-abd15b89183645b8bf019ca902f46ff3",
+      "bild_lokal": "images/7de81c1f3c3df28c.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/686aa74697c7b385af1408f4",
@@ -2833,7 +2906,8 @@
       "lon": 13.0125,
       "url_norm": "https://immobilienscout24.at/expose/686aa74697c7b385af1408f4",
       "dedup_fp": "9635|330000|220|400",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000iMSuQ-1751803788-859fc072ef294e1eb2eddc96bb63a836"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0015I00000iMSuQ-1751803788-859fc072ef294e1eb2eddc96bb63a836",
+      "bild_lokal": "images/4dfea9122f07adf5.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/68ff98a2445b6fca205da670",
@@ -2861,7 +2935,8 @@
       "lon": 12.9986,
       "url_norm": "https://immobilienscout24.at/expose/68ff98a2445b6fca205da670",
       "dedup_fp": "9640|380000|160|800",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E8490-b6b4941b8dd448db8e56859a9d13c55d"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E8490-b6b4941b8dd448db8e56859a9d13c55d",
+      "bild_lokal": "images/1a08e7a282b4fe5f.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/69c4fd19b4edae4658d422ba",
@@ -2891,7 +2966,8 @@
       "dedup_fp": "3830|470000||5300",
       "wohnflaeche_hinweis": "nicht im Exposé angegeben (EG: gr. Wohn-/Esszimmer + Küche + Bad; OG: 1 Schlafzimmer, 1 gr. Zimmer, Lesezimmer, Ankleide, WC) - vermutlich < 160 m²",
       "grundflaeche_hinweis": "(Beschreibung nennt)",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001U7Uyv-1682079241-909d2c354124435680a0a413310cb55b"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001U7Uyv-1682079241-909d2c354124435680a0a413310cb55b",
+      "bild_lokal": "images/041a6d65315c936a.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/69fe0271c3a521c369f6c72b",
@@ -2919,7 +2995,8 @@
       "lon": 14.7333,
       "url_norm": "https://immobilienscout24.at/expose/69fe0271c3a521c369f6c72b",
       "dedup_fp": "9463||240|23200",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001Y13Yu-9a301f5a54024dab87f55ebf4c6d32ab"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001Y13Yu-9a301f5a54024dab87f55ebf4c6d32ab",
+      "bild_lokal": "images/a93bf065aea40953.png"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a0317fce9613f27f25ff155",
@@ -2947,7 +3024,8 @@
       "lon": 12.8667,
       "url_norm": "https://immobilienscout24.at/expose/6a0317fce9613f27f25ff155",
       "dedup_fp": "9844||500|144500",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3rBw-1776131904-d9c838137d514aff88573031efe49bf3"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E3rBw-1776131904-d9c838137d514aff88573031efe49bf3",
+      "bild_lokal": "images/9ef919d675875131.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a2d12d5f2ccdf265e3135c6",
@@ -2975,7 +3053,8 @@
       "lon": 12.9986,
       "url_norm": "https://immobilienscout24.at/expose/6a2d12d5f2ccdf265e3135c6",
       "dedup_fp": "9640||215|500",
-      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83Y2-1781187208-49ea3fee5fa04bf7a3b46557f8168af0"
+      "bild": "https://pictures.immobilienscout24.de/prod.www.immobilienscout24.at/pictureserver/loadPicture?q=70&id=012.0012000001E83Y2-1781187208-49ea3fee5fa04bf7a3b46557f8168af0",
+      "bild_lokal": "images/4327d6a48bf98d52.jpg"
     },
     {
       "url": "https://www.immowelt.at/expose/22939f25-f1fb-4986-ab8b-dd33a8b5f590",
@@ -3004,7 +3083,8 @@
       "url_norm": "https://immowelt.at/expose/22939f25-f1fb-4986-ab8b-dd33a8b5f590",
       "dedup_fp": "6707||210|1500",
       "wohnflaeche_hinweis": "(zzgl. UG, Gesamt)",
-      "bild": "https://mms.immowelt.de/a/a/d/a/aadaa2f9-7450-4e09-be78-a877898ed4f1.png?ci_seal=f06d72ff90d737179d04694942cbc3f920126632"
+      "bild": "https://mms.immowelt.de/a/a/d/a/aadaa2f9-7450-4e09-be78-a877898ed4f1.png?ci_seal=f06d72ff90d737179d04694942cbc3f920126632",
+      "bild_lokal": "images/00ce06cfd4d800a1.png"
     },
     {
       "url": "https://www.immowelt.at/expose/74547f87-ac56-4b75-915d-bb3665a72eac",
@@ -3033,7 +3113,8 @@
       "url_norm": "https://immowelt.at/expose/74547f87-ac56-4b75-915d-bb3665a72eac",
       "dedup_fp": "6460||205|1600",
       "wohnflaeche_hinweis": "(Eckdaten) bzw. ca. (Beschreibung)",
-      "bild": "https://mms.immowelt.de/5/a/a/a/5aaa4991-d9d4-42fb-961f-6f547be82e5f.jpg?ci_seal=59f4f23e890152b6cae1d6334d7fe7f589fe02da"
+      "bild": "https://mms.immowelt.de/5/a/a/a/5aaa4991-d9d4-42fb-961f-6f547be82e5f.jpg?ci_seal=59f4f23e890152b6cae1d6334d7fe7f589fe02da",
+      "bild_lokal": "images/d4e335734e5552c7.jpg"
     },
     {
       "url": "https://www.immowelt.at/expose/75e3acc4-e166-4d38-8cdf-94635932fb16",
@@ -3061,7 +3142,8 @@
       "lon": 9.7,
       "url_norm": "https://immowelt.at/expose/75e3acc4-e166-4d38-8cdf-94635932fb16",
       "dedup_fp": "6710||185|700",
-      "bild": "https://mms.immowelt.de/e/7/0/3/e703a8bd-7e09-4546-9e30-af7682e637e3.jpg?ci_seal=8d152b6c5b4b5c2fadb8b8cb43312b4b88d4c6f9"
+      "bild": "https://mms.immowelt.de/e/7/0/3/e703a8bd-7e09-4546-9e30-af7682e637e3.jpg?ci_seal=8d152b6c5b4b5c2fadb8b8cb43312b4b88d4c6f9",
+      "bild_lokal": "images/7f405ace5da4eddc.jpg"
     },
     {
       "url": "https://www.immowelt.at/expose/761c7bee-887c-4849-99c9-52492f1db370",
@@ -3091,7 +3173,8 @@
       "dedup_fp": "6542|670000|270|1900",
       "wohnflaeche_hinweis": "ca. Wohnen (EG 125,47 + OG 142,22), zzgl. UG = Gesamt ca.; Inserat nennt",
       "grundflaeche_hinweis": "(2 Parzellen: Baeflaeche + Garten/landw. Flaeche)",
-      "bild": "https://mms.immowelt.de/7/e/a/f/7eaf8943-c849-4ee6-b7a8-f748c23ede21.jpg?ci_seal=9e88d412ec4d4e389e0e069067b8c5a9097678c6"
+      "bild": "https://mms.immowelt.de/7/e/a/f/7eaf8943-c849-4ee6-b7a8-f748c23ede21.jpg?ci_seal=9e88d412ec4d4e389e0e069067b8c5a9097678c6",
+      "bild_lokal": "images/9e337808c21d0b7f.jpg"
     },
     {
       "url": "https://www.immowelt.at/expose/76734f59-e6fc-48c3-8fd7-5c8094a9cb40",
@@ -3122,7 +3205,8 @@
       "bild": "https://mms.immowelt.de/f/2/e/3/f2e306da-f576-42d5-932c-8613a587cf45.jpg?ci_seal=15b3373497adaf7abb02171a0fbdf37f1f3cb984",
       "url_alt": [
         "https://www.laendleimmo.at/immobilien/haus/einfamilienhaus/vorarlberg/bludenz/65TgOdEKK7l"
-      ]
+      ],
+      "bild_lokal": "images/4e508c232cd683a5.jpg"
     },
     {
       "url": "https://www.immowelt.at/expose/a362f911-cf9c-4c09-ac63-50b83235ed9d",
@@ -3150,7 +3234,8 @@
       "lon": 10.965,
       "url_norm": "https://immowelt.at/expose/a362f911-cf9c-4c09-ac63-50b83235ed9d",
       "dedup_fp": "6414||160|1100",
-      "bild": "https://mms.immowelt.de/b/6/4/f/b64f0ecb-a7a8-4bf0-a77b-2665538c4798.jpg?ci_seal=bcbc4e9b5d4bc73587ba2b96125ebe7722b532b3"
+      "bild": "https://mms.immowelt.de/b/6/4/f/b64f0ecb-a7a8-4bf0-a77b-2665538c4798.jpg?ci_seal=bcbc4e9b5d4bc73587ba2b96125ebe7722b532b3",
+      "bild_lokal": "images/aa5a08286ed9e630.jpg"
     },
     {
       "url": "https://www.dibeo.at/expose/barta/h-einfamilienhaus-kauf/ktn/9103/bis600000/2222592/acvblr",
@@ -3208,7 +3293,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "aktiv",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/9ba5d098336bd079.jpg"
     },
     {
       "url": "https://www.immowelt.at/expose/a9be709a-629d-4de5-b6b0-519cc9b484a9",
@@ -3237,7 +3323,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "zu_pruefen",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/076fe63c09ef61e6.jpg"
     },
     {
       "url": "https://www.dibeo.at/expose/rustler/h-einfamilienhaus-kauf/ktn/9371/bis600000/2221945/acvblr",
@@ -3295,7 +3382,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "zu_pruefen",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/5072bd020c6cc500.jpg"
     },
     {
       "url": "https://www.dibeo.at/expose/2215190",
@@ -3353,7 +3441,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "zu_pruefen",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/a734d5e369d5f341.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/8510-stainz/ein-anwesen-mit-charakter-weitblick-und-aussergewoehnlichem-potenzial-69e771646f96aa67dcfbace5/",
@@ -3382,7 +3471,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "aktiv",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/351fab20f3642421.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/8552-eibiswald/sehr-gepflegtes-wohnhaus-mit-separaten-nebengebaeude-und-langcarport-in-laendlicher-und-sonniger-sackgassenlage-69cd5b170b8f06368a2547e5/",
@@ -3411,7 +3501,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "aktiv",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/883b3294014ae7b7.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/8354-giesselsdorf/bauernhaus-wohnhaus-mit-nebengebaeude-teilw-saniert-carport-innenhof-st-anna-giesselsdorf-699ff5161ce767168fc01469/",
@@ -3440,7 +3531,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "aktiv",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/fdcb0558f959134e.jpg"
     },
     {
       "url": "https://www.immobilien.net/immobilie/8720-knittelfeld/traumhaus-mit-wunderschoenem-garten-in-ruhiger-lage-mit-doppelcarport-69bd9f08827301c347668a44/",
@@ -3469,7 +3561,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "aktiv",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/76179c476a53058a.jpg"
     },
     {
       "url": "https://www.immobilienscout24.at/expose/6a44953672fd3487e42fa372",
@@ -3556,7 +3649,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "zu_pruefen",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/49abc6bf3a557ce2.jpg"
     },
     {
       "url": "https://www.dibeo.at/expose/2169654",
@@ -3585,7 +3679,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "aktiv",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/cae46980d93b9f76.webp"
     },
     {
       "url": "https://immobilien.nachrichten.at/immobilien/sehr-gepflegtes-bauernhaus-in-alleinlage-GVR3TR",
@@ -3759,7 +3854,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "zu_pruefen",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/47bf45e6367bc34d.jpg"
     },
     {
       "url": "https://www.immobiliare.it/en/annunci/129859744/",
@@ -3788,7 +3884,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "zu_pruefen",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/c6d7a76e361b8700.jpg"
     },
     {
       "url": "https://www.willhaben.at/iad/immobilien/d/haus-kaufen/kaernten/voelkermarkt/gepflegte-architektenvilla-in-voelkermarkt-220-m-wohnflaeche-1-300-m-grundstueck-doppelgarage-922210930/",
@@ -3817,7 +3914,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "aktiv",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/0facb44daf6759ae.webp"
     },
     {
       "url": "https://www.willhaben.at/iad/immobilien/d/haus-kaufen/steiermark/leibnitz/gemuetliches-zuhause-in-der-traumhaften-suedsteiermark-1189095941/",
@@ -3846,7 +3944,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "zu_pruefen",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/32a7c65b36795512.webp"
     },
     {
       "url": "https://www.willhaben.at/iad/immobilien/d/haus-kaufen/steiermark/bruck-muerzzuschlag/interessannte-liegenschaft-in-aussichtslage-in-st-barbara-im-muerztal-1177945604/",
@@ -3875,7 +3974,8 @@
       "zuletzt_gesehen": "2026-07-01",
       "fehlt_seit": 0,
       "status": "aktiv",
-      "geo_quelle": "orts-/PLZ-genau (ungefähr)"
+      "geo_quelle": "orts-/PLZ-genau (ungefähr)",
+      "bild_lokal": "images/b18784b744b1ea15.webp"
     }
   ]
 }

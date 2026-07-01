@@ -53,7 +53,7 @@
           if (o.lat && o.lon) {
             var m = L.marker([o.lat, o.lon]);
             m.bindPopup(
-              (o.bild ? '<img src="' + Immo.ui.esc(o.bild) + '" referrerpolicy="no-referrer" onerror="this.remove()" style="width:210px;height:115px;object-fit:cover;border-radius:6px;display:block;margin-bottom:6px">' : '') +
+              ((o.bild_lokal || o.bild) ? '<img src="' + Immo.ui.esc(o.bild_lokal || o.bild) + '" referrerpolicy="no-referrer" onerror="this.remove()" style="width:210px;height:115px;object-fit:cover;border-radius:6px;display:block;margin-bottom:6px">' : '') +
               '<b>' + Immo.ui.esc(o.titel || "") + '</b><br>' +
               Immo.ui.esc(o.ort || "") + '<br>' + Immo.fmtPreis(o.preis) +
               ' · Freiheit ' + Immo.ui.esc(o.freiheits_score == null ? "—" : o.freiheits_score) +

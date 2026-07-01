@@ -12,6 +12,10 @@ cd "$REPO" || exit 1
 # Stale Git-Locks aus der Cowork-/Mount-Umgebung entfernen (sonst blockieren sie git)
 rm -f .git/index.lock .git/HEAD.lock .git/objects/maintenance.lock 2>/dev/null
 
+# Fehlende Objektbilder lokal laden und data.json neu erzeugen (best effort, braucht Netz)
+python3 "$REPO/tools/fetch_images.py" >>"$LOG" 2>&1 || true
+python3 "$REPO/tools/build_data.py"   >>"$LOG" 2>&1 || true
+
 # Geänderte Dateien committen (falls vorhanden)
 if [ -n "$(git status --porcelain)" ]; then
   git add -A

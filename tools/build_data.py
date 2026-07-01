@@ -34,7 +34,6 @@ def main():
             "anzahl": len(objekte),
             "anzahl_aktiv": sum(1 for o in objekte if o.get("status") == "aktiv"),
             "schema_version": data.get("schema_version"),
-            "generiert_am": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
             "lauf_historie": data.get("lauf_historie", [])[-12:],
         },
         "objekte": objekte,
