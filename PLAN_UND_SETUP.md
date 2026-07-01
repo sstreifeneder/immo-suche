@@ -101,9 +101,13 @@ service cloud.firestore {
     function signedIn() { return request.auth != null; }
     match /users/{uid}   { allow read: if signedIn();
                            allow write: if signedIn() && request.auth.uid == uid; }
-    match /ratings/{id}  { allow read: if signedIn();
-                           allow create, update, delete:
-                             if signedIn() && request.resource.data.uid == request.auth.uid; }
+    match /ratings/{id}  {
+      allow read:   if signedIn();
+      allow create: if signedIn() && request.resource.data.uid == request.auth.uid;
+      allow update: if signedIn() && resource.data.uid == request.auth.uid
+                                  && request.resource.data.uid == request.auth.uid;
+      allow delete: if signedIn() && resource.data.uid == request.auth.uid;
+    }
     match /views/{uid}   { allow read, write: if signedIn() && request.auth.uid == uid; }
   }
 }
