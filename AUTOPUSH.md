@@ -34,6 +34,7 @@ rm ~/Library/LaunchAgents/de.immosuche.autopush.plist
 ```
 
 ## Hinweise
+- Der Auto-Push lädt bei jedem Lauf auch fehlende **Objektbilder** nach `images/` herunter (Log: `~/Library/Logs/immo-images.log`). Das Repo wächst dadurch um einige MB.
 - Läuft nur, solange dein Mac an und du angemeldet bist (der Schlüsselbund muss entsperrt sein). Für die Cowork-Läufe ist das ohnehin der Fall.
 - Der Token läuft nach der gewählten Frist ab (z. B. 90 Tage). Wenn im Log ein Push-Fehler auftaucht, einfach einmal neu `git push` mit frischem Token — danach greift der Automatismus wieder.
 - Wenn der Projektordner verschoben wird, den Pfad in `tools/de.immosuche.autopush.plist` anpassen und den LaunchAgent neu laden.
