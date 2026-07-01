@@ -67,6 +67,7 @@ a { color: var(--accent2); }
   padding: 12px 13px; box-shadow: var(--shadow); position: relative; overflow: hidden;
 }
 .card.new { border-color: var(--accent); }
+.card .thumb { display: block; width: calc(100% + 26px); height: 170px; object-fit: cover; margin: -12px -13px 11px; border-radius: 14px 14px 0 0; background: #0b0f12; }
 .card .ribbon {
   position: absolute; top: 10px; right: -34px; transform: rotate(38deg);
   background: var(--accent); color: #08130f; font-size: 10.5px; font-weight: 700;

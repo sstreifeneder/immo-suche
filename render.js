@@ -79,6 +79,7 @@
       ? `<span class="badge score" title="${esc(o.freiheits_score_detail || "")}">Freiheit ${esc(o.freiheits_score)}</span>` : "";
     return `
       <div class="card${isNew ? " new" : ""}" data-url="${esc(o.url_norm)}">
+        ${o.bild ? `<img class="thumb" src="${esc(o.bild)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
         ${isNew ? '<div class="ribbon">NEU</div>' : ""}
         <h3>${esc(o.titel || "(ohne Titel)")}</h3>
         <div class="loc">${esc(o.ort || "")}${o.region ? " · " + esc(o.region) : ""}</div>
