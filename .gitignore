@@ -2,9 +2,12 @@
 .DS_Store
 **/.DS_Store
 
-# Backups / Zwischenstände der Zustandsdatei (nicht im Repo nötig)
+# Backups / Zwischenstände der Zustandsdatei (nicht im Repo/Deploy nötig)
 *.backup.json
 *.pre-dedup-*.json
+*.pre-flaechen-*.json
+*.pre-lauf-*.json
+*.pre-nachlauf-*.json
 
 # Editor / Tools
 .vscode/

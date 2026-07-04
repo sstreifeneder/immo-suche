@@ -1,0 +1,49 @@
+name: Deploy to GitHub Pages
+
+# Statische Web-App (HTML/JS/JSON, kein Build-Schritt). Ersetzt den eingebauten
+# "pages build and deployment"-Workflow (Deploy from a branch).
+#
+# WICHTIG – einmalig aktivieren:
+#   GitHub -> Repo -> Settings -> Pages -> "Build and deployment"
+#   -> Source auf "GitHub Actions" umstellen.
+# Erst danach greift dieser Workflow; solange die Source noch auf "Deploy from a
+# branch" steht, schlaegt der Deploy-Schritt erwartungsgemaess fehl.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Nur EIN Pages-Deployment gleichzeitig. Ein neuer Push bricht ein noch laufendes
+# aelteres Deployment SAUBER ab (Status: cancelled) statt es mit
+# "Deployment failed, try again later" scheitern zu lassen.
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact (gesamte Site aus dem Repo-Root)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

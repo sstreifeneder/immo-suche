@@ -7,6 +7,8 @@ set -u
 
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
 LOG="$HOME/Library/Logs/immo-autopush.log"
+STAMP="$REPO/.git/immo-last-push"   # Zeitstempel des letzten Pushes (liegt in .git/, nicht versioniert)
+COOLDOWN_MIN=10                     # Mindestabstand zwischen zwei Pushes (verhindert ueberlappende Pages-Deployments)
 cd "$REPO" || exit 1
 
 # Stale Git-Locks aus der Cowork-/Mount-Umgebung entfernen (sonst blockieren sie git)
@@ -28,11 +30,30 @@ if [ "$AHEAD" = "0" ]; then
   exit 0
 fi
 
+# Push-Cooldown: nur pushen, wenn der letzte Push mind. COOLDOWN_MIN Minuten her ist.
+# Ein Immobilien-Lauf erzeugt oft mehrere Commits kurz hintereinander (Daten zuerst,
+# nachgeladene Bilder ein paar Minuten spaeter). Ohne Cooldown loest JEDER Push ein eigenes
+# GitHub-Pages-Deployment aus; ein neueres verdraengt dann das noch laufende aeltere, das
+# daraufhin "Deployment failed, try again later" meldet. Mit dem Cooldown werden mehrere
+# Commits zu EINEM Push (= EIN Deployment) gebuendelt und Deployments ueberlappen sich nicht.
+now=$(date +%s)
+if [ -f "$STAMP" ]; then
+  last="$(cat "$STAMP" 2>/dev/null || echo 0)"
+  [ -z "$last" ] && last=0
+  age_min=$(( (now - last) / 60 ))
+  if [ "$age_min" -lt "$COOLDOWN_MIN" ]; then
+    echo "$(date '+%Y-%m-%d %H:%M')  Cooldown aktiv (${age_min}/${COOLDOWN_MIN} min) – $AHEAD Commit(s) offen, Push im naechsten Zyklus gebuendelt" >>"$LOG"
+    exit 0
+  fi
+fi
+
 if git push origin main >>"$LOG" 2>&1; then
-  echo "$(date '+%Y-%m-%d %H:%M')  OK gepusht" >>"$LOG"
+  date +%s > "$STAMP"
+  echo "$(date '+%Y-%m-%d %H:%M')  OK gepusht ($AHEAD Commit(s))" >>"$LOG"
 else
   # Remote evtl. voraus -> rebasen und erneut versuchen
   if git pull --rebase origin main >>"$LOG" 2>&1 && git push origin main >>"$LOG" 2>&1; then
+    date +%s > "$STAMP"
     echo "$(date '+%Y-%m-%d %H:%M')  OK nach rebase" >>"$LOG"
   else
     echo "$(date '+%Y-%m-%d %H:%M')  FEHLER push – siehe Log oben" >>"$LOG"

@@ -14,6 +14,43 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
 EXT = {"image/jpeg": ".jpg", "image/jpg": ".jpg", "image/pjpeg": ".jpg",
        "image/png": ".png", "image/webp": ".webp", "image/gif": ".gif"}
 
+# Optionales Verkleinern grosser Bilder (spart Repo-/Deploy-Gewicht). Best effort:
+# Ist Pillow (PIL) nicht installiert, werden Bilder unveraendert gespeichert (kein Fehler).
+try:
+    from PIL import Image
+    import io as _io
+    _HAVE_PIL = True
+except Exception:
+    _HAVE_PIL = False
+MAXDIM = 1400   # groesste Kante in px
+QUALITY = 82    # JPEG/WebP-Qualitaet
+
+
+def maybe_downscale(blob, ct):
+    """Verkleinert grosse Bilder; bei fehlendem Pillow oder Fehler: Original zurueck."""
+    if not _HAVE_PIL:
+        return blob
+    try:
+        im = Image.open(_io.BytesIO(blob))
+        w, h = im.size
+        if max(w, h) <= MAXDIM and len(blob) <= 300_000:
+            return blob  # schon klein genug
+        if max(w, h) > MAXDIM:
+            s = MAXDIM / float(max(w, h))
+            im = im.resize((max(1, int(w * s)), max(1, int(h * s))), Image.LANCZOS)
+        out = _io.BytesIO()
+        if "png" in ct:
+            im.save(out, format="PNG", optimize=True)
+        elif "webp" in ct:
+            im.save(out, format="WEBP", quality=QUALITY, method=4)
+        else:
+            im.convert("RGB").save(out, format="JPEG", quality=QUALITY, optimize=True)
+        new = out.getvalue()
+        return new if 0 < len(new) < len(blob) else blob
+    except Exception as e:
+        log(f"downscale-skip: {e}")
+        return blob
+
 
 def log(msg):
     try:
@@ -65,6 +102,7 @@ def main():
                 fail += 1
                 log(f"zu klein ({len(blob)}B) {bild[:90]}")
                 continue
+            blob = maybe_downscale(blob, ct)  # grosse Bilder verkleinern (best effort)
             fn = h + EXT.get(ct, ".jpg")
             with open(os.path.join(IMGDIR, fn), "wb") as f:
                 f.write(blob)
