@@ -82,7 +82,10 @@ def main():
             continue
         h = hashlib.md5(key.encode("utf-8")).hexdigest()[:16]
 
-        existing = glob.glob(os.path.join(IMGDIR, h + ".*"))
+        # Falls mehrere Dateien pro Hash existieren (z. B. .jpg neben altem .png):
+        # nicht-PNG bevorzugen, damit die verkleinerte/aktive Datei gewaehlt wird.
+        existing = sorted(glob.glob(os.path.join(IMGDIR, h + ".*")),
+                          key=lambda x: (x.lower().endswith(".png"), x.lower()))
         if existing:
             rel = "images/" + os.path.basename(existing[0])
             if o.get("bild_lokal") != rel:
