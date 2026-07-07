@@ -10,8 +10,8 @@ from immo_lib import url_norm, dedup_fp
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE = os.path.join(ROOT, "bekannte_objekte.json")
 CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/sessions/modest-bold-ptolemy/mnt/outputs"
-NOW_ISO = "2026-07-06T12:30:00+02:00"
-TODAY = "2026-07-06"
+NOW_ISO = "2026-07-07T20:45:00+02:00"
+TODAY = "2026-07-07"
 
 def is_grund(o):
     t = (o.get("typ") or "").lower()
@@ -127,7 +127,7 @@ def main():
         "zeit": NOW_ISO, "typ": "delta", "neu": len(neu), "preisaenderungen": len(preisaenderungen),
         "entfernt": 0, "aktiv_gesamt": aktiv_gesamt, "davon_zu_pruefen": zu_pruefen,
         "davon_hart_ok_aktiv": aktiv_gesamt,
-        "willhaben": "abgedeckt (Browser, Kärnten Häuser & Grundstücke, Aktualität) – 1 Volltreffer-Grundstück (Sittersdorf) + 2 Near-Miss-Häuser (Latschach, Obervellach)",
+        "willhaben": "abgedeckt (Chrome-Browser, Aktualität: Kärnten Häuser & Grundstücke + Steiermark Häuser & Grundstücke) – 1 Volltreffer-Grundstück (Bad Eisenkappel/Unterort 1.148 m² Bauland, 79.000 €); Steiermark ohne neue Volltreffer (Grundstücke >200k oder <1.000 m², Häuser WF<160)",
         "sub_agenten": "6 Großregionen parallel (Kärnten+Osttirol, Salzburg, Steiermark, Tirol+Vorarlberg, OÖ+NÖ, Südtirol)",
         "dubletten_zusammengefuehrt": len([d for d in dubletten if isinstance(d, dict) and d.get("merged_into")]),
         "verworfen_ueber_obergrenze": len(verworfen),
