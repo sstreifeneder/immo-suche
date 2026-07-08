@@ -127,7 +127,7 @@ def main():
         "zeit": NOW_ISO, "typ": "delta", "neu": len(neu), "preisaenderungen": len(preisaenderungen),
         "entfernt": 0, "aktiv_gesamt": aktiv_gesamt, "davon_zu_pruefen": zu_pruefen,
         "davon_hart_ok_aktiv": aktiv_gesamt,
-        "willhaben": "abgedeckt (Chrome-Browser, Aktualität: Kärnten & Steiermark, Häuser & Grundstücke). Häuser-newest ohne neue profilkonforme Volltreffer (Mehrfamilien-/Ferien-/Neubau-Fixpreis bzw. WF<160; Graz/Leoben Stadt-/Industrielagen). 2 frische Grundstücks-Near-Miss aufgenommen: Lölling Sonnseite/Kärnten (Bauland, 1.000 m², 55k, Grund exakt 1.000) + Pinggau/Steiermark (1.487 m², 45k, überwiegend Wald, Widmung ungesichert)",
+        "willhaben": "abgedeckt (Chrome-Browser, Aktualität: Kärnten & Steiermark, Häuser & Grundstücke). 2 Volltreffer aus der Steiermark: Schäffern/Hartberg-Fürstenfeld EFH (160 m² WF, 1.524 m² Grund, 249k, quasi Alleinlage/Sackgasse) + Baugrundstück Gutenberg/Stockheim/Weiz (1.314 m², 105k, davon 297 m² Freiland in Umwidmung -> Netto-Bauland ~1.017 m²). Kärnten Häuser & Grundstücke ohne profilkonforme Neutreffer (WF<160, Mehrfamilien-/Reihenhaus bzw. Grundstücke <1.000 m², >200k oder Zweitwohnsitz/Bauträger)",
         "sub_agenten": "6 Großregionen parallel (Kärnten+Osttirol, Salzburg, Steiermark, Tirol+Vorarlberg, OÖ+NÖ, Südtirol)",
         "dubletten_zusammengefuehrt": len([d for d in dubletten if isinstance(d, dict) and d.get("merged_into")]),
         "verworfen_ueber_obergrenze": len(verworfen),
@@ -151,7 +151,9 @@ def main():
           "| VERWORFEN:", len(verworfen), "| GESAMT:", len(objekte), "| aktiv:", aktiv_gesamt, "| zu_pruefen:", zu_pruefen)
     print("--- NEU (nach Freiheits-Score) ---")
     for o in result["neu_liste"]:
-        print(f"  {o.get('freiheits_score'):>3} | {o.get('hart_ok','')[:1]} | {o.get('preis')} | {o.get('ort')} | {o.get('typ')[:30]} | {o.get('titel')[:45]}")
+        sc = o.get('freiheits_score')
+        sc = f"{sc:>3}" if isinstance(sc, (int, float)) else "  –"
+        print(f"  {sc} | {(o.get('hart_ok') or '')[:1]} | {o.get('preis')} | {o.get('ort')} | {(o.get('typ') or '')[:30]} | {(o.get('titel') or '')[:45]}")
 
 if __name__ == "__main__":
     main()
