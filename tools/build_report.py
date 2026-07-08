@@ -26,7 +26,7 @@ kopf = (f"# Delta-Bericht Immobilien-Lauf\n\n"
         f"{r['neu']} neu · {r['preisaenderungen']} Preisänderungen · 0 entfernt · "
         f"{r['aktiv_gesamt']} aktiv gesamt** "
         f"(gesamt geführt {r['gesamt_objekte']}, davon {r['zu_pruefen']} zu prüfen)\n\n"
-        f"Suche: 6 Großregionen parallel (Sub-Agenten) + willhaben via Chrome-Browser (Kärnten + Steiermark, Häuser & Grundstücke, Aktualität). "
+        f"Suche: 6 Großregionen parallel (Sub-Agenten: Kärnten+Osttirol, Salzburg, Steiermark, Tirol+Vorarlberg, OÖ+NÖ, Südtirol) + willhaben via Chrome-Browser (Kärnten + Steiermark, Häuser & Grundstücke, Aktualität). "
         f"Dubletten zusammengeführt: {r['dubletten']}. Über Aufnahme-Obergrenze verworfen: {r['verworfen']}.\n")
 lines.append(kopf)
 
@@ -59,7 +59,7 @@ else:
 lines.append("## ENTFERNT / VERKAUFT\n")
 lines.append("_keine (additiver Neufund-Lauf ohne vollständige Verfügbarkeits-Nachprüfung)_\n")
 
-out = os.path.join(ROOT, "berichte", "delta_2026-07-07_2045.md")
+out = os.path.join(ROOT, "berichte", "delta_2026-07-08_0854.md")
 open(out, "w", encoding="utf-8").write("\n".join(lines))
 print("Bericht geschrieben:", out)
 print("Zeilen:", len(lines))

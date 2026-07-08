@@ -9,9 +9,9 @@ from immo_lib import url_norm, dedup_fp
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE = os.path.join(ROOT, "bekannte_objekte.json")
-CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/sessions/modest-bold-ptolemy/mnt/outputs"
-NOW_ISO = "2026-07-07T20:45:00+02:00"
-TODAY = "2026-07-07"
+CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/sessions/gracious-peaceful-mccarthy/mnt/outputs"
+NOW_ISO = "2026-07-08T08:54:00+02:00"
+TODAY = "2026-07-08"
 
 def is_grund(o):
     t = (o.get("typ") or "").lower()
@@ -127,7 +127,7 @@ def main():
         "zeit": NOW_ISO, "typ": "delta", "neu": len(neu), "preisaenderungen": len(preisaenderungen),
         "entfernt": 0, "aktiv_gesamt": aktiv_gesamt, "davon_zu_pruefen": zu_pruefen,
         "davon_hart_ok_aktiv": aktiv_gesamt,
-        "willhaben": "abgedeckt (Chrome-Browser, Aktualität: Kärnten Häuser & Grundstücke + Steiermark Häuser & Grundstücke) – 1 Volltreffer-Grundstück (Bad Eisenkappel/Unterort 1.148 m² Bauland, 79.000 €); Steiermark ohne neue Volltreffer (Grundstücke >200k oder <1.000 m², Häuser WF<160)",
+        "willhaben": "abgedeckt (Chrome-Browser, Aktualität: Kärnten & Steiermark, Häuser & Grundstücke). Häuser-newest ohne neue profilkonforme Volltreffer (Mehrfamilien-/Ferien-/Neubau-Fixpreis bzw. WF<160; Graz/Leoben Stadt-/Industrielagen). 2 frische Grundstücks-Near-Miss aufgenommen: Lölling Sonnseite/Kärnten (Bauland, 1.000 m², 55k, Grund exakt 1.000) + Pinggau/Steiermark (1.487 m², 45k, überwiegend Wald, Widmung ungesichert)",
         "sub_agenten": "6 Großregionen parallel (Kärnten+Osttirol, Salzburg, Steiermark, Tirol+Vorarlberg, OÖ+NÖ, Südtirol)",
         "dubletten_zusammengefuehrt": len([d for d in dubletten if isinstance(d, dict) and d.get("merged_into")]),
         "verworfen_ueber_obergrenze": len(verworfen),
