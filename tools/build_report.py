@@ -59,7 +59,7 @@ else:
 lines.append("## ENTFERNT / VERKAUFT\n")
 lines.append("_keine (additiver Neufund-Lauf ohne vollständige Verfügbarkeits-Nachprüfung)_\n")
 
-out = os.path.join(ROOT, "berichte", "delta_2026-07-08_0854.md")
+out = os.path.join(ROOT, "berichte", "delta_2026-07-08_1636.md")
 open(out, "w", encoding="utf-8").write("\n".join(lines))
 print("Bericht geschrieben:", out)
 print("Zeilen:", len(lines))

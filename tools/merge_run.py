@@ -10,7 +10,7 @@ from immo_lib import url_norm, dedup_fp
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE = os.path.join(ROOT, "bekannte_objekte.json")
 CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/sessions/gracious-peaceful-mccarthy/mnt/outputs"
-NOW_ISO = "2026-07-08T08:54:00+02:00"
+NOW_ISO = "2026-07-08T16:36:00+02:00"
 TODAY = "2026-07-08"
 
 def is_grund(o):
