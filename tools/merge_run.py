@@ -9,9 +9,9 @@ from immo_lib import url_norm, dedup_fp
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE = os.path.join(ROOT, "bekannte_objekte.json")
-CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/sessions/gracious-peaceful-mccarthy/mnt/outputs"
-NOW_ISO = "2026-07-08T16:36:00+02:00"
-TODAY = "2026-07-08"
+CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/sessions/sharp-practical-goldberg/mnt/outputs"
+NOW_ISO = "2026-07-09T10:01:00+02:00"
+TODAY = "2026-07-09"
 
 def is_grund(o):
     t = (o.get("typ") or "").lower()
@@ -127,8 +127,8 @@ def main():
         "zeit": NOW_ISO, "typ": "delta", "neu": len(neu), "preisaenderungen": len(preisaenderungen),
         "entfernt": 0, "aktiv_gesamt": aktiv_gesamt, "davon_zu_pruefen": zu_pruefen,
         "davon_hart_ok_aktiv": aktiv_gesamt,
-        "willhaben": "abgedeckt (Chrome-Browser, Aktualität: Kärnten & Steiermark, Häuser & Grundstücke). 2 Volltreffer aus der Steiermark: Schäffern/Hartberg-Fürstenfeld EFH (160 m² WF, 1.524 m² Grund, 249k, quasi Alleinlage/Sackgasse) + Baugrundstück Gutenberg/Stockheim/Weiz (1.314 m², 105k, davon 297 m² Freiland in Umwidmung -> Netto-Bauland ~1.017 m²). Kärnten Häuser & Grundstücke ohne profilkonforme Neutreffer (WF<160, Mehrfamilien-/Reihenhaus bzw. Grundstücke <1.000 m², >200k oder Zweitwohnsitz/Bauträger)",
-        "sub_agenten": "6 Großregionen parallel (Kärnten+Osttirol, Salzburg, Steiermark, Tirol+Vorarlberg, OÖ+NÖ, Südtirol)",
+        "willhaben": "abgedeckt (Chrome-Browser, Aktualität: Kärnten & Steiermark, Häuser & Grundstücke). 3 Volltreffer: Bauernhaus Hermagor-Pressegger See/Gailtal (192 m² WF, 10.778 m² Grund davon ~1.100 m² Bauland-Dorfgebiet, 430k, nur 1 Nachbar, unverbaubarer Fernblick, eigene Quelle) + Baugrundstück Duel/Velden (1.163 m² davon 1.079 m² Bauland-Dorfgebiet, 110k, Süd-Steilhang, Karawankenblick, Hauptwohnsitzverpflichtung) + EFH Straden/Nägelsdorf Südoststeiermark (204 m² WF, 1.497 m² Grund, 239k, Streusiedlung, Hausbrunnen). Steiermark-Grundstücke aktuell ohne >1.000-m²-Neutreffer (Top-Recency alle <1.000 m²)",
+        "sub_agenten": "6 Großregionen parallel (Kärnten+Osttirol, Salzburg, Steiermark, Tirol+Vorarlberg, OÖ+NÖ, Südtirol). Südtirol in diesem Lauf nur eingeschränkt: web_fetch dauerhaft rate-limitiert -> keine Exposé-Verifikation moeglich, unbelegte Such-URLs verworfen (0 Suedtirol-Kandidaten aufgenommen)",
         "dubletten_zusammengefuehrt": len([d for d in dubletten if isinstance(d, dict) and d.get("merged_into")]),
         "verworfen_ueber_obergrenze": len(verworfen),
         "hinweis": "additiver Neufund-Lauf; keine vollständige Verfügbarkeits-Nachpruefung -> kein fehlt_seit-Inkrement, entfernt=0",
