@@ -9,8 +9,8 @@ from immo_lib import url_norm, dedup_fp
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE = os.path.join(ROOT, "bekannte_objekte.json")
-CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/sessions/sharp-practical-goldberg/mnt/outputs"
-NOW_ISO = "2026-07-09T10:01:00+02:00"
+CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/sessions/sweet-gifted-shannon/mnt/outputs"
+NOW_ISO = "2026-07-09T18:31:00+02:00"
 TODAY = "2026-07-09"
 
 def is_grund(o):
@@ -127,8 +127,8 @@ def main():
         "zeit": NOW_ISO, "typ": "delta", "neu": len(neu), "preisaenderungen": len(preisaenderungen),
         "entfernt": 0, "aktiv_gesamt": aktiv_gesamt, "davon_zu_pruefen": zu_pruefen,
         "davon_hart_ok_aktiv": aktiv_gesamt,
-        "willhaben": "abgedeckt (Chrome-Browser, Aktualität: Kärnten & Steiermark, Häuser & Grundstücke). 3 Volltreffer: Bauernhaus Hermagor-Pressegger See/Gailtal (192 m² WF, 10.778 m² Grund davon ~1.100 m² Bauland-Dorfgebiet, 430k, nur 1 Nachbar, unverbaubarer Fernblick, eigene Quelle) + Baugrundstück Duel/Velden (1.163 m² davon 1.079 m² Bauland-Dorfgebiet, 110k, Süd-Steilhang, Karawankenblick, Hauptwohnsitzverpflichtung) + EFH Straden/Nägelsdorf Südoststeiermark (204 m² WF, 1.497 m² Grund, 239k, Streusiedlung, Hausbrunnen). Steiermark-Grundstücke aktuell ohne >1.000-m²-Neutreffer (Top-Recency alle <1.000 m²)",
-        "sub_agenten": "6 Großregionen parallel (Kärnten+Osttirol, Salzburg, Steiermark, Tirol+Vorarlberg, OÖ+NÖ, Südtirol). Südtirol in diesem Lauf nur eingeschränkt: web_fetch dauerhaft rate-limitiert -> keine Exposé-Verifikation moeglich, unbelegte Such-URLs verworfen (0 Suedtirol-Kandidaten aufgenommen)",
+        "willhaben": "abgedeckt (Chrome-Browser, Aktualität: Kärnten & Steiermark, Häuser & Grundstücke). Volltreffer-Grundstück: Kogl bei Wernersdorf/Wies Südsteiermark (2.062 m², ~50% Bauland/Südhang mit Aussicht, 55k). 3 Near-Miss-Häuser (Preis 650–900k, sonst voll profilkonform): Unterzirknitz/Jagerberg SO-Steiermark (absolute Alleinlage, 3,3 ha, Selbstversorger, 220 m² WF, 730k, Score 80) + Hofstätten a.d. Raab/Weiz (EFH + Kleinlandwirtschaft, 224 m² WF, 2,7 ha inkl. eigenem Wald, 759k) + Landhaus Glainach bei Ferlach/Rosental (220 m² WF, 2.173 m² Bauland, 890k, Selbstversorger/Destille). 2 Near-Miss-Grundstücke: Liebenfels-Sonnenhang (nur ~500 m² bebaubar) + Södingberg/Voitsberg (A-WR Aufschließungsgebiet). Baugrund Duel/Velden bereits im Bestand (Dublette)",
+        "sub_agenten": "6 Großregionen parallel (Kärnten+Osttirol, Salzburg, Steiermark, Tirol+Vorarlberg, OÖ+NÖ, Südtirol). Südtirol in diesem Lauf nur eingeschränkt: idealista-Exposés bot-blockiert, immomarkt-suedtirol.bz/pareggerpartner JS-gerendert -> nur immoco/immoweb/rimmo verifizierbar (4 Kandidaten)",
         "dubletten_zusammengefuehrt": len([d for d in dubletten if isinstance(d, dict) and d.get("merged_into")]),
         "verworfen_ueber_obergrenze": len(verworfen),
         "hinweis": "additiver Neufund-Lauf; keine vollständige Verfügbarkeits-Nachpruefung -> kein fehlt_seit-Inkrement, entfernt=0",
