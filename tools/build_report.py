@@ -26,7 +26,7 @@ kopf = (f"# Delta-Bericht Immobilien-Lauf\n\n"
         f"{r['neu']} neu · {r['preisaenderungen']} Preisänderungen · 0 entfernt · "
         f"{r['aktiv_gesamt']} aktiv gesamt** "
         f"(gesamt geführt {r['gesamt_objekte']}, davon {r['zu_pruefen']} zu prüfen)\n\n"
-        f"Suche: 6 Großregionen parallel (Sub-Agenten: Kärnten+Osttirol, Salzburg, Steiermark, Tirol+Vorarlberg, OÖ+NÖ, Südtirol) + willhaben via Chrome-Browser (Kärnten + Steiermark, Häuser & Grundstücke, nach Aktualität; 1 Volltreffer-Grundstück Kogl/Wies + 3 Near-Miss-Häuser + 2 Near-Miss-Grundstücke). ⚠️ Südtirol in diesem Lauf nur eingeschränkt: idealista-Exposés bot-blockiert, immomarkt-suedtirol.bz/pareggerpartner JS-gerendert → nur immoco/immoweb/rimmo verifizierbar. "
+        f"Suche: 6 Großregionen parallel (Sub-Agenten: Kärnten+Osttirol, Salzburg, Steiermark, Tirol+Vorarlberg, OÖ+NÖ, Südtirol) + willhaben via Chrome-Browser (Kärnten + Steiermark, Häuser & Grundstücke, nach Aktualität; u.a. Volltreffer-Haus Tauplitz/Ennstal mit Grimmingblick 425k + Volltreffer-Grundstück Deutsch Goritz/Südoststeiermark Bauland-Dorfgebiet 36k, dazu mehrere Near-Miss). ⚠️ Südtirol in diesem Lauf nur eingeschränkt: idealista/casa.it bot-blockiert, immomarkt-suedtirol.bz/pareggerpartner JS-gerendert → nur immoco/immoweb/engelvölkers verifizierbar. "
         f"Dubletten zusammengeführt: {r['dubletten']}. Über Aufnahme-Obergrenze verworfen: {r['verworfen']}.\n")
 lines.append(kopf)
 
