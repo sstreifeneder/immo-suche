@@ -176,7 +176,7 @@
       {
         "zeit": "2026-07-16T13:58:00+02:00",
         "typ": "delta",
-        "neu": 109,
+        "neu": 110,
         "preisaenderungen": 1,
         "entfernt": 0,
         "aktiv_gesamt": 281,
@@ -186,7 +186,7 @@
         "sub_agenten": "6 Großregionen parallel (Kärnten+Osttirol 9, Salzburg 6, Steiermark 20, Tirol+Vorarlberg 3, OÖ+NÖ 4, Südtirol 6 Kandidaten). Volltreffer: Kärnten Sonnenchalet Eitweg/Lavanttal (340k, 260 m², 1.277 m², Alleinlage+Panoramablick, Pellet+Solar, Score 62) + Baugrund St. Jakob im Rosental/Schlatten (72k, 1.131 m², Bauland-Dorfgebiet); Salzburg Bauernhaus Hopfberg/Taxenbach (Bieterverfahren ab 570k, 200 m², 1.475 m², 1.100 m Seehöhe, Score 62); Steiermark EFH Krakaudorf/Murau (545k, 258 m², 2.659 m², 50) + Judenburg (499k, 167 m², 47) + Unterlamm (650k, 243 m², 43) + Gnas (280k, 198 m²) + Bauernhaus St. Stefan ob Stainz (610k, 168 m²) + Baugründe Fohnsdorf 112k/1.120, Rettenbach-Sonnenhang 148k/1.481, St. Lambrecht 69k/1.380, Bad Schwanberg 60k/1.890; OÖ+NÖ Baugrund Perwarth/Randegg (51,8k, 1.044 m², Bauland-Wohnen). Tirol+Vorarlberg 0 Volltreffer (Grund durchweg <1.000 m², Bauland >1.000 m² durchweg >200k). Südtirol 0 Volltreffer (Konventionierung/geschlossener Hof/Preis auf Anfrage; Baugrundstücke >1.000 m² unter 200k praktisch nicht am Markt). Blockiert: pareggerpartner.com JS-leer, engelvoelkers.com JS-Hülle, immowelt/immobilien.net/immobilien.nachrichten.at für OÖ+NÖ leer; idealista/casa.it bot-blockiert (nur Snippets). immomarkt-suedtirol.bz diesmal lesbar.",
         "dubletten_zusammengefuehrt": 27,
         "verworfen_ueber_obergrenze": 0,
-        "hinweis": "additiver Neufund-Lauf; keine vollständige Verfügbarkeits-Nachpruefung -> kein fehlt_seit-Inkrement, entfernt=0"
+        "hinweis": "additiver Neufund-Lauf; keine vollständige Verfügbarkeits-Nachpruefung -> kein fehlt_seit-Inkrement, entfernt=0. Post-Merge-Dublettencheck: 3 Objekte manuell zusammengeführt (2 davon Neufunde: willhaben Döbriach/Glanz identisches Inserat, Baugrund Schlatten engelvoelkers = ImmoScout-Bestand mit Preis 74.500->72.000; 1 Altbestands-Dublette Gorintschach 135k)."
       }
     ]
   },
