@@ -2,7 +2,7 @@
 """build_report.py – erzeugt den Delta-Bericht (Markdown) aus delta_result.json."""
 import json, os, sys
 
-CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/sessions/serene-pensive-sagan/mnt/outputs"
+CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/sessions/fervent-loving-thompson/mnt/outputs"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 r = json.load(open(os.path.join(CAND_DIR, "delta_result.json"), encoding="utf-8"))
 
@@ -60,7 +60,7 @@ else:
 lines.append("## ENTFERNT / VERKAUFT\n")
 lines.append("_keine (additiver Neufund-Lauf ohne vollständige Verfügbarkeits-Nachprüfung)_\n")
 
-out = os.path.join(ROOT, "berichte", "delta_2026-07-19_1010.md")
+out = os.path.join(ROOT, "berichte", "delta_2026-07-20_0930.md")
 open(out, "w", encoding="utf-8").write("\n".join(lines))
 print("Bericht geschrieben:", out)
 print("Zeilen:", len(lines))
