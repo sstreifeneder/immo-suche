@@ -2,7 +2,7 @@
 """build_report.py – erzeugt den Delta-Bericht (Markdown) aus delta_result.json."""
 import json, os, sys
 
-CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/sessions/fervent-loving-thompson/mnt/outputs"
+CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/tmp/immolauf/outputs"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 r = json.load(open(os.path.join(CAND_DIR, "delta_result.json"), encoding="utf-8"))
 
@@ -26,8 +26,8 @@ kopf = (f"# Delta-Bericht Immobilien-Lauf\n\n"
         f"{r['neu']} neu · {r['preisaenderungen']} Preisänderungen · 0 entfernt · "
         f"{r['aktiv_gesamt']} aktiv gesamt** "
         f"(gesamt geführt {r['gesamt_objekte']}, davon {r['zu_pruefen']} zu prüfen)\n\n"
-        f"Suche: 6 Großregionen parallel über Sub-Agenten (Kärnten+Osttirol 14, Salzburg 7, Steiermark 9, Tirol+Vorarlberg 13, OÖ+NÖ 36, Südtirol 35 = 114 Kandidaten) + **willhaben via Chrome-Browser** (Kärnten & Steiermark, Häuser & Grundstücke nach Aktualität, 690 Anzeigen durchgeblättert; nach Filterung und Dedup gegen 320 bekannte willhaben-IDs 64 Kandidaten, davon 38 nach Exposé-Prüfung übernommen). Bei willhaben-Häusern wurde die Grundstücksgröße einzeln aus dem Exposé-Detail (`PLOT/AREA`) verifiziert, bei Grundstücken die Widmung aus dem Exposé-Text (`DESCRIPTION`) belegt; Objekte ohne belegte Bauland-Widmung, mit Grund <1.000 m² oder mit ausgeschlossenem Typ (Doppel-/Reihen-/Mehrfamilienhaus, Gasthaus/Gewerbe, Freizeitwohnsitz) sind nicht als Volltreffer geführt.\n\n"
-        f"Häuser 650–900k und Grundstücke 150–200k sind als Near-Miss „TEIL – verfehlt: Preis\" geführt (Zielpreise 650k bzw. 150k). ⚠️ Tirol+Vorarlberg 0 Volltreffer (Grund durchweg <1.000 m², Bauland >1.000 m² durchweg >200k; mehrfach explizite Freizeitwohnsitz-Widmung). ⚠️ Südtirol nur 1 Volltreffer (Konventionierung/geschlossener Hof; Bauland kleinparzelliert und konventioniert). ⚠️ Salzburg: kein gewidmetes Bauland >1.000 m² unter 200.000 € am Markt. ⚠️ Rate-Limit: web_fetch lief bei mehreren Sub-Agenten ins HTTP 429 – 5 Kärntner Objekte nur listenbasiert erfasst (als TEIL/ohne Bild geführt, im nächsten Lauf nachzuverifizieren); remax.at, sreal.at, findmyhome.at, wohnnet.at sowie Teile von OÖ (Molln, Windischgarsten, Hinterstoder, Spital am Pyhrn) blieben unabgedeckt. Leere Hüllen: immmo.at, immo.sn.at, teilweise immobiliare.it. "
+        f"Suche: 6 Großregionen parallel über Sub-Agenten (Kärnten+Osttirol 17, Salzburg 5, Steiermark 20, Tirol+Vorarlberg 7, OÖ+NÖ 11, Südtirol 4 = 64 Kandidaten) + **willhaben via Chrome-Browser** (Kärnten & Steiermark, Häuser ≤900k & Grundstücke ≤200k nach Aktualität, 840 Anzeigen bis Inseratsdatum 21.07. durchgeblättert; nach WF/Grund-Filter, Typ-Whitelist und Dedup gegen 437 bekannte willhaben-IDs 167 Kandidaten, davon 120 Exposé-geprüft und 75 übernommen). Bei willhaben-Häusern wurde die echte Grundstücksgröße einzeln aus dem Exposé-Detail (`PLOT/AREA`) verifiziert, bei Grundstücken die Widmung aus dem Exposé-Text (`DESCRIPTION`) belegt; Objekte ohne belegte Bauland-Widmung, mit Grund <1.000 m² oder mit ausgeschlossenem Typ (Doppel-/Reihen-/Mehrfamilienhaus, Gasthaus/Gewerbe, Freizeit-/Freilandwidmung) sind nicht als Volltreffer geführt.\n\n"
+        f"Häuser 650–900k und Grundstücke 150–200k sind als Near-Miss \"TEIL – verfehlt: Preis\" geführt (Zielpreise 650k bzw. 150k). ⚠️ Tirol+Vorarlberg 0 Volltreffer (Grund durchweg <1.000 m², Bauland >1.000 m² durchweg >200k; mehrfach explizite Freizeitwohnsitz-Widmung). ⚠️ Südtirol 0 Volltreffer (Konventionierung/geschlossener Hof; Bauland kleinparzelliert). ⚠️ Salzburg: kein gewidmetes Bauland >1.000 m² unter 200.000 € am Markt. ⚠️ Mehrere Sub-Agenten-Exposés lieferten HTTP 410/404 (abgelaufen) und wurden verworfen; remax.at robots-gesperrt; immo.sn.at/immmo.at teils leere Hüllen. "
         f"Dubletten zusammengeführt: {r['dubletten']} (Zwei-Stufen-Dedup url_norm + Inhalts-Fingerprint, plus Post-Merge-Check über Ortsname/Preis/Grund). Über Aufnahme-Obergrenze verworfen: {r['verworfen']}.\n")
 lines.append(kopf)
 
@@ -60,7 +60,7 @@ else:
 lines.append("## ENTFERNT / VERKAUFT\n")
 lines.append("_keine (additiver Neufund-Lauf ohne vollständige Verfügbarkeits-Nachprüfung)_\n")
 
-out = os.path.join(ROOT, "berichte", "delta_2026-07-20_0930.md")
+out = os.path.join(ROOT, "berichte", "delta_2026-07-22_1627.md")
 open(out, "w", encoding="utf-8").write("\n".join(lines))
 print("Bericht geschrieben:", out)
 print("Zeilen:", len(lines))
