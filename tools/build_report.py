@@ -2,7 +2,7 @@
 """build_report.py – erzeugt den Delta-Bericht (Markdown) aus delta_result.json."""
 import json, os, sys
 
-CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/tmp/immolauf/outputs"
+CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/tmp/immolauf/proj/outputs"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 r = json.load(open(os.path.join(CAND_DIR, "delta_result.json"), encoding="utf-8"))
 
@@ -26,8 +26,8 @@ kopf = (f"# Delta-Bericht Immobilien-Lauf\n\n"
         f"{r['neu']} neu · {r['preisaenderungen']} Preisänderungen · 0 entfernt · "
         f"{r['aktiv_gesamt']} aktiv gesamt** "
         f"(gesamt geführt {r['gesamt_objekte']}, davon {r['zu_pruefen']} zu prüfen)\n\n"
-        f"Suche: 6 Großregionen parallel über Sub-Agenten (Kärnten+Osttirol 11, Salzburg 6, Steiermark 23, Tirol+Vorarlberg 8, OÖ+NÖ 17, Südtirol 5 = 70 Kandidaten, 29 Volltreffer) + **willhaben via Chrome-Browser** (Kärnten & Steiermark, Häuser ≤900k & Grundstücke ≤200k nach Aktualität; Delta ~2 Tage seit letztem Lauf → 990 Anzeigen bis Cutoff 03.08. durchgeblättert (rows=90); nach ID-Dedup gegen 742 bekannte willhaben-IDs 82 neue Kandidaten Exposé-geprüft und 41 übernommen: 28 Häuser + 13 Grundstücke, davon 19 Volltreffer). Bei willhaben-Häusern wurde die echte Grundstücksgröße einzeln aus dem Exposé-Detail (`PLOT/AREA`) verifiziert, bei Grundstücken die Widmung aus dem Exposé-Text (`DESCRIPTION`) belegt; willhaben-Objekte ohne belegte Bauland-Widmung, Häuser mit Grund <1.000 m² bzw. ohne belegbare Grundfläche (46 Exposé-Drops) sowie per Titel-Vorfilter erkannte Freizeit-/Gewerbe-/Ausschluss-Objekte (72) sind nicht als Volltreffer geführt; 6 willhaben-Häuser wurden über das PROPERTY_TYPE-/Titel-Sicherheitsnetz (Mehrfamilienhaus/Bungalow, „vier Einheiten\"/„2 Wohnhäuser\"/Tankstelle) auf TEIL Typ herabgestuft.\n\n"
-        f"Häuser 650–900k und Grundstücke 150–200k sind als Near-Miss \"TEIL – verfehlt: Preis\" geführt (Zielpreise 650k bzw. 150k); Objekte mit Freizeit-/Zweitwohnsitz-Widmung als \"TEIL – verfehlt: Widmung\", Zwei-/Mehrfamilienhäuser als \"TEIL – verfehlt: Typ\". ⚠️ Tirol+Vorarlberg nur 1 Volltreffer (Grund meist <1.000 m², Bauland >200k, mehrfach explizite Freizeitwohnsitz-Widmung). ⚠️ Südtirol 0 Volltreffer (Konventionierung/geschlossener Hof; Grundfläche selten beziffert; Bauland kleinparzelliert/Agrar). ⚠️ Salzburg: kein gewidmetes Bauland >1.000 m² unter 200.000 € am Markt (nur 1 Haus-Volltreffer). ⚠️ remax.at robots-gesperrt; idealista/immo.sn.at teils leere Hüllen. "
+        f"Suche: 6 Großregionen parallel über Sub-Agenten (Kärnten+Osttirol 22, Salzburg 8, Steiermark 28, Tirol+Vorarlberg 6, OÖ+NÖ 31, Südtirol 12 = 107 Kandidaten, 42 Volltreffer) + **willhaben via Chrome-Browser** (Kärnten & Steiermark, Häuser ≤900k & Grundstücke ≤200k nach Aktualität; Delta ~8 Tage seit letztem Lauf → 2.622 Anzeigen im Delta-Fenster bis Cutoff 05.08. durchgeblättert (rows=90); nach ID-Dedup gegen 781 bekannte willhaben-IDs und Titel-Vorfilter 299 neue Kandidaten einzeln Exposé-geprüft und 97 übernommen: 66 Häuser + 31 Grundstücke, davon 44 Volltreffer). Bei willhaben-Häusern wurde die echte Grundstücksgröße einzeln aus dem Exposé-Detail (`PLOT/AREA`) verifiziert, bei Grundstücken die Widmung aus dem Exposé-Text (`DESCRIPTION`) belegt; 115 Häuser mit Grund <1.000 m² bzw. ohne belegbare Grundfläche und 83 Grundstücke ohne belegte Bauland-Widmung sind nicht übernommen, 5 weitere Häuser über das PROPERTY_TYPE-/Titel-Sicherheitsnetz auf TEIL Typ herabgestuft.\n\n"
+        f"Häuser 650–900k und Grundstücke 150–200k sind als Near-Miss \"TEIL – verfehlt: Preis\" geführt (Zielpreise 650k bzw. 150k); Objekte mit Freizeit-/Zweitwohnsitz-Widmung als \"TEIL – verfehlt: Widmung\", Zwei-/Mehrfamilienhäuser und Gewerbe-/Anlageobjekte als \"TEIL – verfehlt: Typ\". ⚠️ Tirol+Vorarlberg nur 1 Volltreffer und **0 Baugrundstücke** (in 9 Bezirken kein unbebautes Grundstück >1.000 m² unter 200.000 €; Häuser fast durchweg Grund <1.000 m², mehrfach Freizeitwohnsitz-Widmung). ⚠️ Südtirol nur 1 Volltreffer (Konventionierung/geschlossener Hof; Grundfläche selten beziffert; Bauland kleinparzelliert/agrarisch). ⚠️ Salzburg: weiterhin kein gewidmetes Bauland >1.000 m² unter 200.000 € am Markt; Häuser ≥160 m² auf ≥1.000 m² starten faktisch bei 790.000 €. ⚠️ Blockiert: remax.at robots-gesperrt; immowelt.at Suchseiten HTTP 410; findmyhome.at/sreal.at/derStandard-Immobilien 404; laendleimmo.at + immoversum.com robots-gesperrt; idealista.it HTTP 400. "
         f"Dubletten zusammengeführt: {r['dubletten']} (Zwei-Stufen-Dedup url_norm + Inhalts-Fingerprint im Merge, plus Post-Merge-Check über Ortsname/Preis/Grund und ortsunabhängig gegen den Altbestand). Über Aufnahme-Obergrenze verworfen: {r['verworfen']}.\n")
 lines.append(kopf)
 
@@ -60,7 +60,7 @@ else:
 lines.append("## ENTFERNT / VERKAUFT\n")
 lines.append("_keine (additiver Neufund-Lauf ohne vollständige Verfügbarkeits-Nachprüfung)_\n")
 
-out = os.path.join(ROOT, "berichte", "delta_2026-08-05_0952.md")
+out = os.path.join(ROOT, "berichte", "delta_2026-08-13_0925.md")
 open(out, "w", encoding="utf-8").write("\n".join(lines))
 print("Bericht geschrieben:", out)
 print("Zeilen:", len(lines))
