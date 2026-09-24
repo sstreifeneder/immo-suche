@@ -10,8 +10,8 @@ from immo_lib import url_norm, dedup_fp
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE = os.path.join(ROOT, "bekannte_objekte.json")
 CAND_DIR = sys.argv[1] if len(sys.argv) > 1 else "/tmp/immolauf/proj/outputs"
-NOW_ISO = "2026-08-17T09:30:00+02:00"
-TODAY = "2026-08-17"
+NOW_ISO = "2026-09-24T10:15:00+02:00"
+TODAY = "2026-09-24"
 
 def is_grund(o):
     t = (o.get("typ") or "").lower()

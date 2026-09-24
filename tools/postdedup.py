@@ -14,7 +14,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE = os.path.join(ROOT, "bekannte_objekte.json")
 CAND_DIR = sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("--") else "/tmp/immolauf/proj/outputs"
 APPLY = "--apply" in sys.argv
-TODAY = "2026-08-17"
+TODAY = "2026-09-24"
 
 
 def norm_ort(s):
@@ -55,6 +55,15 @@ def main():
     def add(prim, dup, regel):
         if id(dup) in used or id(prim) in used or prim is dup:
             return
+        # Guard (2026-09-24): ortsunabhaengige Treffer nur, wenn Grund und Preis praktisch identisch
+        # sind – sonst streuen (b)/(c) Zufallstreffer zwischen verschiedenen Orten (z. B. Lindegg/Oberwoelz,
+        # Hermagor/Muhr, Gresten/Fladnitz).
+        if norm_ort(prim.get("ort")) != norm_ort(dup.get("ort")):
+            gp, gd = prim.get("grundflaeche") or 0, dup.get("grundflaeche") or 0
+            pp, pd = prim.get("preis") or 0, dup.get("preis") or 0
+            if not (gp and gd and abs(gp - gd) <= 0.01 * max(gp, gd)
+                    and pp and pd and abs(pp - pd) <= 0.005 * max(pp, pd)):
+                return
         used.add(id(dup))
         paare.append((prim, dup, regel))
 
