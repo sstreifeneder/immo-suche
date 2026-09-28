@@ -1,0 +1,612 @@
+[
+ {
+  "url": "https://www.immobiliare.it/de/annunci/120645012/",
+  "titel": "Freistehende Einfamilienvilla Laas (Dr.-Franz-Tappeiner-Str. 35), 381 m², 1.415 m² Grund",
+  "region": "Südtirol (Vinschgau)",
+  "ort": "39023 Laas",
+  "preis": 790000,
+  "preis_hinweis": null,
+  "wohnflaeche": 381,
+  "grundflaeche": 1415,
+  "nutzflaeche": "Garage 2 Plätze, Keller, Taverne, 60 m² Gewächshaus",
+  "typ": "Einfamilienhaus",
+  "widmung": "Wohnhaus im Dorf; Konventionierung nicht angegeben",
+  "zustand": "renovierungsbedürftig, seit Jahren leerstehend; Methan-Heizung; kein geschlossener Hof",
+  "bergblick": "nicht angegeben",
+  "alleinlage": "nein – sonnige, ruhige Wohngegend im Dorf Laas",
+  "hart_ok": "TEIL – verfehlt: Preis (790.000 € > 650.000 Ziel; >600k mit hohem Sanierungsbedarf)",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": "https://pwm.im-cdn.it/image/1710357984/m-c.jpg",
+  "lat": 46.616,
+  "lon": 10.7,
+  "quelle": "immobiliare.it"
+ },
+ {
+  "url": "https://www.immobiliare.it/de/annunci/121742516/",
+  "titel": "Sanierungsbedürftiges alleinstehendes Haus in Antholz (via Ammerer), Neubaupotenzial bis 1.000 m³",
+  "region": "Südtirol (Pustertal / Antholzer Tal)",
+  "ort": "39030 Rasen-Antholz (Antholz Mittertal)",
+  "preis": 550000,
+  "preis_hinweis": null,
+  "wohnflaeche": 154,
+  "grundflaeche": null,
+  "nutzflaeche": null,
+  "typ": "Einfamilienhaus",
+  "widmung": "landwirtschaftliches Gebiet (lt. Inserat); Konventionierung nicht angegeben",
+  "zustand": "Baujahr 1970, stark renovierungsbedürftig; Holzofenheizung; kein geschlossener Hof erwähnt",
+  "bergblick": "nicht angegeben",
+  "alleinlage": "alleinstehendes Haus, sonnige Lage",
+  "hart_ok": "TEIL – verfehlt: Wohnfläche (154 < 160), Grundfläche nicht beziffert",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": "https://pwm.im-cdn.it/image/1743656238/m-c.jpg",
+  "lat": 46.868,
+  "lon": 12.106,
+  "quelle": "immobiliare.it (Immobilien Niederkofler)"
+ },
+ {
+  "url": "https://www.immobiliare.it/de/annunci/122767632/",
+  "titel": "Renovierungsbedürftiges Einfamilienhaus Tassenbach (bei Innichen gelistet), 300 m²",
+  "region": "Tirol (Osttirol, Hochpustertal – über Südtiroler Makler)",
+  "ort": "Tassenbach (Strassen, Osttirol) – lt. Inserat 'Innichen'",
+  "preis": 320000,
+  "preis_hinweis": null,
+  "wohnflaeche": 300,
+  "grundflaeche": 550,
+  "nutzflaeche": null,
+  "typ": "Einfamilienhaus",
+  "widmung": null,
+  "zustand": "renovierungsbedürftig, Energieklasse G",
+  "bergblick": "nicht angegeben",
+  "alleinlage": "nein – ruhige Lage nahe Bahnhof/Radweg",
+  "hart_ok": "TEIL – verfehlt: Grundfläche (550 < 1.000)",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": "https://pwm.im-cdn.it/image/1771950372/m-c.jpg",
+  "lat": 46.745,
+  "lon": 12.436,
+  "quelle": "immobiliare.it (Aurimmobil)"
+ },
+ {
+  "url": "https://www.immobiliare.it/de/annunci/131598286/",
+  "titel": "Einfamilienhaus Heinfels (bei Innichen gelistet), 162 m², sonnige Hanglage",
+  "region": "Tirol (Osttirol, Hochpustertal – über Südtiroler Makler)",
+  "ort": "Heinfels (Osttirol) – lt. Inserat 'Innichen'",
+  "preis": 425000,
+  "preis_hinweis": null,
+  "wohnflaeche": 162,
+  "grundflaeche": 516,
+  "nutzflaeche": null,
+  "typ": "Einfamilienhaus",
+  "widmung": null,
+  "zustand": "Baujahr 2004, modernisiert 2009; PV-Anlage, Elektroheizung",
+  "bergblick": "ja (Berglandschaft)",
+  "alleinlage": "ruhige Hanglage",
+  "hart_ok": "TEIL – verfehlt: Grundfläche (516 < 1.000)",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": "https://pwm.im-cdn.it/image/1985070970/m-c.jpg",
+  "lat": 46.749,
+  "lon": 12.441,
+  "quelle": "immobiliare.it (Aurimmobil)"
+ },
+ {
+  "url": "https://www.immobiliare.it/de/annunci/131738394/",
+  "titel": "Ebenerdiges Einfamilienhaus in Arnbach (bei Innichen gelistet)",
+  "region": "Tirol (Osttirol, Hochpustertal – über Südtiroler Makler)",
+  "ort": "Arnbach (Sillian, Osttirol)",
+  "preis": 445000,
+  "preis_hinweis": null,
+  "wohnflaeche": 96,
+  "grundflaeche": null,
+  "nutzflaeche": "Handelsfläche ca. 150 m²",
+  "typ": "Einfamilienhaus",
+  "widmung": "Hauptwohnsitz lt. Inserat",
+  "zustand": "Baujahr 2010, Pelletheizung",
+  "bergblick": "teilweise",
+  "alleinlage": "ruhig am Radweg",
+  "hart_ok": "TEIL – verfehlt: Wohnfläche (96 < 160), Grundfläche nicht beziffert",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": "https://pwm.im-cdn.it/image/1988374548/m-c.jpg",
+  "lat": 46.738,
+  "lon": 12.401,
+  "quelle": "immobiliare.it (Aurimmobil)"
+ },
+ {
+  "url": "https://www.immobiliare.it/de/annunci/129553832/",
+  "titel": "Historische Jugendstilvilla 'via Bolzano 3', Innichen, 365 m²",
+  "region": "Südtirol (Hochpustertal)",
+  "ort": "39038 Innichen (lt. Inserat)",
+  "preis": 630000,
+  "preis_hinweis": null,
+  "wohnflaeche": 365,
+  "grundflaeche": 40,
+  "nutzflaeche": null,
+  "typ": "Einfamilienhaus (Villa)",
+  "widmung": null,
+  "zustand": "um 1900, gut erhalten/teilrenoviert; Aufteilung in mehrere Einheiten möglich",
+  "bergblick": "ja (360° vom Turm)",
+  "alleinlage": "nein",
+  "hart_ok": "TEIL – verfehlt: Grundfläche (ca. 40 m² Garten)",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": "https://pwm.im-cdn.it/image/1936058806/m-c.jpg",
+  "lat": 46.733,
+  "lon": 12.282,
+  "quelle": "immobiliare.it (privat)"
+ },
+ {
+  "url": "https://www.immobiliare.it/de/annunci/128672498/",
+  "titel": "Sanierungsbedürftige Haushälfte in Wengen (La Val), 320 m²",
+  "region": "Südtirol (Gadertal)",
+  "ort": "39030 Wengen / La Val",
+  "preis": 700000,
+  "preis_hinweis": null,
+  "wohnflaeche": 320,
+  "grundflaeche": null,
+  "nutzflaeche": null,
+  "typ": "Haushälfte",
+  "widmung": null,
+  "zustand": "stark renovierungsbedürftig, Klasse G",
+  "bergblick": "nicht explizit",
+  "alleinlage": "ruhige Lage auf 1.353 m im Grünen",
+  "hart_ok": "TEIL – verfehlt: Typ (Haushälfte), Preis (>650k)",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": "https://pwm.im-cdn.it/image/1914403548/m-c.jpg",
+  "lat": 46.637,
+  "lon": 11.917,
+  "quelle": "immobiliare.it (Aurimmobil)"
+ },
+ {
+  "url": "https://www.immomarkt-suedtirol.bz/immoAlps/27-alter-bestand-baukubatur-in-vintl",
+  "titel": "Alter Bestand / Baukubatur ca. 410 m³ in Vintl (für EFH geeignet)",
+  "region": "Südtirol (Pustertal)",
+  "ort": "39030 Vintl",
+  "preis": 125000,
+  "preis_hinweis": null,
+  "wohnflaeche": null,
+  "grundflaeche": null,
+  "nutzflaeche": null,
+  "typ": "Baugrundstück (Altbestand/Baukubatur)",
+  "widmung": "nicht belegt (Altbestand/Baukubatur ca. 410 m³)",
+  "zustand": "Altbestand, Energieklasse G; Grundstücksgröße und Aufschließung nicht angegeben",
+  "bergblick": null,
+  "alleinlage": null,
+  "hart_ok": "TEIL – verfehlt: Grundfläche nicht beziffert, Widmung ungesichert",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": null,
+  "lat": 46.806,
+  "lon": 11.719,
+  "quelle": "immomarkt-suedtirol.bz (immoAlps)"
+ },
+ {
+  "url": "https://www.immomarkt-suedtirol.bz/profiimmobilien/dein-r-ckzugsort-in-den-bergen-traumhaus-in-absoluter-ruhe",
+  "titel": "Traumhaus in absoluter Ruhe, Karthaus/Schnals (113 m² WF)",
+  "region": "Südtirol (Vinschgau / Schnalstal)",
+  "ort": "39020 Schnals (Karthaus)",
+  "preis": 549000,
+  "preis_hinweis": null,
+  "wohnflaeche": 113,
+  "grundflaeche": null,
+  "nutzflaeche": "141 m² brutto",
+  "typ": "Einfamilienhaus",
+  "widmung": null,
+  "zustand": "Baujahr 1970, sehr guter Zustand; Kachelofen, Holzofen; Konventionierung nicht angegeben",
+  "bergblick": "ja",
+  "alleinlage": "ruhige, sonnige Lage im Grünen/Wald",
+  "hart_ok": "TEIL – verfehlt: Wohnfläche (113 < 160), Grundfläche nicht beziffert (vermutl. gleiches Objekt wie bekanntes Schnals-EFH 549k)",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": null,
+  "lat": 46.689,
+  "lon": 10.945,
+  "quelle": "immomarkt-suedtirol.bz (Profi Immobilien)"
+ },
+ {
+  "url": "https://www.immomarkt-suedtirol.bz/profiimmobilien/speck-wein-und-platz-ohne-ende-neidische-nachbarn-inklusive",
+  "titel": "Wohnhaus in Unsere Liebe Frau im Walde (Gampenpass), BJ 2004",
+  "region": "Südtirol (Deutschnonsberg / Burggrafenamt)",
+  "ort": "39010 Unsere Liebe Frau im Walde-St. Felix",
+  "preis": 700000,
+  "preis_hinweis": null,
+  "wohnflaeche": 140,
+  "grundflaeche": null,
+  "nutzflaeche": null,
+  "typ": "Einfamilienhaus",
+  "widmung": null,
+  "zustand": "Baujahr 2004, hochwertig; DG-Ausbaureserve; Klasse G; Konventionierung nicht angegeben",
+  "bergblick": "ja",
+  "alleinlage": "ruhige ländliche Lage im Bergdorf",
+  "hart_ok": "TEIL – verfehlt: Preis (>650k), Wohnfläche (140 < 160), Grundfläche nicht beziffert",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": null,
+  "lat": 46.522,
+  "lon": 11.087,
+  "quelle": "immomarkt-suedtirol.bz (Profi Immobilien)"
+ },
+ {
+  "url": "https://www.immomarkt-suedtirol.bz/castellanum/14-sanierungsbeduerftiges-alleinstehendes-haus-BK13480",
+  "titel": "Sanierungsbedürftiges alleinstehendes Haus mit Stadel unter Schloss Ehrenburg",
+  "region": "Südtirol (Pustertal)",
+  "ort": "39030 Kiens-Ehrenburg",
+  "preis": 600000,
+  "preis_hinweis": null,
+  "wohnflaeche": 158,
+  "grundflaeche": null,
+  "nutzflaeche": "Verkaufsfläche 215 m² + separater Stadel",
+  "typ": "Einfamilienhaus",
+  "widmung": null,
+  "zustand": "Baujahr 1904, sanierungsbedürftig, Klasse G; Konventionierung/geschl. Hof nicht angegeben",
+  "bergblick": null,
+  "alleinlage": "ruhige, naturnahe Lage",
+  "hart_ok": "TEIL – verfehlt: Wohnfläche (158 < 160), Grundfläche nicht beziffert (Dublette zu immoweb 111174)",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": null,
+  "lat": 46.795,
+  "lon": 11.841,
+  "quelle": "immomarkt-suedtirol.bz (Castellanum)"
+ },
+ {
+  "url": "https://www.immoweb.it/de/goldrain/haus/111175-haus-tschanderle",
+  "titel": "Haus 'Tschanderle' – Neubau Passivhaus in Voll-Südhanglage, Goldrain",
+  "region": "Südtirol (Vinschgau)",
+  "ort": "39021 Latsch-Goldrain",
+  "preis": null,
+  "preis_hinweis": "Preis auf Anfrage",
+  "wohnflaeche": null,
+  "grundflaeche": null,
+  "nutzflaeche": null,
+  "typ": "Einfamilienhaus",
+  "widmung": "frei (lt. Suchfilter), nicht belegt",
+  "zustand": "Neubau/Erstbezug, Passivhaus (Baufix GmbH)",
+  "bergblick": null,
+  "alleinlage": null,
+  "hart_ok": "TEIL – verfehlt: Preis, Wohn- und Grundfläche nicht angegeben",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": null,
+  "lat": 46.622,
+  "lon": 10.817,
+  "quelle": "immoweb.it"
+ },
+ {
+  "url": "https://www.immoweb.it/de/brenner/haus/111217-stadel-mit-kochstelle",
+  "titel": "Almstadel mit Kochstelle, Ziroger Alm (Brenner), 32.579 m² Grund",
+  "region": "Südtirol (Wipptal)",
+  "ort": "39041 Brenner (Ziroger Alm)",
+  "preis": 500000,
+  "preis_hinweis": null,
+  "wohnflaeche": null,
+  "grundflaeche": 32579,
+  "nutzflaeche": null,
+  "typ": "Almstadel",
+  "widmung": "landwirtschaftlich",
+  "zustand": "Neubau 2025, nur einfache Kochstelle; nur Fußweg-Zugang",
+  "bergblick": "ja",
+  "alleinlage": "ja (Almlage)",
+  "hart_ok": "TEIL – verfehlt: Typ/Hauptwohnsitz (Almstadel, kein Wohnhaus)",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": "https://www.immoweb.it/content/uploads/111217_2f56082fbfd3b56007a504a709e3852c_pre.jpg",
+  "lat": 47.0,
+  "lon": 11.49,
+  "quelle": "immoweb.it (Castellanum)"
+ },
+ {
+  "url": "https://www.immomarkt-suedtirol.bz/wellenzohn/52-mals-laatsch-sanierungsobjekt-mit-potenzial-zu-verkaufen",
+  "titel": "Mals/Laatsch: Hofstelle im Rohbau mit Projekt für 5 Wohneinheiten",
+  "region": "Südtirol (Vinschgau / Obervinschgau)",
+  "ort": "39024 Mals-Laatsch",
+  "preis": null,
+  "preis_hinweis": "Preis auf Anfrage",
+  "wohnflaeche": null,
+  "grundflaeche": null,
+  "nutzflaeche": "ca. 1.370 m³ oberirdisch + 362 m³ unterirdisch",
+  "typ": "Mehrfamilienhaus-Projekt",
+  "widmung": "Wohnbau mit genehmigtem Projekt; Whg. 2 und 5 konventionierungspflichtig, 3 frei",
+  "zustand": "teilweise Rohbau; Dorfkern",
+  "bergblick": null,
+  "alleinlage": "nein – Dorfkern",
+  "hart_ok": "TEIL – verfehlt: Typ (5 Wohneinheiten), Preis nicht angegeben",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": null,
+  "lat": 46.672,
+  "lon": 10.536,
+  "quelle": "immomarkt-suedtirol.bz (Wellenzohn)"
+ },
+ {
+  "url": "https://www.immoweb.it/de/burgstall/haus/111067-vielseitiges-einfamilienhaus-mit-grossem-potenzial-und-garage-magazin-im-burggrafenamt-secret-sale",
+  "titel": "Einfamilienhaus mit Einliegerwohnung und Garage-Magazin, Burgstall (Secret Sale)",
+  "region": "Südtirol (Burggrafenamt)",
+  "ort": "39014 Burgstall",
+  "preis": null,
+  "preis_hinweis": "Preis auf Anfrage",
+  "wohnflaeche": 196,
+  "grundflaeche": 341,
+  "nutzflaeche": "116 m² netto Wohnen; Garage/Magazin ca. 99 m²",
+  "typ": "Einfamilienhaus",
+  "widmung": null,
+  "zustand": "renoviert 2000/2012, PV; Konventionierung nicht angegeben",
+  "bergblick": null,
+  "alleinlage": "nein",
+  "hart_ok": "TEIL – verfehlt: Grundfläche (341 < 1.000), Preis nicht angegeben",
+  "freiheits_score": null,
+  "freiheits_score_detail": null,
+  "bild": null,
+  "lat": 46.608,
+  "lon": 11.195,
+  "quelle": "immoweb.it (Marsoner Bauer)"
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/wellenzohn/52-latsch-st-martin-am-kofel-geschlossener-hof-in-alleinlage-mit-genehmigtem-bauprojekt-zu-verkaufen",
+  "titel": "Latsch/St. Martin am Kofel - Geschlossener Hof",
+  "preis": 375000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/wellenzohn/52-mals-planeil-wohnhaus-mit-wirtschaftsgebaeude-und-garten-zu-verkaufen",
+  "titel": "Mals/Planeil: Wohnhaus mit Wirtschaftsgebäude",
+  "preis": null
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/wellenzohn/52-stilfs-sanierungsbeduerftiges-wohnhaus-mit-wirtschaftsgebaeude-zu-verkaufen",
+  "titel": "Stilfs: Sanierungsbedürftiges Wohnhaus",
+  "preis": 220000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/Immobilien-Regensburger/29-einzigartiges-wohnhaus-mit-geschichte-und-zukunft",
+  "titel": "Einzigartiges Wohnhaus mit Geschichte und Zukunft",
+  "preis": 850000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/castellanum/14-sanierungsbeduerftiges-alleinstehendes-haus",
+  "titel": "Sanierungsbedürftiges alleinstehendes Haus (Ehrenburg)",
+  "preis": 680000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/aurimmobil/80-casa-singola-a-predoi",
+  "titel": "Freistehendes Einfamilienhaus in Prettau",
+  "preis": 620000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/immobilienniederkofler/17-alleinstehendes-einfamilienhaus-ruhe-raum-und-lebensqualitaet",
+  "titel": "Alleinstehende Einfamilienvilla Niederdorf",
+  "preis": null
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/castellanum/14-saniertes-freistehendes-haus-in-idyllischer-lage",
+  "titel": "Saniertes freistehendes Haus Innerprags",
+  "preis": null
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/immobilienniederkofler/17-landwirtschaftliches-anwesen-mit-wald-wiesen-und-wirtschaftsgebaeuden",
+  "titel": "Landwirtschaftliches Anwesen Außermühlwald",
+  "preis": null
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/wellenzohn/52-latsch-morter-exklusives-architektenhaus-freistehend-und-mit-beeindruckender-dachterrasse",
+  "titel": "Latsch/Morter Architektenhaus",
+  "preis": null
+ },
+ {
+  "url": "https://immobar.it/haus/taufers-im-muenstertal/6431/einzigartiges-wohnhaus-mit-geschichte-und-zukunft",
+  "titel": "Einzigartiges Wohnhaus mit Geschichte und Zukunft",
+  "preis": 850000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/rimmoimmobilien/gepflegtes-einfamilienhaus-in-ruhiger-und-sonniger-lage",
+  "titel": "Gepflegtes Einfamilienhaus Schnals",
+  "preis": 549000
+ },
+ {
+  "url": "https://immobar.it/haus/moos-in-passeier/6972/ein-zuhause-mit-seele-antikes-bauernhaus-in-moos-i-passeier",
+  "titel": "Antikes Bauernhaus in Moos in Passeier",
+  "preis": 680000
+ },
+ {
+  "url": "https://immobar.it/haus/moos-in-passeier/7011/ein-zuhause-mit-seele-antikes-bauernhaus-in-moos-i-passeier",
+  "titel": "Antikes Bauernhaus in Moos in Passeier",
+  "preis": 680000
+ },
+ {
+  "url": "https://immobar.it/landwirtschaft/st-pankraz/6942/ein-leben-wie-frueher-der-traum-vom-selbstversorgerhof",
+  "titel": "Selbstversorgerhof St. Pankraz",
+  "preis": 680000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/ZingerleStefan/ein-leben-wie-frueher-der-traum-vom-selbstversorgerhof",
+  "titel": "Selbstversorgerhof St. Pankraz",
+  "preis": 680000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/Bozen%20Real%20GmbH/sanierungsbeduerftiges-wohnhaus-mit-stadel-zu-verkaufen",
+  "titel": "Historischer Bauernhof mit Projekt (Olang)",
+  "preis": 900000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/aurimmobil/80-casa-da-ristruttare-vivere-con-ampio-respiro",
+  "titel": "Sanierungsbedürftiges Haus - Wohnen mit Weitblick (Mühlwald)",
+  "preis": 540000
+ },
+ {
+  "url": "https://engelvoelkers.com/it/de/exposes/2531d68b-51e6-59e7-9d11-336c331be9df",
+  "titel": "Exklusive Villa in Alleinlage Antholzer Tal",
+  "preis": null
+ },
+ {
+  "url": "https://engelvoelkers.com/it/de/exposes/4dc00abb-367b-58ca-84df-f4a03f30e6d1",
+  "titel": "Geschlossener Hof mit Entwicklungspotential (Taisten)",
+  "preis": null
+ },
+ {
+  "url": "https://engelvoelkers.com/it/en/exposes/a7476f9c-30e4-58e2-a035-262fe6d5bafa",
+  "titel": "Baukubatur Holzneregg/St. Pankraz",
+  "preis": null
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/wellenzohn/52-laas-tschengls-wohnhaus-mit-wirtschaftsgebaeude-zu-verkaufen",
+  "titel": "Laas/Tschengls Wohnhaus",
+  "preis": 380000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/Home-Immobilien/375-obertall-bei-schenna-gepflegtes-haus-mit-garten-und-panoramablick-in-sonniger-ruhelage",
+  "titel": "Obertall bei Schenna",
+  "preis": 599000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/castellanum/14-altbestand-mit-grundstueck",
+  "titel": "Altbestand mit Grundstück (Villnöß)",
+  "preis": 495000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/benedetti/76-idyllisches-landgut-alpines-hideaway",
+  "titel": "Idyllisches Landgut – Alpines Hideaway",
+  "preis": null
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/rimmoimmobilien/sanierungsbeduerftiges-stadthaus-in-glurns",
+  "titel": "Sanierungsbedürftiges Stadthaus in Glurns",
+  "preis": 450000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/wellenzohn/52-denkmalgeschuetztes-wohnhaus-mit-wirtschaftsgebaeude-in-burgeis-zu-verkaufen",
+  "titel": "Denkmalgeschütztes Wohnhaus Burgeis",
+  "preis": 350000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/wellenzohn/52-taufers-im-muenstertal-sanierungsbeduerftiges-wohnhaus-mit-wirtschaftsgebaeude-und-garten-zu-verkaufen",
+  "titel": "Taufers im Münstertal Wohnhaus",
+  "preis": 350000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/wellenzohn/52-mals-laatsch-geschichtstraechtiger-ansitz-mit-grossem-hofraum-zu-verkaufen",
+  "titel": "Mals/Laatsch Ansitz",
+  "preis": null
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/ausserhofer/38-eckhaus-in-prettau-aelteres-baujahr-mit-garten",
+  "titel": "Eckhaus in Prettau",
+  "preis": null
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/immobilienniederkofler/17-alleinstehendes-haus-in-antholz-zu-verkaufen",
+  "titel": "Zu sanierendes alleinstehendes Haus in Antholz",
+  "preis": 550000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/castellanum/14-haus-in-latzfons",
+  "titel": "Haus in Latzfons",
+  "preis": 490000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/castellanum/14-einfamilienhaus-zu-sanieren-in-laendlicher-lage",
+  "titel": "Einfamilienhaus zu sanieren (Petschied)",
+  "preis": 325000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/ausserhofer/38-baugrund-fuer-ein-eckreihenhaus-im-ahrntal",
+  "titel": "Baugrund für ein Eckreihenhaus im Ahrntal",
+  "preis": 145000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/rimmoimmobilien/119-riffian-1",
+  "titel": "Riffian – Günstiges Baugrundstück",
+  "preis": 125000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/Home%20Immobilien/375-naturns-freistehendes-haus",
+  "titel": "Naturns: Freistehendes Haus",
+  "preis": 860000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/Home-Immobilien/375-morter-latsch-zu-sanierendes-haus",
+  "titel": "Morter (Latsch): Zu sanierendes Haus",
+  "preis": 295000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/Home-Immobilien/375-freihstehendes-haus-mit-genehmigten-projekt-und-grosszuegigem-grundstueck-in-gfrill",
+  "titel": "Freistehendes Haus Gfrill",
+  "preis": 510000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/Home-Immobilien/375-tisens-sanierungsbeduerftiges-haus",
+  "titel": "Tisens: Sanierungsbedürftiges Haus",
+  "preis": 600000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/wellenzohn/52-prad-am-stilfserjoch-sanierungsbeduerftiges-wohnhaus-im-zentrum-zu-verkaufen",
+  "titel": "Prad Sanierungsbedürftiges Wohnhaus",
+  "preis": 450000
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/ruthimmobilien/40-modernes-wohnhaus-in-sonniger-panoramalage-im-vinschgau",
+  "titel": "Modernes Wohnhaus Panoramalage Vinschgau",
+  "preis": null
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/ruthimmobilien/40-wohnhaus-mit-grossem-grundstueck-und-entwicklungspotenzial",
+  "titel": "Wohnhaus mit großem Grundstück (Antholz)",
+  "preis": null
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/Seeber-Immobilien/30-attraktives-baugrundstueck-mit-entwicklungspotenzial-in-niederolang",
+  "titel": "Baugrundstück Niederolang",
+  "preis": null
+ },
+ {
+  "url": "https://immomarkt-suedtirol.bz/wellenzohn/52-geschlossener-hof-in-mals-burgeis-zu-verkaufen",
+  "titel": "Geschlossener Hof Stampferhof Burgeis",
+  "preis": null
+ },
+ {
+  "url": "https://immoweb.it/de/kiens/haus/111174-sanierungsbeduerftiges-alleinstehendes-haus",
+  "titel": "Sanierungsbedürftiges alleinstehendes Haus (Ehrenburg)",
+  "preis": 600000
+ },
+ {
+  "url": "https://immobiliare.it/de/annunci/125835795",
+  "titel": "Einfamilienvilla San Pietro 21, Klausen",
+  "preis": 490000
+ },
+ {
+  "url": "https://immobiliare.it/de/annunci/129563020",
+  "titel": "Einfamilienvilla Mühlbach bei Gais",
+  "preis": 850000
+ },
+ {
+  "url": "https://immobiliare.it/en/annunci/128521636",
+  "titel": "Einfamilienvilla Schnals",
+  "preis": 549000
+ },
+ {
+  "url": "https://rimmo.it/de/suedtirol/haus/einfamilienhaus/vinschgau/schnals/detail/5010",
+  "titel": "Gepflegtes Einfamilienhaus Schnals",
+  "preis": 549000
+ },
+ {
+  "url": "https://rimmo.it/de/suedtirol/kauf/haus/einfamilienhaus/vinschgau/schnals/detail/5010",
+  "titel": "Gepflegtes Einfamilienhaus Schnals",
+  "preis": 549000
+ },
+ {
+  "url": "https://rimmo.it/de/suedtirol/kauf/haus/hof/salten-schlern/jenesien/detail/6185",
+  "titel": "Reizender Hof in Alleinlage Flaas/Jenesien",
+  "preis": null
+ },
+ {
+  "url": "https://immoco.it/en/property/detached-house-with-large-plot-for-sale-in-muehlwalder-valley",
+  "titel": "Detached House Mühlwalder Tal",
+  "preis": 540000
+ },
+ {
+  "url": "https://tschenett.com/de/immobilien-suchen/stilfs-gomagoi-115000-zu-sanierendes-wohnhaus-mit-stall-und-stadel-99949",
+  "titel": "Stilfs, Gomagoi Wohnhaus mit Stall",
+  "preis": 115000
+ }
+]
