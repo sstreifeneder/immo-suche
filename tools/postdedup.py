@@ -14,7 +14,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE = os.path.join(ROOT, "bekannte_objekte.json")
 CAND_DIR = sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("--") else "/tmp/immolauf/proj/outputs"
 APPLY = "--apply" in sys.argv
-TODAY = "2026-09-24"
+TODAY = json.load(open(os.path.join(CAND_DIR, "lauf_meta.json"), encoding="utf-8"))["today"]
 
 
 def norm_ort(s):

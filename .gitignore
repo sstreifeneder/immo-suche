@@ -22,3 +22,7 @@ images/c7ee8c682e71d5ac.png
 
 # Temp-Dateien
 *.tmp
+
+# Lauf-Arbeitsordner (Kandidaten, Zwischenstände)
+outputs/
+outputs.orig/

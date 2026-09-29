@@ -10,6 +10,8 @@ RX_TYP = re.compile(r"mehrfamilien|zweifamilien|bungalow|villa|reihenhaus|doppel
 RX_TITEL = re.compile(r"wohneinheiten|whgen|(zwei|drei|vier|2|3|4)\s+(wohnh|häuser|einheiten|wohnungen)|wohnhäuser|anlageobjekt|anlageimmobilie|renditeimmobilie|investment|tankstelle|geschäftslokal|geschäftshaus|betriebsobjekt|lagerhalle|werkstatt|arbeiten & wohnen|wohnen und vermieten|mietwohnhaus|vollvermietet|vermietungspotenzial|projektentwicklung|mehrgeschossig|liegenschaftspaket|ensemble|garagen|firmenstandort", re.I)
 RX_ELW = re.compile(r"einliegerwohnung", re.I)
 RX_FREIZEIT = re.compile(r"freizeitwohnsitz|zweitwohnsitz|ferienimmobilie|freizeitgrund|freizeitwohn", re.I)
+# Verneinungen der Sub-Agenten ("kein Zweitwohnsitz-Hinweis", "weder Zweitwohnsitz noch ...") sind KEIN Freizeit-Treffer (2026-09-29)
+RX_FREIZEIT_NEG = re.compile(r"(kein(e|en)?|weder|nicht als|ohne)\s+(\w+\s+){0,2}(freizeitwohn|zweitwohn|ferienimmob)", re.I)
 # Harter Ausschluss: nie gesichertes Wohn-Bauland
 RX_KEIN_BAULAND_HART = re.compile(r"beabsichtigtes bauland|aufschließungsgebiet|firmenstandort|betriebsgebiet|betriebsbaugebiet|industriegebiet|gewerbegebiet|gewerbegrund|freizeitgrund", re.I)
 # Weicher Ausschluss: nur wenn KEIN positiver Bauland-Beleg vorhanden (Mischparzellen Bauland+Grünland sind ok)
@@ -93,7 +95,7 @@ def main():
                     teil(o, "verfehlt: Typ", "typ")
 
             # Freizeit-Check (beide Klassen)
-            if RX_FREIZEIT.search(alltext):
+            if RX_FREIZEIT.search(RX_FREIZEIT_NEG.sub(" ", alltext)):
                 teil(o, "verfehlt: Widmung (Freizeitwohnsitz)", "freizeit")
 
             # Grundstuecke ohne echtes Bauland
